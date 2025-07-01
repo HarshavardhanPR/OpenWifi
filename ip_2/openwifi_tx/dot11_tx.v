@@ -37,7 +37,7 @@ localparam S11_PSDU_DATA = 3'd1;
 localparam S11_PSDU_CRC  = 3'd2;
 localparam S11_TAIL      = 3'd3;
 localparam S11_PAD       = 3'd4;
-localparam S11_RESET     = 3'd5; // Added an explicit reset state to FSM11 for clarity
+localparam S11_RESET     = 3'd5; // Added an explicit reset state to FSM11
 
 // IQ sample generation states (FSM2)
 reg [1:0] state2;
@@ -82,7 +82,7 @@ reg [14:0] ofdm_cnt_FSM1;        // Maximum number of OFDM symbols = 3 + ceil((1
 wire [31:0] l_stf;
 wire [31:0] l_ltf;
 reg  [7:0] preamble_addr; // Needs to be 8-bit to address 0-159
-// Instantiation of ROMs (assuming these modules exist)
+// Instantiation of ROMs 
 l_stf_rom l_stf_rom (
     .addr(preamble_addr[3:0]), // L_STF uses 10 samples (addr 0-9), so 4 bits are enough
     .dout(l_stf)
@@ -90,7 +90,7 @@ l_stf_rom l_stf_rom (
 
 l_ltf_rom l_ltf_rom (
     .addr(preamble_addr[7:0]), // L_LTF uses 10 samples (addr 0-9) + 6 for GI, but preamble_addr can go up to 159.
-                               // Ensure this `addr` width matches your ROM definition if it's larger than 4 bits for L_LTF
+                               // Ensured with this `addr` width matches the ROM definition if it's larger than 4 bits for L_LTF
     .dout(l_ltf)
 );
 
@@ -99,7 +99,7 @@ l_ltf_rom l_ltf_rom (
 //////////////////////////////////////////////////////////////////////////
 wire [31:0] ht_stf;
 wire [31:0] ht_ltf;
-// Instantiation of ROMs (assuming these modules exist)
+// Instantiation of ROMs 
 ht_stf_rom ht_stf_rom (
     .addr(preamble_addr[3:0]), // HT-STF uses 5 samples (addr 0-4), so 4 bits are enough
     .dout(ht_stf)
@@ -128,9 +128,6 @@ wire        bits_enc_fifo_iready, bits_enc_fifo_oready;
 wire [15:0] bits_enc_fifo_space;
 wire [1:0]  bits_enc_fifo_odata;
 
-
-// Synchronous update for bram_din_last_nibble (should be inside an always @(posedge clk) block)
-// This was correctly implemented in your original code.
 always @(posedge clk) begin
     if (reset_int) begin
         bram_din_last_nibble <= 4'b0; // Initialize to avoid X
@@ -161,7 +158,6 @@ assign crc_en = (bits_enc_fifo_iready == 1 && state1 == S1_DATA && state11 == S1
 reg         bit_scram;
 reg [6:0] data_scram_state;
 
-// This always @* block correctly infers combinational logic.
 // All paths assign a value to bit_scram, so no latches are inferred,
 // and it should not generate 'X' if its inputs are valid.
 always @* begin
@@ -371,9 +367,7 @@ always @(posedge clk) begin
                 state11 <= S11_SERVICE;
             end
             endcase
-
-            // Update block ram address
-            // This condition is for when the current BRAM word is consumed.
+           // This condition is for when the current BRAM word is consumed.
             // psdu_bit_cnt[5:0] == 6'b111110 (62) for 64-bit word (bits 0-63)
             // It suggests that bram_din provides 64 bits at once, and psdu_bit_cnt increments by 1 for each bit.
             if(state11 <= S11_PSDU_DATA && psdu_bit_cnt[5:0] == 6'd62)
@@ -550,7 +544,6 @@ always @(posedge clk) begin
     end else begin
         case(state2)
         S2_PUNC_INTERLV: begin
-            // Check if there's enough space in both output FIFOs and bits_enc_fifo has valid data
             if((pkt_fifo_space > 15'd63) && (CP_fifo_space > 15'd15) && (bits_enc_fifo_ovalid == 1'b1)) begin
                 // The encoding position is shifted only if encoded bits are not punctured (punc_info[0] is 0)
                 if(|punc_info == 1'b0) // If punc_info is all zeros
@@ -933,13 +926,10 @@ always @(posedge clk) begin
     end
 end
 
-// Output assignments: result_iq_valid, result_i, result_q
 // These were already combinational assignments, correctly.
 assign result_iq_valid = (state3 == S3_L_STF || state3 == S3_L_LTF) ? (preamble_addr >= 8'd0 && preamble_addr < 8'd160) :
                          ((state3 == S3_L_SIG || state3 == S3_HT_SIG) && pkt_fifo_ovalid == 1'b1 && fifo_turn == PKT_FIFO) ? 1'b1 : // result_iq_ready removed here, as valid should indicate readiness of data irrespective of sink's readiness
                          (state3 >= S3_HT_STF && (pkt_fifo_ovalid == 1'b1 || CP_fifo_ovalid == 1'b1));
-                         // Simplified logic for result_iq_valid.
-                         // It should indicate if *this module has valid data to send*, not if the receiver is ready.
                          // The receiver's readiness (`result_iq_ready` input) controls the FSM, not the validity of *this* output.
 
 assign result_i = (state3 == S3_L_STF || state3 == S3_L_LTF) ? (state3 == S3_L_STF ? l_stf[31:16] : l_ltf[31:16]) :
