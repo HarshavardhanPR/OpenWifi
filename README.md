@@ -31,14 +31,3 @@ Build Toolchain
 Vivado (tested with 2020.2 - 2024.2)
 Xilinx SDK / Vitis / PetaLinux
 Customizable for different RFSoC boards
-
-🧰 Repository Structure
-
-openwifi/
-├── ip/                   # Verilog source code for core modules (PHY/MAC/IP)
-├── boards/               # Per-board Vivado projects (ZC706, ZCU102, etc.)
-├── sim/                  # Simulation testbenches and scripts
-├── sw/                   # Software integration (Linux drivers, PetaLinux)
-├── doc/                  # Technical documentation and specifications
-├── scripts/              # Helper TCL scripts and utilities
-└── README.md
