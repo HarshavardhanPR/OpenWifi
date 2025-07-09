@@ -1,0 +1,1 @@
+`define OPENOFDM_RX_GIT_REV (32'h00000000)

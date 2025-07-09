@@ -1,0 +1,65 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Tue Jul  8 22:39:42 2025
+# Process ID: 25780
+# Current directory: C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq
+# Command line: vivado.exe -source openofdm_rx.tcl -tclargs zed_fmcs2 100
+# Log file: C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/vivado.log
+# Journal file: C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq\vivado.jou
+#-----------------------------------------------------------
+start_gui
+source openofdm_rx.tcl
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+report_property $obj
+source openofdm_rx.tcl
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+current_project openofdm_rx
+source openofdm_rx.tcl
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+close_project
+upgrade_ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 [get_ips  rot_lut] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips rot_lut] -no_script -sync -force -quiet
+set_property generate_synth_checkpoint false [get_files  C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/ip_repo/rot_lut/rot_lut.xci]
+generate_target all [get_files  C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/ip_repo/rot_lut/rot_lut.xci]
+export_ip_user_files -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/ip_repo/rot_lut/rot_lut.xci] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/ip_repo/rot_lut/rot_lut.xci] -directory C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.ip_user_files -ipstatic_source_dir C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.cache/compile_simlib/modelsim} {questa=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.cache/compile_simlib/questa} {riviera=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.cache/compile_simlib/riviera} {activehdl=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+upgrade_ip -vlnv xilinx.com:ip:xfft:9.1 [get_ips  xfft_v9] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips xfft_v9] -no_script -sync -force -quiet
+set_property generate_synth_checkpoint false [get_files  C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/ip_repo/xfft/xfft_v9.xci]
+generate_target all [get_files  C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/ip_repo/xfft/xfft_v9.xci]
+export_ip_user_files -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/ip_repo/xfft/xfft_v9.xci] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/ip_repo/xfft/xfft_v9.xci] -directory C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.ip_user_files -ipstatic_source_dir C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.cache/compile_simlib/modelsim} {questa=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.cache/compile_simlib/questa} {riviera=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.cache/compile_simlib/riviera} {activehdl=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+upgrade_ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 [get_ips  atan_lut] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips atan_lut] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/ip_repo/atan_lut/atan_lut.xci]
+export_ip_user_files -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/ip_repo/atan_lut/atan_lut.xci] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/ip_repo/atan_lut/atan_lut.xci] -directory C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.ip_user_files -ipstatic_source_dir C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.cache/compile_simlib/modelsim} {questa=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.cache/compile_simlib/questa} {riviera=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.cache/compile_simlib/riviera} {activehdl=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+upgrade_ip -vlnv xilinx.com:ip:cmpy:6.0 [get_ips  complex_multiplier] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips complex_multiplier] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/ip_repo/complex_multiplier/complex_multiplier.xci]
+export_ip_user_files -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/ip_repo/complex_multiplier/complex_multiplier.xci] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/ip_repo/complex_multiplier/complex_multiplier.xci] -directory C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.ip_user_files -ipstatic_source_dir C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.cache/compile_simlib/modelsim} {questa=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.cache/compile_simlib/questa} {riviera=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.cache/compile_simlib/riviera} {activehdl=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+upgrade_ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 [get_ips  deinter_lut] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips deinter_lut] -no_script -sync -force -quiet
+set_property generate_synth_checkpoint false [get_files  C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/ip_repo/deinter_lut/deinter_lut.xci]
+generate_target all [get_files  C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/ip_repo/deinter_lut/deinter_lut.xci]
+export_ip_user_files -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/ip_repo/deinter_lut/deinter_lut.xci] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/ip_repo/deinter_lut/deinter_lut.xci] -directory C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.ip_user_files -ipstatic_source_dir C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.cache/compile_simlib/modelsim} {questa=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.cache/compile_simlib/questa} {riviera=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.cache/compile_simlib/riviera} {activehdl=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+upgrade_ip -vlnv xilinx.com:ip:div_gen:5.1 [get_ips  div_gen_div_gen_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips div_gen_div_gen_0_0] -no_script -sync -force -quiet
+set_property generate_synth_checkpoint false [get_files  C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/ip_repo/div_gen_new/src/div_gen_div_gen_0_0/div_gen_div_gen_0_0.xci]
+generate_target all [get_files  C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/ip_repo/div_gen_new/src/div_gen_div_gen_0_0/div_gen_div_gen_0_0.xci]
+export_ip_user_files -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/ip_repo/div_gen_new/src/div_gen_div_gen_0_0/div_gen_div_gen_0_0.xci] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/ip_repo/div_gen_new/src/div_gen_div_gen_0_0/div_gen_div_gen_0_0.xci] -directory C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.ip_user_files -ipstatic_source_dir C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.cache/compile_simlib/modelsim} {questa=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.cache/compile_simlib/questa} {riviera=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.cache/compile_simlib/riviera} {activehdl=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+upgrade_ip -vlnv xilinx.com:ip:xlslice:1.0 [get_ips  div_gen_xlslice_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips div_gen_xlslice_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/ip_repo/div_gen_new/src/div_gen_xlslice_0_0/div_gen_xlslice_0_0.xci]
+export_ip_user_files -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/ip_repo/div_gen_new/src/div_gen_xlslice_0_0/div_gen_xlslice_0_0.xci] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/ip_repo/div_gen_new/src/div_gen_xlslice_0_0/div_gen_xlslice_0_0.xci] -directory C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.ip_user_files -ipstatic_source_dir C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.cache/compile_simlib/modelsim} {questa=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.cache/compile_simlib/questa} {riviera=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.cache/compile_simlib/riviera} {activehdl=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+source ./system_project.tcl
+close_project
