@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 
-//`include "openofdm_rx_pre_def.v"
+`include "openofdm_rx_pre_def.v"
 
 module dot11_tb;
 

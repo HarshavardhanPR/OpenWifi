@@ -1,0 +1,2 @@
+xfft_v9.vhd,vhdl,xil_defaultlib,../../../../../ip_repo/xfft/sim/xfft_v9.vhd,
+glbl.v,Verilog,xil_defaultlib,glbl.v

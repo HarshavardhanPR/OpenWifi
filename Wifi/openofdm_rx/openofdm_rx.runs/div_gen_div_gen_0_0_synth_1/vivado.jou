@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Wed Jul  9 17:47:35 2025
+# Process ID: 22440
+# Current directory: C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.runs/div_gen_div_gen_0_0_synth_1
+# Command line: vivado.exe -log div_gen_div_gen_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source div_gen_div_gen_0_0.tcl
+# Log file: C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.runs/div_gen_div_gen_0_0_synth_1/div_gen_div_gen_0_0.vds
+# Journal file: C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.runs/div_gen_div_gen_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source div_gen_div_gen_0_0.tcl -notrace

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="deinter_lut_synth_1" LaunchDir="C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.runs/deinter_lut_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="div_gen_csi_over_nova_synth_1" LaunchDir="C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.runs/div_gen_csi_over_nova_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="div_gen_div_gen_0_0_synth_1" LaunchDir="C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.runs/div_gen_div_gen_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="div_for_rotafft_synth_1" LaunchDir="C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.runs/div_for_rotafft_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="xfft_v9_synth_1" LaunchDir="C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.runs/xfft_v9_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="rot_lut_synth_1" LaunchDir="C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.runs/rot_lut_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

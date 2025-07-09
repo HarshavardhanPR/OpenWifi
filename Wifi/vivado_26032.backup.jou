@@ -1,0 +1,99 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Wed Jul  9 16:42:52 2025
+# Process ID: 26032
+# Current directory: C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi
+# Command line: vivado.exe -source openofdm_rx.tcl -tclargs zed_fmcs2 100
+# Log file: C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/vivado.log
+# Journal file: C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi\vivado.jou
+#-----------------------------------------------------------
+start_gui
+source openofdm_rx.tcl
+update_compile_order -fileset sources_1
+generate_target all [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/deinter_lut/deinter_lut.xci]
+export_ip_user_files -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/deinter_lut/deinter_lut.xci] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/deinter_lut/deinter_lut.xci] -directory C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.ip_user_files -ipstatic_source_dir C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.cache/compile_simlib/modelsim} {questa=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.cache/compile_simlib/questa} {riviera=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.cache/compile_simlib/riviera} {activehdl=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+create_fileset -blockset deinter_lut
+set_property top deinter_lut [get_fileset deinter_lut]
+move_files -fileset [get_fileset deinter_lut] [get_files -of_objects [get_fileset sources_1] C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/deinter_lut/deinter_lut.xci]
+generate_target all [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/div_gen_csi_over_nova/div_gen_csi_over_nova.xci]
+export_ip_user_files -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/div_gen_csi_over_nova/div_gen_csi_over_nova.xci] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/div_gen_csi_over_nova/div_gen_csi_over_nova.xci] -directory C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.ip_user_files -ipstatic_source_dir C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.cache/compile_simlib/modelsim} {questa=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.cache/compile_simlib/questa} {riviera=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.cache/compile_simlib/riviera} {activehdl=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+create_fileset -blockset div_gen_csi_over_nova
+set_property top div_gen_csi_over_nova [get_fileset div_gen_csi_over_nova]
+move_files -fileset [get_fileset div_gen_csi_over_nova] [get_files -of_objects [get_fileset sources_1] C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/div_gen_csi_over_nova/div_gen_csi_over_nova.xci]
+generate_target Simulation [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/complex_multiplier/complex_multiplier.xci]
+export_ip_user_files -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/complex_multiplier/complex_multiplier.xci] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/complex_multiplier/complex_multiplier.xci] -directory C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.ip_user_files -ipstatic_source_dir C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.cache/compile_simlib/modelsim} {questa=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.cache/compile_simlib/questa} {riviera=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.cache/compile_simlib/riviera} {activehdl=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+generate_target Simulation [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/div_gen_new/src/div_gen_xlslice_0_0/div_gen_xlslice_0_0.xci]
+export_ip_user_files -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/div_gen_new/src/div_gen_xlslice_0_0/div_gen_xlslice_0_0.xci] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/div_gen_new/src/div_gen_xlslice_0_0/div_gen_xlslice_0_0.xci] -directory C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.ip_user_files -ipstatic_source_dir C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.cache/compile_simlib/modelsim} {questa=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.cache/compile_simlib/questa} {riviera=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.cache/compile_simlib/riviera} {activehdl=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+generate_target all [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/div_gen_new/src/div_gen_div_gen_0_0/div_gen_div_gen_0_0.xci]
+export_ip_user_files -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/div_gen_new/src/div_gen_div_gen_0_0/div_gen_div_gen_0_0.xci] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/div_gen_new/src/div_gen_div_gen_0_0/div_gen_div_gen_0_0.xci] -directory C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.ip_user_files -ipstatic_source_dir C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.cache/compile_simlib/modelsim} {questa=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.cache/compile_simlib/questa} {riviera=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.cache/compile_simlib/riviera} {activehdl=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+create_fileset -blockset div_gen_div_gen_0_0
+set_property top div_gen_div_gen_0_0 [get_fileset div_gen_div_gen_0_0]
+move_files -fileset [get_fileset div_gen_div_gen_0_0] [get_files -of_objects [get_fileset sources_1] C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/div_gen_new/src/div_gen_div_gen_0_0/div_gen_div_gen_0_0.xci]
+generate_target all [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/div_for_rotafft/div_for_rotafft.xci]
+export_ip_user_files -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/div_for_rotafft/div_for_rotafft.xci] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/div_for_rotafft/div_for_rotafft.xci] -directory C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.ip_user_files -ipstatic_source_dir C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.cache/compile_simlib/modelsim} {questa=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.cache/compile_simlib/questa} {riviera=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.cache/compile_simlib/riviera} {activehdl=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+create_fileset -blockset div_for_rotafft
+set_property top div_for_rotafft [get_fileset div_for_rotafft]
+move_files -fileset [get_fileset div_for_rotafft] [get_files -of_objects [get_fileset sources_1] C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/div_for_rotafft/div_for_rotafft.xci]
+generate_target all [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/xfft/xfft_v9.xci]
+export_ip_user_files -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/xfft/xfft_v9.xci] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/xfft/xfft_v9.xci] -directory C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.ip_user_files -ipstatic_source_dir C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.cache/compile_simlib/modelsim} {questa=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.cache/compile_simlib/questa} {riviera=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.cache/compile_simlib/riviera} {activehdl=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+create_fileset -blockset xfft_v9
+set_property top xfft_v9 [get_fileset xfft_v9]
+move_files -fileset [get_fileset xfft_v9] [get_files -of_objects [get_fileset sources_1] C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/xfft/xfft_v9.xci]
+generate_target Simulation [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/atan_lut/atan_lut.xci]
+export_ip_user_files -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/atan_lut/atan_lut.xci] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/atan_lut/atan_lut.xci] -directory C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.ip_user_files -ipstatic_source_dir C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.cache/compile_simlib/modelsim} {questa=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.cache/compile_simlib/questa} {riviera=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.cache/compile_simlib/riviera} {activehdl=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+generate_target all [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/rot_lut/rot_lut.xci]
+export_ip_user_files -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/rot_lut/rot_lut.xci] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/rot_lut/rot_lut.xci] -directory C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.ip_user_files -ipstatic_source_dir C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.cache/compile_simlib/modelsim} {questa=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.cache/compile_simlib/questa} {riviera=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.cache/compile_simlib/riviera} {activehdl=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+create_fileset -blockset rot_lut
+set_property top rot_lut [get_fileset rot_lut]
+move_files -fileset [get_fileset rot_lut] [get_files -of_objects [get_fileset sources_1] C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/rot_lut/rot_lut.xci]
+launch_run {deinter_lut_synth_1 div_gen_csi_over_nova_synth_1 div_gen_div_gen_0_0_synth_1 div_for_rotafft_synth_1 xfft_v9_synth_1 rot_lut_synth_1}
+wait_on_run deinter_lut_synth_1
+
+wait_on_run deinter_lut_synth_1
+wait_on_run div_gen_csi_over_nova_synth_1
+
+wait_on_run deinter_lut_synth_1
+wait_on_run div_gen_csi_over_nova_synth_1
+wait_on_run div_gen_div_gen_0_0_synth_1
+
+wait_on_run deinter_lut_synth_1
+wait_on_run div_gen_csi_over_nova_synth_1
+wait_on_run div_gen_div_gen_0_0_synth_1
+wait_on_run div_for_rotafft_synth_1
+
+wait_on_run deinter_lut_synth_1
+wait_on_run div_gen_csi_over_nova_synth_1
+wait_on_run div_gen_div_gen_0_0_synth_1
+wait_on_run div_for_rotafft_synth_1
+wait_on_run xfft_v9_synth_1
+
+wait_on_run deinter_lut_synth_1
+wait_on_run div_gen_csi_over_nova_synth_1
+wait_on_run div_gen_div_gen_0_0_synth_1
+wait_on_run div_for_rotafft_synth_1
+wait_on_run xfft_v9_synth_1
+wait_on_run rot_lut_synth_1
+
+launch_simulation
+export_ip_user_files -of_objects  [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/viterbi/viterbi_v7_0.xci] -no_script -reset -force -quiet
+remove_files  C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/viterbi/viterbi_v7_0.xci
+add_files -norecurse {C:/Users/ASUS/Downloads/Openofdm/openofdm-39cec9f3ecf3d67069461a3e2bb85d5594712d05/verilog/coregen/viterbi_v7_0.ngc C:/Users/ASUS/Downloads/Openofdm/openofdm-39cec9f3ecf3d67069461a3e2bb85d5594712d05/verilog/coregen/viterbi_v7_0romlifo.mif C:/Users/ASUS/Downloads/Openofdm/openofdm-39cec9f3ecf3d67069461a3e2bb85d5594712d05/verilog/coregen/viterbi_v7_0.xco C:/Users/ASUS/Downloads/Openofdm/openofdm-39cec9f3ecf3d67069461a3e2bb85d5594712d05/verilog/coregen/viterbi_v7_0rombram.mif C:/Users/ASUS/Downloads/Openofdm/openofdm-39cec9f3ecf3d67069461a3e2bb85d5594712d05/verilog/coregen/viterbi_v7_0romwe.mif}
+export_ip_user_files -of_objects  [get_files  C:/Users/ASUS/Downloads/Openofdm/openofdm-39cec9f3ecf3d67069461a3e2bb85d5594712d05/verilog/coregen/viterbi_v7_0.xco] -lib_map_path [list {modelsim=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.cache/compile_simlib/modelsim} {questa=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.cache/compile_simlib/questa} {riviera=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.cache/compile_simlib/riviera} {activehdl=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.cache/compile_simlib/activehdl}] -force -quiet
+add_files -norecurse {C:/Users/ASUS/Downloads/Openofdm/openofdm-39cec9f3ecf3d67069461a3e2bb85d5594712d05/verilog/coregen/viterbi_v7_0.veo C:/Users/ASUS/Downloads/Openofdm/openofdm-39cec9f3ecf3d67069461a3e2bb85d5594712d05/verilog/coregen/viterbi_v7_0.vhd C:/Users/ASUS/Downloads/Openofdm/openofdm-39cec9f3ecf3d67069461a3e2bb85d5594712d05/verilog/coregen/viterbi_v7_0.v C:/Users/ASUS/Downloads/Openofdm/openofdm-39cec9f3ecf3d67069461a3e2bb85d5594712d05/verilog/coregen/viterbi_v7_0.vho}
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-39cec9f3ecf3d67069461a3e2bb85d5594712d05/verilog/coregen/viterbi_v7_0.xco] -no_script -reset -force -quiet
+remove_files  C:/Users/ASUS/Downloads/Openofdm/openofdm-39cec9f3ecf3d67069461a3e2bb85d5594712d05/verilog/coregen/viterbi_v7_0.xco
+update_compile_order -fileset sources_1
+launch_simulation
+source dot11_tb.tcl

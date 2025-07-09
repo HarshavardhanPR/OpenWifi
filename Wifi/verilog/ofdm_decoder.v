@@ -185,7 +185,7 @@ deinterleave deinterleave_inst (
   .output_strobe(deinterleave_out_strobe),
   .erase(erase)
 );
-/*
+
 viterbi_v7_0 viterbi_inst (
   .clk(clock),
   .ce(vit_ce),
@@ -196,7 +196,7 @@ viterbi_v7_0 viterbi_inst (
   .rdy(vit_rdy),
   .data_out(conv_decoder_out)
 );
-*/
+/*
 //reg [4:0] idle_wire_5bit ;
 wire [6:0] idle_wire_7bit; 
 viterbi_v7_0 viterbi_inst (
@@ -210,7 +210,7 @@ viterbi_v7_0 viterbi_inst (
   .m_axis_data_tdata({idle_wire_7bit, conv_decoder_out}),    // output wire [7 : 0] m_axis_data_tdata
   .m_axis_data_tvalid(m_axis_data_tvalid)  // output wire m_axis_data_tvalid
 );
-
+*/
 descramble decramble_inst (
   .clock(clock),
   .enable(enable),

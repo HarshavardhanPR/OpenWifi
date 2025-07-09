@@ -1,0 +1,7 @@
+xpm_memory.sv,systemverilog,xpm,D:/Apps/v_log/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv,
+xpm_fifo.sv,systemverilog,xpm,D:/Apps/v_log/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv,
+xpm_cdc.sv,systemverilog,xpm,D:/Apps/v_log/Vivado/2021.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv,
+xpm_VCOMP.vhd,vhdl,xpm,D:/Apps/v_log/Vivado/2021.1/data/ip/xpm/xpm_VCOMP.vhd,
+blk_mem_gen_v8_4.v,verilog,blk_mem_gen_v8_4_4,../../../ipstatic/simulation/blk_mem_gen_v8_4.v,
+rot_lut.v,verilog,xil_defaultlib,../../../../../ip_repo/rot_lut/sim/rot_lut.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

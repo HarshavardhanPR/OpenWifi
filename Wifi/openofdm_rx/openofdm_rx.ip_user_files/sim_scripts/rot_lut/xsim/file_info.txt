@@ -1,0 +1,2 @@
+rot_lut.v,verilog,xil_defaultlib,../../../../../ip_repo/rot_lut/sim/rot_lut.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

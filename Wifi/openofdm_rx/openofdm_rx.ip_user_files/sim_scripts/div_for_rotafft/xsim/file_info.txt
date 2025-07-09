@@ -1,0 +1,2 @@
+div_for_rotafft.vhd,vhdl,xil_defaultlib,../../../../../ip_repo/div_for_rotafft/sim/div_for_rotafft.vhd,
+glbl.v,Verilog,xil_defaultlib,glbl.v

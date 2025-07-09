@@ -257,11 +257,11 @@ set files [list \
  "[file normalize "$origin_dir/verilog/signal_watchdog.v"]"\
  "[file normalize "$origin_dir/verilog/phy_len_calculation.v"]"\
  "[file normalize "$origin_dir/verilog/rot_after_fft.v"]"\
+ "[file normalize "$origin_dir/verilog/viterbi_v7_0.v"]"\
  "[file normalize "$origin_dir/ip_repo/div_for_rotafft/div_for_rotafft.xci"]"\
  "[file normalize "$origin_dir/ip_repo/complex_multiplier/complex_multiplier.xci"]"\
  "[file normalize "$origin_dir/ip_repo/atan_lut/atan_lut.coe"]"\
  "[file normalize "$origin_dir/ip_repo/atan_lut/atan_lut.xci"]"\
- "[file normalize "$origin_dir/ip_repo/viterbi/viterbi_v7_0.xci"]"\
  "[file normalize "$origin_dir/ip_repo/deinter_lut/deinter_lut.coe"]"\
  "[file normalize "$origin_dir/ip_repo/deinter_lut/deinter_lut.xci"]"\
  "[file normalize "$origin_dir/ip_repo/xfft/xfft_v9.xci"]"\
@@ -792,7 +792,7 @@ puts "\nINFO: Project created:$project_name\n"
 update_compile_order -fileset sources_1
 report_ip_status -name ip_status 
 
-set all_ips_to_upgrade {atan_lut complex_multiplier deinter_lut div_gen_div_gen_0_0 div_gen_xlslice_0_0 rot_lut viterbi_v7_0 xfft_v9 div_for_rotafft div_gen_csi_over_nova}
+set all_ips_to_upgrade {atan_lut complex_multiplier deinter_lut div_gen_div_gen_0_0 div_gen_xlslice_0_0 rot_lut xfft_v9 div_for_rotafft div_gen_csi_over_nova}
 if {[llength [get_ips -quiet $all_ips_to_upgrade]] > 0} {
     upgrade_ip [get_ips $all_ips_to_upgrade] -log ip_upgrade.log
 }

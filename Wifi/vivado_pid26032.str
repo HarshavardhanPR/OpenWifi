@@ -1,0 +1,2655 @@
+/*
+
+Xilinx Vivado v2021.1 (64-bit) [Major: 2021, Minor: 1]
+SW Build: 3247384 on Thu Jun 10 19:36:33 MDT 2021
+IP Build: 3246043 on Fri Jun 11 00:30:35 MDT 2021
+
+Process ID (PID): 26032
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Wed Jul 09 16:43:16 IST 2025
+Time zone: 	India Standard Time (Asia/Calcutta)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 12
+
+Screen size: 1920x1080
+Screen resolution (DPI): 125
+Available screens: 1
+Default font: family=Segoe UI,name=Segoe UI,style=plain,size=15
+Scale size: 19
+
+Java version: 	11.0.2 64-bit
+Java home: 	D:/Apps/v_log/Vivado/2021.1/tps/win64/jre11.0.2
+Java executable: 	D:/Apps/v_log/Vivado/2021.1/tps/win64/jre11.0.2/bin/java.exe
+Java initial memory (-Xms): 	256 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	ASUS
+User home directory: C:/Users/ASUS
+User working directory: C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi
+User country: 	IN
+User language: 	en
+User locale: 	en_IN
+
+RDI_BASEROOT: D:/Apps/v_log/Vivado
+HDI_APPROOT: D:/Apps/v_log/Vivado/2021.1
+RDI_DATADIR: D:/Apps/v_log/Vivado/2021.1/data
+RDI_BINDIR: D:/Apps/v_log/Vivado/2021.1/bin
+
+Vivado preferences file: C:/Users/ASUS/AppData/Roaming/Xilinx/Vivado/2021.1/vivado.xml
+Vivado preferences directory: C:/Users/ASUS/AppData/Roaming/Xilinx/Vivado/2021.1/
+Vivado layouts directory: C:/Users/ASUS/AppData/Roaming/Xilinx/Vivado/2021.1/data/layouts
+PlanAhead jar file: 	D:/Apps/v_log/Vivado/2021.1/lib/classes/planAhead.jar
+Vivado log file: 	C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/vivado.log
+Vivado journal file: 	C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/vivado.jou
+Engine tmp dir: 	C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/.Xil/Vivado-26032-MyASUS
+
+Xilinx Environment Variables
+----------------------------
+XILINX: D:/Apps/v_log/Vivado/2021.1/ids_lite/ISE
+XILINX_DIR: D:\Apps\v_log\Vivado\2021.1
+XILINX_DSP: D:/Apps/v_log/Vivado/2021.1/ids_lite/ISE
+XILINX_HLS: D:\Apps\v_log\Vitis_HLS\2021.1
+XILINX_PLANAHEAD: D:/Apps/v_log/Vivado/2021.1
+XILINX_VIVADO: D:/Apps/v_log/Vivado/2021.1
+XILINX_VIVADO_HLS: D:/Apps/v_log/Vivado/2021.1
+
+
+GUI allocated memory:	256 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,147 MB
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// TclEventType: START_PROGRESS_DIALOG
+// Tcl Message: start_gui 
+// TclEventType: START_PROGRESS_DIALOG
+// bz (cs):  Sourcing Tcl script 'openofdm_rx.tcl' : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// Tcl Message: source openofdm_rx.tcl 
+// Tcl Message:  BOARD_NAME zed_fmcs2  
+// Tcl Message: # puts "NUM_CLK_PER_US $NUM_CLK_PER_US\n" 
+// Tcl Message: NUM_CLK_PER_US 100  
+// Tcl Message: # puts "ultra_scale_flag $ultra_scale_flag\n" 
+// Tcl Message: ultra_scale_flag 0  
+// Tcl Message: # puts "part_string $part_string\n" 
+// Tcl Message: part_string xc7z020clg484-1  
+// Tcl Message: # puts "fpga_size_flag $fpga_size_flag\n" 
+// Tcl Message: fpga_size_flag 0  
+// Tcl Message: # puts "ARGUMENT3 $ARGUMENT3\n" 
+// Tcl Message: ARGUMENT3   
+// Tcl Message: # puts "ARGUMENT4 $MODULE_NAME\_$ARGUMENT4\n" 
+// Tcl Message: ARGUMENT4 OPENOFDM_RX_  
+// Tcl Message: # puts "ARGUMENT5 $MODULE_NAME\_$ARGUMENT5\n" 
+// Tcl Message: ARGUMENT5 OPENOFDM_RX_  
+// Tcl Message: # puts "ARGUMENT6 $MODULE_NAME\_$ARGUMENT6\n" 
+// Tcl Message: ARGUMENT6 OPENOFDM_RX_  
+// Tcl Message: # puts "ARGUMENT7 $MODULE_NAME\_$ARGUMENT7\n" 
+// Tcl Message: ARGUMENT7 OPENOFDM_RX_  
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 75 MB (+76417kb) [00:00:11]
+// [Engine Memory]: 1,147 MB (+1050950kb) [00:00:11]
+// [GUI Memory]: 100 MB (+21721kb) [00:00:11]
+// [GUI Memory]: 117 MB (+12509kb) [00:00:12]
+// [GUI Memory]: 127 MB (+4966kb) [00:00:12]
+// WARNING: HEventQueue.dispatchEvent() is taking  2671 ms.
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Apps/v_log/Vivado/2021.1/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,147 MB. GUI used memory: 65 MB. Current time: 7/9/25, 4:43:16 PM IST
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: create_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 1137.098 ; gain = 0.000 
+// Tcl Message: # set_property -name "dsa.rom.debug_type" -value "0" -objects $obj 
+// Tcl Message: # set_property -name "dsa.rom.prom_type" -value "0" -objects $obj 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/verilog/coregen/div_gen_new_ip_core_zynq'. 
+// TclEventType: LOAD_FEATURE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_OPTIONS_MODIFIED
+// Tcl Message:  INFO: Project created:openofdm_rx  
+// Tcl Message: # update_compile_order -fileset sources_1 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_SUMMARY_RESULTS
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: # report_ip_status -name ip_status  
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: # set all_ips_to_upgrade {atan_lut complex_multiplier deinter_lut div_gen_div_gen_0_0 div_gen_xlslice_0_0 rot_lut viterbi_v7_0 xfft_v9 div_for_rotafft div_gen_csi_over_nova} # if {[llength [get_ips -quiet $all_ips_to_upgrade]] > 0} { #     upgrade_ip [get_ips $all_ips_to_upgrade] -log ip_upgrade.log # } 
+// Tcl Message: Upgrading 'atan_lut' 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_UPDATE_IP
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-3422] Upgraded atan_lut (Block Memory Generator 8.4) from revision 2 to revision 4 INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'atan_lut'... 
+// Tcl Message: Upgrading 'complex_multiplier' 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_UPDATE_IP
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-3422] Upgraded complex_multiplier (Complex Multiplier 6.0) from revision 16 to revision 20 INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'complex_multiplier'... 
+// Tcl Message: Upgrading 'deinter_lut' 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_UPDATE_IP
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_UPDATE_IP
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_UPDATE_IP
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-3422] Upgraded deinter_lut (Block Memory Generator 8.4) from revision 2 to revision 4 INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'deinter_lut'... 
+// Tcl Message: Upgrading 'div_gen_div_gen_0_0' 
+// Tcl Message: INFO: [IP_Flow 19-3422] Upgraded div_gen_div_gen_0_0 (Divider Generator 5.1) from revision 14 to revision 18 INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'div_gen_div_gen_0_0'... 
+// Tcl Message: Upgrading 'div_gen_xlslice_0_0' 
+// Tcl Message: INFO: [IP_Flow 19-3422] Upgraded div_gen_xlslice_0_0 (Slice 1.0) from revision 1 to revision 2 INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'div_gen_xlslice_0_0'... 
+// Tcl Message: Upgrading 'rot_lut' 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_UPDATE_IP
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-3422] Upgraded rot_lut (Block Memory Generator 8.4) from revision 2 to revision 4 INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'rot_lut'... 
+// Tcl Message: Upgrading 'xfft_v9' 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_UPDATE_IP
+// TclEventType: IP_UPGRADE_COMPLETE
+// Tcl Message: INFO: [IP_Flow 19-3422] Upgraded xfft_v9 (Fast Fourier Transform 9.1) from revision 1 to revision 6 INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'xfft_v9'... INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/ip_upgrade.log'. 
+// Tcl Message: upgrade_ip: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1137.098 ; gain = 0.000 
+// Tcl Message: # export_ip_user_files -of_objects [get_ips $all_ips_to_upgrade] -no_script -sync -force -ip_user_files_dir "ip_user_files" -quiet 
+// TclEventType: IP_SUMMARY_RESULTS
+// TclEventType: STOP_PROGRESS_DIALOG
+dismissDialog("Sourcing Tcl script 'openofdm_rx.tcl'"); // bz
+// Tcl Message: # update_compile_order -fileset sources_1 # report_ip_status -name ip_status  
+// TclEventType: STOP_PROGRESS_DIALOG
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HEventQueue.dispatchEvent() is taking  6447 ms.
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 6202 ms. Increasing delay to 18606 ms.
+selectTab((HResource) null, (HResource) null, "Design Runs", 4); // aK
+// Tcl Message: update_compile_order -fileset sources_1 
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// [GUI Memory]: 135 MB (+920kb) [00:00:42]
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aK
+// [GUI Memory]: 153 MB (+12659kb) [00:00:47]
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 6); // D
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "IP Sources", 1); // i
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP, viterbi_v7_0]", 9, false); // D
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Hierarchy", 0); // i
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Coefficient Files]", 4); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 8); // D
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 23 ms. Decreasing delay to 2023 ms.
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog]", 1); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog, common_defs.v]", 2, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog, common_defs.v]", 2, false, false, false, false, false, true); // D - Double Click
+// WARNING: HEventQueue.dispatchEvent() is taking  1343 ms.
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog Header]", 3); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 15); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, dot11_tb (dot11_tb.v)]", 18, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, dot11_tb (dot11_tb.v), signal_watchdog_inst : signal_watchdog (signal_watchdog.v)]", 19, true, false, false, false, false, true); // D - Double Click - Node
+// WARNING: HEventQueue.dispatchEvent() is taking  1314 ms.
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, dot11_tb (dot11_tb.v), signal_watchdog_inst : signal_watchdog (signal_watchdog.v)]", 19); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, dot11_tb (dot11_tb.v), dot11_inst : dot11 (dot11.v)]", 21); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, openofdm_rx (openofdm_rx.v)]", 33); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v)]", 36); // D
+// Elapsed time: 10 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), ofdm_decoder_inst : ofdm_decoder (ofdm_decoder.v)]", 44); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), ofdm_decoder_inst : ofdm_decoder (ofdm_decoder.v), viterbi_inst : viterbi_v7_0 (viterbi_v7_0.xci)]", 50, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), ofdm_decoder_inst : ofdm_decoder (ofdm_decoder.v), viterbi_inst : viterbi_v7_0 (viterbi_v7_0.xci)]", 50, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), ofdm_decoder_inst : ofdm_decoder (ofdm_decoder.v), viterbi_inst : viterbi_v7_0 (viterbi_v7_0.xci)]", 50, false, false, false, false, false, true); // D - Double Click
+// Run Command: PAResourceCommand.PACommandNames_RECUSTOMIZE_CORE
+// TclEventType: IP_LOCK_CHANGE
+// r (cs): Re-customize IP: addNotify
+selectButton(PAResourceAtoD.CustomizeCoreDialog_SWITCH_TO_DEFAULTS, "Switch to Defaults"); // E
+selectButton("OptionPane.button", "Yes"); // JButton
+// bz (r):  Reset Configuration : addNotify
+dismissDialog("Reset Configuration"); // bz
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Re-customize IP"); // r
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), ofdm_decoder_inst : ofdm_decoder (ofdm_decoder.v), viterbi_inst : viterbi_v7_0 (viterbi_v7_0.xci)]", 50, false, false, false, false, true, false); // D - Popup Trigger
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), ofdm_decoder_inst : ofdm_decoder (ofdm_decoder.v), viterbi_inst : viterbi_v7_0 (viterbi_v7_0.xci)]", 50, false); // D
+selectButton(RDIResource.HCodeView_FIND_TEXT_IN_FILE, (String) null); // x: TRUE
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "viter", true); // l
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "viter"); // l
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "viter"); // l
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "viter"); // l
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "viter"); // l
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "viter"); // l
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "viter"); // l
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "viter"); // l
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "viter"); // l
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "viter"); // l
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "viter"); // l
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "viter"); // l
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "viter"); // l
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "viter"); // l
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "viter"); // l
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "viter"); // l
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "viter"); // l
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "viter"); // l
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "viter"); // l
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "viter"); // l
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "viter"); // l
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, openofdm_rx (openofdm_rx.v)]", 7, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, openofdm_rx (openofdm_rx.v), signal_watchdog_inst : signal_watchdog (signal_watchdog.v)]", 9, true, false, false, false, false, true); // D - Double Click - Node
+// WARNING: HEventQueue.dispatchEvent() is taking  1328 ms.
+selectButton(RDIResource.HCodeView_FIND_TEXT_IN_FILE, (String) null); // x: TRUE
+// Elapsed time: 30 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, (String) null); // l
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v)]", 10, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), equalizer_inst : equalizer (equalizer.v)]", 16, true, false, false, false, false, true); // D - Double Click - Node
+// WARNING: HEventQueue.dispatchEvent() is taking  1308 ms.
+selectButton(RDIResource.HCodeView_FIND_TEXT_IN_FILE, (String) null); // x: TRUE
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "viter", true); // l
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "viter"); // l
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "viter"); // l
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "viter"); // l
+// Elapsed time: 18 seconds
+selectCodeEditor("dot11.v", 114, 131); // bP
+// Elapsed time: 89 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "dot11_tb.v", 2); // m
+// Elapsed time: 174 seconds
+selectCodeEditor("dot11_tb.v", 23, 44); // bP
+// Elapsed time: 20 seconds
+selectCodeEditor("dot11_tb.v", 179, 84); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 33 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "vit"); // l
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "IP Sources", 1); // i
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP, viterbi_v7_0]", 9, false); // D
+// [GUI Memory]: 162 MB (+1483kb) [00:09:34]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP, viterbi_v7_0]", 9, false, false, false, false, false, true); // D - Double Click
+// Run Command: PAResourceCommand.PACommandNames_RECUSTOMIZE_CORE
+// TclEventType: IP_LOCK_CHANGE
+// r (cs): Re-customize IP: addNotify
+selectButton(PAResourceAtoD.CustomizeCoreDialog_MORE_INFO, "more info"); // h
+selectButton(PAResourceAtoD.CustomizeCoreDialog_IP_LOCATION, "IP Location"); // E
+dismissDialog("Re-customize IP"); // r
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Hierarchy", 0); // i
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, openofdm_rx (openofdm_rx.v), openofdm_rx_s_axi_i : openofdm_rx_s_axi (openofdm_rx_s_axi.v)]", 71, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), phy_len_calculation_inst : phy_len_calculation (phy_len_calculation.v)]", 70, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), fcs_inst : crc32 (crc32.v)]", 69, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), crc_inst : ht_sig_crc (ht_sig_crc.v)]", 68, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), ofdm_decoder_inst : ofdm_decoder (ofdm_decoder.v), byte_inst : bits_to_bytes (bits_to_bytes.v)]", 67, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), ofdm_decoder_inst : ofdm_decoder (ofdm_decoder.v), decramble_inst : descramble (descramble.v)]", 66, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), ofdm_decoder_inst : ofdm_decoder (ofdm_decoder.v), viterbi_inst : viterbi_v7_0 (viterbi_v7_0.xci)]", 65, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), ofdm_decoder_inst : ofdm_decoder (ofdm_decoder.v), deinterleave_inst : deinterleave (deinterleave.v)]", 64, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), ofdm_decoder_inst : ofdm_decoder (ofdm_decoder.v), demod_inst : demodulate (demodulate.v)]", 63, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), ofdm_decoder_inst : ofdm_decoder (ofdm_decoder.v), lts_inst : dpram (dpram.v)]", 62, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), ofdm_decoder_inst : ofdm_decoder (ofdm_decoder.v), div_gen_csi_over_nova_inst : div_gen_csi_over_nova (div_gen_csi_over_nova.xci)]", 61, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), ofdm_decoder_inst : ofdm_decoder (ofdm_decoder.v), csi_square_inst : complex_to_mag_sq (complex_to_mag_sq.v)]", 60, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), ofdm_decoder_inst : ofdm_decoder (ofdm_decoder.v)]", 59, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), eq_delay_inst : delayT (delayT.v)]", 58, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), equalizer_inst : equalizer (equalizer.v)]", 57, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), rotafft_inst : rot_after_fft (rot_after_fft.v)]", 56, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), sync_long_inst : sync_long (sync_long.v)]", 55, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), sync_short_inst : sync_short (sync_short.v)]", 54, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), phase_inst : phase (phase.v)]", 53, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), rot_lut_inst : rot_lut (rot_lut.xci)]", 52, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v)]", 51, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, openofdm_rx (openofdm_rx.v), signal_watchdog_inst : signal_watchdog (signal_watchdog.v)]", 50, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, openofdm_rx (openofdm_rx.v), dot11_setting_agent_i : dot11_setting_agent (dot11_setting_agent.v)]", 49, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, openofdm_rx (openofdm_rx.v)]", 48, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), phy_len_calculation_inst : phy_len_calculation (phy_len_calculation.v)]", 70, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), fcs_inst : crc32 (crc32.v)]", 69, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), crc_inst : ht_sig_crc (ht_sig_crc.v)]", 68, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), ofdm_decoder_inst : ofdm_decoder (ofdm_decoder.v)]", 59, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), eq_delay_inst : delayT (delayT.v)]", 58, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), equalizer_inst : equalizer (equalizer.v)]", 57, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), rotafft_inst : rot_after_fft (rot_after_fft.v)]", 56, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), sync_long_inst : sync_long (sync_long.v)]", 55, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), sync_short_inst : sync_short (sync_short.v)]", 54, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), phase_inst : phase (phase.v)]", 53, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), rot_lut_inst : rot_lut (rot_lut.xci)]", 52, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, dot11_tb (dot11_tb.v), dot11_inst : dot11 (dot11.v)]", 36, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, openofdm_rx (openofdm_rx.v), signal_watchdog_inst : signal_watchdog (signal_watchdog.v), signal_watchdog_running_sum_inst : running_sum_dual_ch (running_sum_dual_ch.v)]", -1, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, dot11_tb (dot11_tb.v), signal_watchdog_inst : signal_watchdog (signal_watchdog.v)]", 34, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, dot11_tb (dot11_tb.v)]", 33, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Verilog Header]", 32, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Verilog]", 31, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 30, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 29, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 28, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 27, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Coefficient Files, rot_lut.coe]", -1, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Coefficient Files, deinter_lut.coe]", -1, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Coefficient Files, atan_lut.coe]", -1, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Coefficient Files]", 23, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, openofdm_rx (openofdm_rx.v), openofdm_rx_s_axi_i : openofdm_rx_s_axi (openofdm_rx_s_axi.v)]", 22, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), phy_len_calculation_inst : phy_len_calculation (phy_len_calculation.v)]", 21, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), fcs_inst : crc32 (crc32.v)]", 20, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), crc_inst : ht_sig_crc (ht_sig_crc.v)]", 19, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), ofdm_decoder_inst : ofdm_decoder (ofdm_decoder.v)]", 18, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), eq_delay_inst : delayT (delayT.v)]", 17, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), equalizer_inst : equalizer (equalizer.v)]", 16, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), rotafft_inst : rot_after_fft (rot_after_fft.v)]", 15, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), sync_long_inst : sync_long (sync_long.v)]", 14, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), sync_short_inst : sync_short (sync_short.v)]", 13, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), phase_inst : phase (phase.v)]", 12, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), rot_lut_inst : rot_lut (rot_lut.xci)]", 11, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v)]", 10, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, openofdm_rx (openofdm_rx.v), signal_watchdog_inst : signal_watchdog (signal_watchdog.v)]", 9, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, openofdm_rx (openofdm_rx.v), dot11_setting_agent_i : dot11_setting_agent (dot11_setting_agent.v)]", 8, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, openofdm_rx (openofdm_rx.v)]", 7, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog Header, openofdm_rx_pre_def.v]", 6, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog Header, openofdm_rx_git_rev.v]", 5, false); // D
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, General Messages, [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/ip_upgrade.log'.. ]", 10, false); // ah
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\ASUS\Downloads\Openofdm\openofdm-dot11zynq\Wifi\openofdm_rx\ip_upgrade.log;-;;-;16;-;"); // ah
+// Elapsed time: 26 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // o
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // an
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// e (cs):  Run Simulation : addNotify
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: generate_target all [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/deinter_lut/deinter_lut.xci] 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'deinter_lut'... INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'deinter_lut'... INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'deinter_lut'... INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'deinter_lut'... 
+// Tcl Message: export_ip_user_files -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/deinter_lut/deinter_lut.xci] -no_script -sync -force -quiet 
+// TclEventType: PROJECT_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// Tcl Message: create_fileset -blockset deinter_lut 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: set_property top deinter_lut [get_fileset deinter_lut] 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,147 MB. GUI used memory: 103 MB. Current time: 7/9/25, 4:54:21 PM IST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: move_files -fileset [get_fileset deinter_lut] [get_files -of_objects [get_fileset sources_1] C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/deinter_lut/deinter_lut.xci] 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: generate_target all [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/div_gen_csi_over_nova/div_gen_csi_over_nova.xci] 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'div_gen_csi_over_nova'... INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'div_gen_csi_over_nova'... INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'div_gen_csi_over_nova'... INFO: [IP_Flow 19-1686] Generating 'C Simulation' target for IP 'div_gen_csi_over_nova'... INFO: [IP_Flow 19-1686] Generating 'Test Bench' target for IP 'div_gen_csi_over_nova'... INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'div_gen_csi_over_nova'... 
+// Tcl Message: export_ip_user_files -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/div_gen_csi_over_nova/div_gen_csi_over_nova.xci] -no_script -sync -force -quiet 
+// TclEventType: PROJECT_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// Tcl Message: create_fileset -blockset div_gen_csi_over_nova 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: set_property top div_gen_csi_over_nova [get_fileset div_gen_csi_over_nova] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: move_files -fileset [get_fileset div_gen_csi_over_nova] [get_files -of_objects [get_fileset sources_1] C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/div_gen_csi_over_nova/div_gen_csi_over_nova.xci] 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: generate_target Simulation [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/complex_multiplier/complex_multiplier.xci] 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'complex_multiplier'... 
+// Tcl Message: export_ip_user_files -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/complex_multiplier/complex_multiplier.xci] -no_script -sync -force -quiet 
+// TclEventType: PROJECT_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: generate_target Simulation [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/div_gen_new/src/div_gen_xlslice_0_0/div_gen_xlslice_0_0.xci] 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'div_gen_xlslice_0_0'... 
+// Tcl Message: export_ip_user_files -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/div_gen_new/src/div_gen_xlslice_0_0/div_gen_xlslice_0_0.xci] -no_script -sync -force -quiet 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,147 MB. GUI used memory: 101 MB. Current time: 7/9/25, 4:54:51 PM IST
+// TclEventType: PROJECT_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: generate_target all [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/div_gen_new/src/div_gen_div_gen_0_0/div_gen_div_gen_0_0.xci] 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'div_gen_div_gen_0_0'... INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'div_gen_div_gen_0_0'... INFO: [IP_Flow 19-1686] Generating 'C Simulation' target for IP 'div_gen_div_gen_0_0'... INFO: [IP_Flow 19-1686] Generating 'Test Bench' target for IP 'div_gen_div_gen_0_0'... INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'div_gen_div_gen_0_0'... 
+// Tcl Message: export_ip_user_files -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/div_gen_new/src/div_gen_div_gen_0_0/div_gen_div_gen_0_0.xci] -no_script -sync -force -quiet 
+// TclEventType: PROJECT_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// Tcl Message: create_fileset -blockset div_gen_div_gen_0_0 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: set_property top div_gen_div_gen_0_0 [get_fileset div_gen_div_gen_0_0] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: move_files -fileset [get_fileset div_gen_div_gen_0_0] [get_files -of_objects [get_fileset sources_1] C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/div_gen_new/src/div_gen_div_gen_0_0/div_gen_div_gen_0_0.xci] 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: generate_target all [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/div_for_rotafft/div_for_rotafft.xci] 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'div_for_rotafft'... INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'div_for_rotafft'... INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'div_for_rotafft'... INFO: [IP_Flow 19-1686] Generating 'C Simulation' target for IP 'div_for_rotafft'... INFO: [IP_Flow 19-1686] Generating 'Test Bench' target for IP 'div_for_rotafft'... INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'div_for_rotafft'... 
+// Tcl Message: export_ip_user_files -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/div_for_rotafft/div_for_rotafft.xci] -no_script -sync -force -quiet 
+// TclEventType: PROJECT_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// Tcl Message: create_fileset -blockset div_for_rotafft 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: set_property top div_for_rotafft [get_fileset div_for_rotafft] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: move_files -fileset [get_fileset div_for_rotafft] [get_files -of_objects [get_fileset sources_1] C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/div_for_rotafft/div_for_rotafft.xci] 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: generate_target all [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/xfft/xfft_v9.xci] 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'xfft_v9'... INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'xfft_v9'... INFO: [IP_Flow 19-1686] Generating 'C Simulation' target for IP 'xfft_v9'... INFO: [IP_Flow 19-1686] Generating 'Test Bench' target for IP 'xfft_v9'... INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'xfft_v9'... 
+// Tcl Message: export_ip_user_files -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/xfft/xfft_v9.xci] -no_script -sync -force -quiet 
+// TclEventType: PROJECT_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// Tcl Message: create_fileset -blockset xfft_v9 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: set_property top xfft_v9 [get_fileset xfft_v9] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: move_files -fileset [get_fileset xfft_v9] [get_files -of_objects [get_fileset sources_1] C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/xfft/xfft_v9.xci] 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: generate_target Simulation [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/atan_lut/atan_lut.xci] 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'atan_lut'... 
+// Tcl Message: export_ip_user_files -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/atan_lut/atan_lut.xci] -no_script -sync -force -quiet 
+// TclEventType: PROJECT_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: generate_target all [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/rot_lut/rot_lut.xci] 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'rot_lut'... INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'rot_lut'... INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'rot_lut'... INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'rot_lut'... 
+// Tcl Message: export_ip_user_files -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/rot_lut/rot_lut.xci] -no_script -sync -force -quiet 
+// TclEventType: PROJECT_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// Tcl Message: create_fileset -blockset rot_lut 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: set_property top rot_lut [get_fileset rot_lut] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: move_files -fileset [get_fileset rot_lut] [get_files -of_objects [get_fileset sources_1] C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/rot_lut/rot_lut.xci] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_run {deinter_lut_synth_1 div_gen_csi_over_nova_synth_1 div_gen_div_gen_0_0_synth_1 div_for_rotafft_synth_1 xfft_v9_synth_1 rot_lut_synth_1} 
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: wait_on_run deinter_lut_synth_1  
+// Tcl Message: [Wed Jul  9 16:55:10 2025] Waiting for deinter_lut_synth_1 to finish... 
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: [Wed Jul  9 16:55:16 2025] Waiting for deinter_lut_synth_1 to finish... 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,147 MB. GUI used memory: 103 MB. Current time: 7/9/25, 4:55:21 PM IST
+// Tcl Message: [Wed Jul  9 16:55:21 2025] Waiting for deinter_lut_synth_1 to finish... 
+// Tcl Message: [Wed Jul  9 16:55:26 2025] Waiting for deinter_lut_synth_1 to finish... 
+// Tcl Message: [Wed Jul  9 16:55:36 2025] Waiting for deinter_lut_synth_1 to finish... 
+// Tcl Message: [Wed Jul  9 16:55:46 2025] Waiting for deinter_lut_synth_1 to finish... 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,147 MB. GUI used memory: 102 MB. Current time: 7/9/25, 4:55:51 PM IST
+// Tcl Message: [Wed Jul  9 16:55:56 2025] Waiting for deinter_lut_synth_1 to finish... 
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: [Wed Jul  9 16:56:06 2025] Waiting for deinter_lut_synth_1 to finish... 
+// Tcl Message: [Wed Jul  9 16:56:06 2025] deinter_lut_synth_1 finished 
+// Tcl Message: wait_on_run: Time (s): cpu = 00:00:03 ; elapsed = 00:00:56 . Memory (MB): peak = 1137.098 ; gain = 0.000 
+// Tcl Message: wait_on_run deinter_lut_synth_1 wait_on_run div_gen_csi_over_nova_synth_1  
+// Tcl Message: [Wed Jul  9 16:56:06 2025] Waiting for deinter_lut_synth_1 to finish... 
+// Tcl Message: [Wed Jul  9 16:56:06 2025] deinter_lut_synth_1 finished [Wed Jul  9 16:56:06 2025] Waiting for div_gen_csi_over_nova_synth_1 to finish... 
+// Tcl Message: [Wed Jul  9 16:56:11 2025] Waiting for div_gen_csi_over_nova_synth_1 to finish... 
+// Tcl Message: [Wed Jul  9 16:56:16 2025] Waiting for div_gen_csi_over_nova_synth_1 to finish... 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,147 MB. GUI used memory: 103 MB. Current time: 7/9/25, 4:56:21 PM IST
+// Tcl Message: [Wed Jul  9 16:56:21 2025] Waiting for div_gen_csi_over_nova_synth_1 to finish... 
+// Tcl Message: [Wed Jul  9 16:56:31 2025] Waiting for div_gen_csi_over_nova_synth_1 to finish... 
+// Tcl Message: [Wed Jul  9 16:56:42 2025] Waiting for div_gen_csi_over_nova_synth_1 to finish... 
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: [Wed Jul  9 16:56:47 2025] div_gen_csi_over_nova_synth_1 finished 
+// Tcl Message: wait_on_run: Time (s): cpu = 00:00:03 ; elapsed = 00:00:40 . Memory (MB): peak = 1137.098 ; gain = 0.000 
+// Tcl Message: wait_on_run deinter_lut_synth_1 wait_on_run div_gen_csi_over_nova_synth_1 wait_on_run div_gen_div_gen_0_0_synth_1  
+// Tcl Message: [Wed Jul  9 16:56:47 2025] Waiting for deinter_lut_synth_1 to finish... 
+// Tcl Message: [Wed Jul  9 16:56:47 2025] deinter_lut_synth_1 finished [Wed Jul  9 16:56:47 2025] Waiting for div_gen_csi_over_nova_synth_1 to finish... 
+// Tcl Message: [Wed Jul  9 16:56:47 2025] div_gen_csi_over_nova_synth_1 finished [Wed Jul  9 16:56:47 2025] Waiting for div_gen_div_gen_0_0_synth_1 to finish... 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,147 MB. GUI used memory: 103 MB. Current time: 7/9/25, 4:56:51 PM IST
+// Tcl Message: [Wed Jul  9 16:56:52 2025] Waiting for div_gen_div_gen_0_0_synth_1 to finish... 
+// Tcl Message: [Wed Jul  9 16:56:57 2025] Waiting for div_gen_div_gen_0_0_synth_1 to finish... 
+// Tcl Message: [Wed Jul  9 16:57:02 2025] Waiting for div_gen_div_gen_0_0_synth_1 to finish... 
+// Tcl Message: [Wed Jul  9 16:57:12 2025] Waiting for div_gen_div_gen_0_0_synth_1 to finish... 
+// Tcl Message: [Wed Jul  9 16:57:22 2025] Waiting for div_gen_div_gen_0_0_synth_1 to finish... 
+// Elapsed time: 221 seconds
+selectButton(RDIResource.ProgressDialog_BACKGROUND, "Background"); // a
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// 'd' command handler elapsed time: 221 seconds
+// Tcl Message: [Wed Jul  9 16:57:32 2025] Waiting for div_gen_div_gen_0_0_synth_1 to finish... 
+// Tcl Message: [Wed Jul  9 16:57:32 2025] div_gen_div_gen_0_0_synth_1 finished 
+// Tcl Message: wait_on_run: Time (s): cpu = 00:00:02 ; elapsed = 00:00:46 . Memory (MB): peak = 1137.098 ; gain = 0.000 
+// Tcl Message: wait_on_run deinter_lut_synth_1 wait_on_run div_gen_csi_over_nova_synth_1 wait_on_run div_gen_div_gen_0_0_synth_1 wait_on_run div_for_rotafft_synth_1  
+// Tcl Message: [Wed Jul  9 16:57:33 2025] Waiting for deinter_lut_synth_1 to finish... 
+// Tcl Message: [Wed Jul  9 16:57:33 2025] deinter_lut_synth_1 finished [Wed Jul  9 16:57:33 2025] Waiting for div_gen_csi_over_nova_synth_1 to finish... 
+// Tcl Message: [Wed Jul  9 16:57:33 2025] div_gen_csi_over_nova_synth_1 finished [Wed Jul  9 16:57:33 2025] Waiting for div_gen_div_gen_0_0_synth_1 to finish... 
+// Tcl Message: [Wed Jul  9 16:57:33 2025] div_gen_div_gen_0_0_synth_1 finished [Wed Jul  9 16:57:33 2025] Waiting for div_for_rotafft_synth_1 to finish... 
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "IP Sources", 1); // i
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Hierarchy", 0); // i
+// Tcl Message: [Wed Jul  9 16:57:38 2025] Waiting for div_for_rotafft_synth_1 to finish... 
+selectButton(RDIResource.AbstractSearchablePanel_SHOW_SEARCH, "Sources_search"); // x: TRUE
+// Tcl Message: [Wed Jul  9 16:57:43 2025] Waiting for div_for_rotafft_synth_1 to finish... 
+setText("PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE_SEARCH_FIELD", "compl", true); // OverlayTextField
+// Tcl Message: [Wed Jul  9 16:57:48 2025] Waiting for div_for_rotafft_synth_1 to finish... 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), sync_short_inst : sync_short (sync_short.v), mag_sq_inst : complex_to_mag_sq (complex_to_mag_sq.v), mult_inst : complex_mult (complex_mult.v)]", 5, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), sync_short_inst : sync_short (sync_short.v), mag_sq_inst : complex_to_mag_sq (complex_to_mag_sq.v), mult_inst : complex_mult (complex_mult.v)]", 5, true, false, false, false, false, true); // D - Double Click - Node
+// WARNING: HEventQueue.dispatchEvent() is taking  1313 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,147 MB. GUI used memory: 104 MB. Current time: 7/9/25, 4:57:51 PM IST
+// Tcl Message: [Wed Jul  9 16:57:58 2025] Waiting for div_for_rotafft_synth_1 to finish... 
+// Elapsed time: 14 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), sync_short_inst : sync_short (sync_short.v), delay_prod_inst : complex_mult (complex_mult.v), mult_inst : complex_multiplier (complex_multiplier.xci)]", 7, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), sync_short_inst : sync_short (sync_short.v), delay_prod_inst : complex_mult (complex_mult.v), mult_inst : complex_multiplier (complex_multiplier.xci)]", 7, false, false, false, false, false, true); // D - Double Click
+// Tcl Message: [Wed Jul  9 16:58:08 2025] Waiting for div_for_rotafft_synth_1 to finish... 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), sync_short_inst : sync_short (sync_short.v), delay_prod_inst : complex_mult (complex_mult.v), mult_inst : complex_multiplier (complex_multiplier.xci)]", 7, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), sync_short_inst : sync_short (sync_short.v), delay_prod_inst : complex_mult (complex_mult.v), mult_inst : complex_multiplier (complex_multiplier.xci)]", 7, false, false, false, false, false, true); // D - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), sync_short_inst : sync_short (sync_short.v), delay_prod_inst : complex_mult (complex_mult.v)]", 6, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), sync_short_inst : sync_short (sync_short.v), delay_prod_inst : complex_mult (complex_mult.v)]", 6, true, false, false, false, false, true); // D - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), sync_short_inst : sync_short (sync_short.v), delay_prod_avg_mag_inst : complex_to_mag (complex_to_mag.v)]", 7, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), sync_short_inst : sync_short (sync_short.v), delay_prod_avg_mag_inst : complex_to_mag (complex_to_mag.v)]", 7, false, false, false, false, false, true); // D - Double Click
+// WARNING: HEventQueue.dispatchEvent() is taking  1298 ms.
+// Tcl Message: [Wed Jul  9 16:58:18 2025] Waiting for div_for_rotafft_synth_1 to finish... 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), sync_long_inst : sync_long (sync_long.v), sum_mag_inst : complex_to_mag (complex_to_mag.v)]", 9, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), sync_long_inst : sync_long (sync_long.v), sum_mag_inst : complex_to_mag (complex_to_mag.v)]", 9, false, false, false, false, false, true); // D - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), sync_long_inst : sync_long (sync_long.v)]", 8, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), sync_long_inst : sync_long (sync_long.v)]", 8, true, false, false, false, false, true); // D - Double Click - Node
+// WARNING: HEventQueue.dispatchEvent() is taking  1312 ms.
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, openofdm_rx (openofdm_rx.v)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, openofdm_rx (openofdm_rx.v)]", 1, true, false, false, false, false, true); // D - Double Click - Node
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, dot11_tb (dot11_tb.v)]", 4, true); // D - Node
+// TclEventType: RUN_STATUS_CHANGE
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, dot11_tb (dot11_tb.v)]", 4, true, false, false, false, false, true); // D - Double Click - Node
+// Tcl Message: [Wed Jul  9 16:58:28 2025] Waiting for div_for_rotafft_synth_1 to finish... 
+// Tcl Message: [Wed Jul  9 16:58:28 2025] div_for_rotafft_synth_1 finished 
+// Tcl Message: wait_on_run: Time (s): cpu = 00:00:06 ; elapsed = 00:00:56 . Memory (MB): peak = 1137.098 ; gain = 0.000 
+// Tcl Message: wait_on_run deinter_lut_synth_1 wait_on_run div_gen_csi_over_nova_synth_1 wait_on_run div_gen_div_gen_0_0_synth_1 wait_on_run div_for_rotafft_synth_1 wait_on_run xfft_v9_synth_1  
+// Tcl Message: [Wed Jul  9 16:58:28 2025] Waiting for deinter_lut_synth_1 to finish... 
+// Tcl Message: [Wed Jul  9 16:58:29 2025] deinter_lut_synth_1 finished [Wed Jul  9 16:58:29 2025] Waiting for div_gen_csi_over_nova_synth_1 to finish... 
+// Tcl Message: [Wed Jul  9 16:58:29 2025] div_gen_csi_over_nova_synth_1 finished [Wed Jul  9 16:58:29 2025] Waiting for div_gen_div_gen_0_0_synth_1 to finish... 
+// Tcl Message: [Wed Jul  9 16:58:29 2025] div_gen_div_gen_0_0_synth_1 finished [Wed Jul  9 16:58:29 2025] Waiting for div_for_rotafft_synth_1 to finish... 
+// Tcl Message: [Wed Jul  9 16:58:29 2025] div_for_rotafft_synth_1 finished [Wed Jul  9 16:58:29 2025] Waiting for xfft_v9_synth_1 to finish... 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, openofdm_rx (openofdm_rx.v)]", 5, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, openofdm_rx (openofdm_rx.v)]", 5, true, false, false, false, false, true); // D - Double Click - Node
+// Tcl Message: [Wed Jul  9 16:58:34 2025] Waiting for xfft_v9_synth_1 to finish... 
+// Tcl Message: [Wed Jul  9 16:58:39 2025] Waiting for xfft_v9_synth_1 to finish... 
+// Tcl Message: [Wed Jul  9 16:58:44 2025] Waiting for xfft_v9_synth_1 to finish... 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,147 MB. GUI used memory: 106 MB. Current time: 7/9/25, 4:58:51 PM IST
+// Tcl Message: [Wed Jul  9 16:58:54 2025] Waiting for xfft_v9_synth_1 to finish... 
+// Tcl Message: [Wed Jul  9 16:59:04 2025] Waiting for xfft_v9_synth_1 to finish... 
+// Tcl Message: [Wed Jul  9 16:59:14 2025] Waiting for xfft_v9_synth_1 to finish... 
+// Elapsed time: 46 seconds
+setText("PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE_SEARCH_FIELD", "vite"); // OverlayTextField
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), ofdm_decoder_inst : ofdm_decoder (ofdm_decoder.v)]", 3, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), ofdm_decoder_inst : ofdm_decoder (ofdm_decoder.v)]", 3, true, false, false, false, false, true); // D - Double Click - Node
+// WARNING: HEventQueue.dispatchEvent() is taking  1299 ms.
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), ofdm_decoder_inst : ofdm_decoder (ofdm_decoder.v)]", 3, true); // D - Node
+// HMemoryUtils.trashcanNow. Engine heap size: 1,147 MB. GUI used memory: 107 MB. Current time: 7/9/25, 4:59:21 PM IST
+selectCodeEditor("ofdm_decoder.v", 127, 190); // bP
+// Tcl Message: [Wed Jul  9 16:59:24 2025] Waiting for xfft_v9_synth_1 to finish... 
+// Tcl Message: [Wed Jul  9 16:59:44 2025] Waiting for xfft_v9_synth_1 to finish... 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,147 MB. GUI used memory: 107 MB. Current time: 7/9/25, 4:59:51 PM IST
+// Elapsed time: 36 seconds
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, dot11_tb (dot11_tb.v), dot11_inst : dot11 (dot11.v), ofdm_decoder_inst : ofdm_decoder (ofdm_decoder.v)]", 8); // D
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, dot11_tb (dot11_tb.v), dot11_inst : dot11 (dot11.v), ofdm_decoder_inst : ofdm_decoder (ofdm_decoder.v)]", 8); // D
+// Tcl Message: [Wed Jul  9 16:59:59 2025] xfft_v9_synth_1 finished 
+// Tcl Message: wait_on_run: Time (s): cpu = 00:00:07 ; elapsed = 00:01:31 . Memory (MB): peak = 1137.098 ; gain = 0.000 
+// Tcl Message: wait_on_run deinter_lut_synth_1 wait_on_run div_gen_csi_over_nova_synth_1 wait_on_run div_gen_div_gen_0_0_synth_1 wait_on_run div_for_rotafft_synth_1 wait_on_run xfft_v9_synth_1 wait_on_run rot_lut_synth_1  
+// Tcl Message: [Wed Jul  9 17:00:00 2025] Waiting for deinter_lut_synth_1 to finish... 
+// Tcl Message: [Wed Jul  9 17:00:00 2025] deinter_lut_synth_1 finished [Wed Jul  9 17:00:00 2025] Waiting for div_gen_csi_over_nova_synth_1 to finish... 
+// Tcl Message: [Wed Jul  9 17:00:00 2025] div_gen_csi_over_nova_synth_1 finished [Wed Jul  9 17:00:00 2025] Waiting for div_gen_div_gen_0_0_synth_1 to finish... 
+// Tcl Message: [Wed Jul  9 17:00:00 2025] div_gen_div_gen_0_0_synth_1 finished [Wed Jul  9 17:00:00 2025] Waiting for div_for_rotafft_synth_1 to finish... 
+// Tcl Message: [Wed Jul  9 17:00:00 2025] div_for_rotafft_synth_1 finished [Wed Jul  9 17:00:00 2025] Waiting for xfft_v9_synth_1 to finish... 
+// Tcl Message: [Wed Jul  9 17:00:00 2025] xfft_v9_synth_1 finished [Wed Jul  9 17:00:00 2025] Waiting for rot_lut_synth_1 to finish... 
+// Tcl Message: [Wed Jul  9 17:00:05 2025] Waiting for rot_lut_synth_1 to finish... 
+// Elapsed time: 11 seconds
+selectCodeEditor("ofdm_decoder.v", 265, 215); // bP
+// Tcl Message: [Wed Jul  9 17:00:10 2025] Waiting for rot_lut_synth_1 to finish... 
+typeControlKey((HResource) null, "ofdm_decoder.v", 'c'); // bP
+// Tcl Message: [Wed Jul  9 17:00:15 2025] Waiting for rot_lut_synth_1 to finish... 
+// Tcl Message: [Wed Jul  9 17:00:25 2025] Waiting for rot_lut_synth_1 to finish... 
+// Tcl Message: [Wed Jul  9 17:00:35 2025] Waiting for rot_lut_synth_1 to finish... 
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Tcl Message: [Wed Jul  9 17:00:45 2025] Waiting for rot_lut_synth_1 to finish... 
+// Tcl Message: [Wed Jul  9 17:00:45 2025] rot_lut_synth_1 finished 
+// Tcl Message: wait_on_run: Time (s): cpu = 00:00:04 ; elapsed = 00:00:45 . Memory (MB): peak = 1137.098 ; gain = 0.000 
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// Tcl Message: INFO: [Vivado 12-12493] Simulation top is 'dot11_tb' INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator... INFO: [Runs 36-567] Checking/generating simulation output products for IPs/BDs (if any)... 
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// Tcl Message: INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.sim/sim_1/behav/xsim' 
+// Tcl Message: "xvlog --incr --relax -prj dot11_tb_vlog.prj" 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,147 MB. GUI used memory: 109 MB. Current time: 7/9/25, 5:00:51 PM IST
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 1137.098 ; gain = 0.000 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '8' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.sim/sim_1/behav/xsim' 
+// Tcl Message: "xelab -wto c368398a2f7640a9bd0564b667426500 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_4_4 -L xbip_utils_v3_0_10 -L axi_utils_v2_0_6 -L xbip_pipe_v3_0_6 -L xbip_dsp48_wrapper_v3_0_4 -L xbip_dsp48_addsub_v3_0_6 -L xbip_bram18k_v3_0_6 -L mult_gen_v12_0_17 -L floating_point_v7_0_19 -L xbip_dsp48_mult_v3_0_6 -L xbip_dsp48_multadd_v3_0_6 -L div_gen_v5_1_18 -L cmpy_v6_0_20 -L xlslice_v1_0_2 -L c_reg_fd_v12_0_6 -L xbip_addsub_v3_0_6 -L c_addsub_v12_0_14 -L c_mux_bit_v12_0_6 -L c_shift_ram_v12_0_14 -L xfft_v9_1_6 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot dot11_tb_behav xil_defaultlib.dot11_tb xil_defaultlib.glbl -log elaborate.log" 
+// TclEventType: LAUNCH_SIM
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds INFO: [USF-XSim-99] Step results log file:'C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.sim/sim_1/behav/xsim/elaborate.log' 
+// Tcl Message: ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.sim/sim_1/behav/xsim/elaborate.log' file for more information. ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation. 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:12 . Memory (MB): peak = 1137.098 ; gain = 0.000 
+// Tcl Message: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  
+// HOptionPane Error: 'ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  (Run Simulation)'
+// Elapsed time: 45 seconds
+dismissDialog("Run Simulation"); // e
+// TclEventType: FILE_SET_CHANGE
+selectButton("OptionPane.button", "OK"); // JButton
+// a (cs): Critical Messages: addNotify
+// [GUI Memory]: 174 MB (+3051kb) [00:18:04]
+selectButton(PAResourceAtoD.CmdMsgDialog_OPEN_MESSAGES_VIEW, "Open Messages View"); // a
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Critical Messages"); // a
+// Elapsed time: 184 seconds
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // E
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cs): Add Sources: addNotify
+selectButton("CANCEL", "Cancel"); // JButton
+dismissDialog("Add Sources"); // c
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), ofdm_decoder_inst : ofdm_decoder (ofdm_decoder.v), viterbi_inst : viterbi_v7_0 (viterbi_v7_0.xci)]", 13, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), ofdm_decoder_inst : ofdm_decoder (ofdm_decoder.v), viterbi_inst : viterbi_v7_0 (viterbi_v7_0.xci)]", 13, false, false, false, false, true, false); // D - Popup Trigger
+selectMenu(PAResourceQtoS.SrcMenu_IP_DOCUMENTATION, "IP Documentation"); // ak
+selectMenu(PAResourceQtoS.SrcMenu_IP_DOCUMENTATION, "IP Documentation"); // ak
+selectMenu(PAResourceQtoS.SrcMenu_IP_DOCUMENTATION, "IP Documentation"); // ak
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ak
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ak
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ak
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ak
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // an
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (cs): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// 'c' command handler elapsed time: 5 seconds
+dismissDialog("Remove Sources"); // aE
+// Tcl Message: export_ip_user_files -of_objects  [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/viterbi/viterbi_v7_0.xci] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: PROJ_DESIGN_MODE_SET
+// Tcl Message: remove_files  C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/viterbi/viterbi_v7_0.xci 
+// aE (cs): Remove Sources: addNotify
+// bz (aE):  Remove Sources : addNotify
+dismissDialog("Remove Sources"); // bz
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // E
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cs): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a
+// Elapsed time: 19 seconds
+String[] filenames31467 = {"C:/Users/ASUS/Downloads/Openofdm/openofdm-39cec9f3ecf3d67069461a3e2bb85d5594712d05/verilog/coregen/viterbi_v7_0.ngc", "C:/Users/ASUS/Downloads/Openofdm/openofdm-39cec9f3ecf3d67069461a3e2bb85d5594712d05/verilog/coregen/viterbi_v7_0.v", "C:/Users/ASUS/Downloads/Openofdm/openofdm-39cec9f3ecf3d67069461a3e2bb85d5594712d05/verilog/coregen/viterbi_v7_0.veo", "C:/Users/ASUS/Downloads/Openofdm/openofdm-39cec9f3ecf3d67069461a3e2bb85d5594712d05/verilog/coregen/viterbi_v7_0.vhd", "C:/Users/ASUS/Downloads/Openofdm/openofdm-39cec9f3ecf3d67069461a3e2bb85d5594712d05/verilog/coregen/viterbi_v7_0.vho", "C:/Users/ASUS/Downloads/Openofdm/openofdm-39cec9f3ecf3d67069461a3e2bb85d5594712d05/verilog/coregen/viterbi_v7_0.xco", "C:/Users/ASUS/Downloads/Openofdm/openofdm-39cec9f3ecf3d67069461a3e2bb85d5594712d05/verilog/coregen/viterbi_v7_0rombram.mif", "C:/Users/ASUS/Downloads/Openofdm/openofdm-39cec9f3ecf3d67069461a3e2bb85d5594712d05/verilog/coregen/viterbi_v7_0romlifo.mif", "C:/Users/ASUS/Downloads/Openofdm/openofdm-39cec9f3ecf3d67069461a3e2bb85d5594712d05/verilog/coregen/viterbi_v7_0romwe.mif"};
+setFileChooser(filenames31467);
+selectButton("FINISH", "Finish"); // JButton
+// 'g' command handler elapsed time: 25 seconds
+dismissDialog("Add Sources"); // c
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse {C:/Users/ASUS/Downloads/Openofdm/openofdm-39cec9f3ecf3d67069461a3e2bb85d5594712d05/verilog/coregen/viterbi_v7_0.ngc C:/Users/ASUS/Downloads/Openofdm/openofdm-39cec9f3ecf3d67069461a3e2bb85d5594712d05/verilog/coregen/viterbi_v7_0romlifo.mif C:/Users/ASUS/Downloads/Openofdm/openofdm-39cec9f3ecf3d67069461a3e2bb85d5594712d05/verilog/coregen/viterbi_v7_0.xco C:/Users/ASUS/Downloads/Openofdm/openofdm-39cec9f3ecf3d67069461a3e2bb85d5594712d05/verilog/coregen/viterbi_v7_0rombram.mif C:/Users/ASUS/Downloads/Openofdm/openofdm-39cec9f3ecf3d67069461a3e2bb85d5594712d05/verilog/coregen/viterbi_v7_0romwe.mif} 
+// bz (cs):  Add Sources  : addNotify
+// Tcl Message: export_ip_user_files -of_objects  [get_files  C:/Users/ASUS/Downloads/Openofdm/openofdm-39cec9f3ecf3d67069461a3e2bb85d5594712d05/verilog/coregen/viterbi_v7_0.xco] -lib_map_path [list {modelsim=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.cache/compile_simlib/modelsim} {questa=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.cache/compile_simlib/questa} {riviera=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.cache/compile_simlib/riviera} {activehdl=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.cache/compile_simlib/activehdl}] -force -quiet 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse {C:/Users/ASUS/Downloads/Openofdm/openofdm-39cec9f3ecf3d67069461a3e2bb85d5594712d05/verilog/coregen/viterbi_v7_0.veo C:/Users/ASUS/Downloads/Openofdm/openofdm-39cec9f3ecf3d67069461a3e2bb85d5594712d05/verilog/coregen/viterbi_v7_0.vhd C:/Users/ASUS/Downloads/Openofdm/openofdm-39cec9f3ecf3d67069461a3e2bb85d5594712d05/verilog/coregen/viterbi_v7_0.v C:/Users/ASUS/Downloads/Openofdm/openofdm-39cec9f3ecf3d67069461a3e2bb85d5594712d05/verilog/coregen/viterbi_v7_0.vho} 
+// a (cs): Critical Messages: addNotify
+dismissDialog("Add Sources"); // bz
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 16 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f
+dismissDialog("Critical Messages"); // a
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), ofdm_decoder_inst : ofdm_decoder (ofdm_decoder.v), viterbi_inst : viterbi_v7_0 (viterbi_v7_0.xco)]", 19, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), ofdm_decoder_inst : ofdm_decoder (ofdm_decoder.v), viterbi_inst : viterbi_v7_0 (viterbi_v7_0.xco)]", 19, false, false, false, false, true, false); // D - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // an
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (cs): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Remove Sources"); // aE
+// Tcl Message: export_ip_user_files -of_objects  [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-39cec9f3ecf3d67069461a3e2bb85d5594712d05/verilog/coregen/viterbi_v7_0.xco] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: PROJ_DESIGN_MODE_SET
+// Tcl Message: remove_files  C:/Users/ASUS/Downloads/Openofdm/openofdm-39cec9f3ecf3d67069461a3e2bb85d5594712d05/verilog/coregen/viterbi_v7_0.xco 
+// aE (cs): Remove Sources: addNotify
+// bz (aE):  Remove Sources : addNotify
+dismissDialog("Remove Sources"); // bz
+// [GUI Memory]: 187 MB (+4817kb) [00:22:21]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), ofdm_decoder_inst : ofdm_decoder (ofdm_decoder.v), viterbi_inst : viterbi_v7_0 (viterbi_v7_0.v)]", 17, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), ofdm_decoder_inst : ofdm_decoder (ofdm_decoder.v), viterbi_inst : viterbi_v7_0 (viterbi_v7_0.v)]", 17, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), ofdm_decoder_inst : ofdm_decoder (ofdm_decoder.v), viterbi_inst : viterbi_v7_0 (viterbi_v7_0.v)]", 17, false, false, false, false, false, true); // D - Double Click
+// [GUI Memory]: 218 MB (+23330kb) [00:22:30]
+// WARNING: HEventQueue.dispatchEvent() is taking  1789 ms.
+// [GUI Memory]: 235 MB (+5513kb) [00:22:30]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), ofdm_decoder_inst : ofdm_decoder (ofdm_decoder.v), viterbi_inst : viterbi_v7_0 (viterbi_v7_0.v)]", 17, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, openofdm_rx (openofdm_rx.v), dot11_i : dot11 (dot11.v), ofdm_decoder_inst : ofdm_decoder (ofdm_decoder.v), viterbi_inst : viterbi_v7_0 (viterbi_v7_0.v)]", 17, false, false, false, false, false, true); // D - Double Click
+// WARNING: HEventQueue.dispatchEvent() is taking  67133 ms.
+// Thread: pool-55-thread-1
+// 	at java.base@11.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+// 	at java.base@11.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+// 	at java.base@11.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: Monitor File Timestamp Swing Worker Thread
+// 	at java.base@11.0.2/java.lang.Thread.sleep(Native Method)
+// 	at ui.views.f.aOo(SourceFile:242)
+// 	at ui.frmwork.y.run(SourceFile:203)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: pool-32-thread-1
+// 	at java.base@11.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+// 	at java.base@11.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+// 	at java.base@11.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: Monitor File Timestamp Swing Worker Thread
+// 	at java.base@11.0.2/java.lang.Thread.sleep(Native Method)
+// 	at ui.views.f.aOo(SourceFile:242)
+// 	at ui.frmwork.y.run(SourceFile:203)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: ForkJoinPool.commonPool-worker-13
+// 	at java.base@11.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+// 	at java.base@11.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1628)
+// 	at java.base@11.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+// Thread: Attach Listener
+// Thread: pool-37-thread-1
+// 	at java.base@11.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+// 	at java.base@11.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+// 	at java.base@11.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: Monitor File Timestamp Swing Worker Thread
+// 	at java.base@11.0.2/java.lang.Thread.sleep(Native Method)
+// 	at ui.views.f.aOo(SourceFile:242)
+// 	at ui.frmwork.y.run(SourceFile:203)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: Life support thread
+// 	at java.base@11.0.2/java.lang.Thread.sleep(Native Method)
+// 	at com.sigasi.lcm.l.run(SourceFile:82)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: pool-28-thread-1
+// 	at java.base@11.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+// 	at java.base@11.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+// 	at java.base@11.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: pool-41-thread-1
+// 	at java.base@11.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+// 	at java.base@11.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+// 	at java.base@11.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: pool-53-thread-1
+// 	at java.base@11.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+// 	at java.base@11.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+// 	at java.base@11.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: pool-17-thread-1
+// 	at java.base@11.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+// 	at java.base@11.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+// 	at java.base@11.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: pool-36-thread-1
+// 	at java.base@11.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+// 	at java.base@11.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+// 	at java.base@11.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: Swing-Shell
+// 	at java.base@11.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+// 	at java.base@11.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+// 	at java.base@11.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+// 	at java.desktop@11.0.2/sun.awt.shell.Win32ShellFolderManager2$ComInvoker$1.run(Win32ShellFolderManager2.java:557)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: Monitor HEventQueue Thread
+// 	at java.base@11.0.2/java.lang.Thread.dumpThreads(Native Method)
+// 	at java.base@11.0.2/java.lang.Thread.getAllStackTraces(Thread.java:1657)
+// 	at ui.utils.d.c.iFv(SourceFile:564)
+// 	at ui.frmwork.a.e.aOo(SourceFile:144)
+// 	at ui.frmwork.y.run(SourceFile:203)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: pool-18-thread-1
+// 	at java.base@11.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+// 	at java.base@11.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+// 	at java.base@11.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: pool-3-thread-1
+// 	at java.base@11.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+// 	at java.base@11.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+// 	at java.base@11.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: Timer-8
+// 	at java.base@11.0.2/java.lang.Object.wait(Native Method)
+// 	at java.base@11.0.2/java.util.TimerThread.mainLoop(Timer.java:553)
+// 	at java.base@11.0.2/java.util.TimerThread.run(Timer.java:506)
+// Thread: OutputGobbler
+// 	at java.base@11.0.2/java.io.FileInputStream.readBytes(Native Method)
+// 	at java.base@11.0.2/java.io.FileInputStream.read(FileInputStream.java:279)
+// 	at java.base@11.0.2/java.io.BufferedInputStream.read1(BufferedInputStream.java:290)
+// 	at java.base@11.0.2/java.io.BufferedInputStream.read(BufferedInputStream.java:351)
+// 	at java.base@11.0.2/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+// 	at java.base@11.0.2/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+// 	at java.base@11.0.2/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+// 	at java.base@11.0.2/java.io.InputStreamReader.read(InputStreamReader.java:185)
+// 	at java.base@11.0.2/java.io.BufferedReader.fill(BufferedReader.java:161)
+// 	at java.base@11.0.2/java.io.BufferedReader.readLine(BufferedReader.java:326)
+// 	at java.base@11.0.2/java.io.BufferedReader.readLine(BufferedReader.java:392)
+// 	at java.base@11.0.2/java.io.BufferedReader$1.hasNext(BufferedReader.java:574)
+// 	at java.base@11.0.2/java.util.Iterator.forEachRemaining(Iterator.java:132)
+// 	at java.base@11.0.2/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
+// 	at java.base@11.0.2/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658)
+// 	at com.sigasi.lcm.C.run(SourceFile:43)
+// Thread: Timer-0
+// 	at java.base@11.0.2/java.lang.Object.wait(Native Method)
+// 	at java.base@11.0.2/java.util.TimerThread.mainLoop(Timer.java:553)
+// 	at java.base@11.0.2/java.util.TimerThread.run(Timer.java:506)
+// Thread: pool-26-thread-1
+// 	at java.base@11.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+// 	at java.base@11.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+// 	at java.base@11.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: pool-52-thread-1
+// 	at java.base@11.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+// 	at java.base@11.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+// 	at java.base@11.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: Java2D Disposer
+// 	at java.base@11.0.2/java.lang.Object.wait(Native Method)
+// 	at java.base@11.0.2/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+// 	at java.base@11.0.2/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:176)
+// 	at java.desktop@11.0.2/sun.java2d.Disposer.run(Disposer.java:144)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: pool-48-thread-1
+// 	at java.base@11.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+// 	at java.base@11.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+// 	at java.base@11.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: Timer-3
+// 	at java.base@11.0.2/java.lang.Object.wait(Native Method)
+// 	at java.base@11.0.2/java.util.TimerThread.mainLoop(Timer.java:553)
+// 	at java.base@11.0.2/java.util.TimerThread.run(Timer.java:506)
+// Thread: pool-43-thread-1
+// 	at java.base@11.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+// 	at java.base@11.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+// 	at java.base@11.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: pool-56-thread-1
+// 	at java.base@11.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+// 	at java.base@11.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+// 	at java.base@11.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: SyntheticaCleanerThread
+// 	at java.base@11.0.2/java.lang.Thread.sleep(Native Method)
+// 	at de.javasoft.plaf.synthetica.StyleFactory$ComponentPropertyStore$1.run(StyleFactory.java:1885)
+// Thread: pool-44-thread-1
+// 	at java.base@11.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+// 	at java.base@11.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+// 	at java.base@11.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: pool-39-thread-1
+// 	at java.base@11.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+// 	at java.base@11.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+// 	at java.base@11.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: hw_ila_monitor
+// 	at java.base@11.0.2/java.lang.Object.wait(Native Method)
+// 	at java.base@11.0.2/java.lang.Object.wait(Object.java:328)
+// 	at java.base@11.0.2/java.util.TimerThread.mainLoop(Timer.java:527)
+// 	at java.base@11.0.2/java.util.TimerThread.run(Timer.java:506)
+// Thread: Protocol translation thread 0
+// 	at java.base@11.0.2/java.net.SocketInputStream.socketRead0(Native Method)
+// 	at java.base@11.0.2/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+// 	at java.base@11.0.2/java.net.SocketInputStream.read(SocketInputStream.java:168)
+// 	at java.base@11.0.2/java.net.SocketInputStream.read(SocketInputStream.java:140)
+// 	at java.base@11.0.2/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:448)
+// 	at java.base@11.0.2/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:68)
+// 	at java.base@11.0.2/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1104)
+// 	at java.base@11.0.2/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:823)
+// 	at java.base@11.0.2/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:758)
+// 	at com.sigasi.hdt.epl.lsp4j.PatchedStreamMessageProducer.listen(PatchedStreamMessageProducer.java:78)
+// 	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+// 	at java.base@11.0.2/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+// 	at java.base@11.0.2/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: Watchdog Thread for com.sigasi.lsp.server.BootstrappedLspServer
+// 	at java.base@11.0.2/java.lang.Thread.sleep(Native Method)
+// 	at com.sigasi.lcm.B.run(SourceFile:66)
+// Thread: Monitor File Timestamp Swing Worker Thread
+// 	at java.base@11.0.2/java.lang.Thread.sleep(Native Method)
+// 	at ui.views.f.aOo(SourceFile:242)
+// 	at ui.frmwork.y.run(SourceFile:203)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: Timer-5
+// 	at java.base@11.0.2/java.lang.Object.wait(Native Method)
+// 	at java.base@11.0.2/java.util.TimerThread.mainLoop(Timer.java:553)
+// 	at java.base@11.0.2/java.util.TimerThread.run(Timer.java:506)
+// Thread: Monitor File Timestamp Swing Worker Thread
+// 	at java.base@11.0.2/java.lang.Thread.sleep(Native Method)
+// 	at ui.views.f.aOo(SourceFile:242)
+// 	at ui.frmwork.y.run(SourceFile:203)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: TimerQueue
+// 	at java.base@11.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.2/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+// 	at java.base@11.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
+// 	at java.base@11.0.2/java.util.concurrent.DelayQueue.take(DelayQueue.java:229)
+// 	at java.desktop@11.0.2/javax.swing.TimerQueue.run(TimerQueue.java:171)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: Batik CleanerThread
+// 	at java.base@11.0.2/java.lang.Object.wait(Native Method)
+// 	at java.base@11.0.2/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+// 	at java.base@11.0.2/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:176)
+// 	at org.apache.batik.util.CleanerThread.run(CleanerThread.java:106)
+// Thread: pool-15-thread-1
+// 	at java.base@11.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+// 	at java.base@11.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+// 	at java.base@11.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: pool-47-thread-1
+// 	at java.base@11.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+// 	at java.base@11.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+// 	at java.base@11.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: Signal Dispatcher
+// Thread: Monitor File Timestamp Swing Worker Thread
+// 	at java.base@11.0.2/java.lang.Thread.sleep(Native Method)
+// 	at ui.views.f.aOo(SourceFile:242)
+// 	at ui.frmwork.y.run(SourceFile:203)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: Reference Handler
+// 	at java.base@11.0.2/java.lang.ref.Reference.waitForReferencePendingList(Native Method)
+// 	at java.base@11.0.2/java.lang.ref.Reference.processPendingReferences(Reference.java:241)
+// 	at java.base@11.0.2/java.lang.ref.Reference$ReferenceHandler.run(Reference.java:213)
+// Thread: pool-13-thread-1
+// 	at java.base@11.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+// 	at java.base@11.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+// 	at java.base@11.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: pool-46-thread-1
+// 	at java.base@11.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+// 	at java.base@11.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+// 	at java.base@11.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: pool-6-thread-1
+// 	at java.base@11.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+// 	at java.base@11.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+// 	at java.base@11.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: Update Runs Swing Worker Thread
+// 	at java.base@11.0.2/java.lang.Thread.sleep(Native Method)
+// 	at ui.data.experiment.F.aOo(SourceFile:373)
+// 	at ui.frmwork.y.run(SourceFile:203)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: ForkJoinPool.commonPool-worker-27
+// 	at java.base@11.0.2/java.lang.Object.wait(Native Method)
+// 	at java.base@11.0.2/java.lang.Object.wait(Object.java:328)
+// 	at java.desktop@11.0.2/java.awt.EventQueue.invokeAndWait(EventQueue.java:1361)
+// 	at java.desktop@11.0.2/java.awt.EventQueue.invokeAndWait(EventQueue.java:1342)
+// 	at java.desktop@11.0.2/javax.swing.SwingUtilities.invokeAndWait(SwingUtilities.java:1480)
+// 	at ui.utils.C.F(SourceFile:2794)
+// 	at ui.j.c.o.a(SourceFile:54)
+// 	at ui.j.c.o$$Lambda$479/0x0000000800e13040.accept(Unknown Source)
+// 	at java.base@11.0.2/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:714)
+// 	at java.base@11.0.2/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:479)
+// 	at java.base@11.0.2/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+// 	at java.base@11.0.2/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
+// 	at java.base@11.0.2/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
+// 	at java.base@11.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
+// 	at java.base@11.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+// Thread: main
+// 	at java.base@11.0.2/java.lang.Thread.sleep(Native Method)
+// 	at ui.PlanAhead.c(SourceFile:1171)
+// 	at ui.PlanAhead.jswMain(SourceFile:1218)
+// Thread: pool-35-thread-1
+// 	at java.base@11.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+// 	at java.base@11.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+// 	at java.base@11.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: Common-Cleaner
+// 	at java.base@11.0.2/java.lang.Object.wait(Native Method)
+// 	at java.base@11.0.2/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+// 	at java.base@11.0.2/jdk.internal.ref.CleanerImpl.run(CleanerImpl.java:148)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// 	at java.base@11.0.2/jdk.internal.misc.InnocuousThread.run(InnocuousThread.java:134)
+// Thread: Timer-2
+// 	at java.base@11.0.2/java.lang.Object.wait(Native Method)
+// 	at java.base@11.0.2/java.util.TimerThread.mainLoop(Timer.java:553)
+// 	at java.base@11.0.2/java.util.TimerThread.run(Timer.java:506)
+// Thread: AWT-EventQueue-0
+// 	at java.base@11.0.2/java.util.LinkedList.node(LinkedList.java:575)
+// 	at java.base@11.0.2/java.util.LinkedList.get(LinkedList.java:481)
+// 	at com.jidesoft.editor.folding.DefaultFoldingModel$b_.addFoldingSpan(Unknown Source)
+// 	at com.jidesoft.editor.folding.DefaultFoldingModel.addFoldingSpan(Unknown Source)
+// 	at ui.views.U.a.aS.a(SourceFile:26)
+// 	at ui.views.U.a.S.b(SourceFile:676)
+// 	at ui.views.U.a.S.a(SourceFile:632)
+// 	at ui.j.c.o.b(SourceFile:58)
+// 	at ui.j.c.o$$Lambda$481/0x0000000800e30040.run(Unknown Source)
+// 	at java.desktop@11.0.2/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:303)
+// 	at java.desktop@11.0.2/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:770)
+// 	at java.desktop@11.0.2/java.awt.EventQueue$4.run(EventQueue.java:721)
+// 	at java.desktop@11.0.2/java.awt.EventQueue$4.run(EventQueue.java:715)
+// 	at java.base@11.0.2/java.security.AccessController.doPrivileged(Native Method)
+// 	at java.base@11.0.2/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+// 	at java.desktop@11.0.2/java.awt.EventQueue.dispatchEvent(EventQueue.java:740)
+// 	at ui.frmwork.a.d.dispatchEvent(SourceFile:92)
+// 	at java.desktop@11.0.2/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+// 	at java.desktop@11.0.2/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+// 	at java.desktop@11.0.2/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+// 	at java.desktop@11.0.2/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+// 	at java.desktop@11.0.2/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+// 	at java.desktop@11.0.2/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+// Thread: pool-51-thread-1
+// 	at java.base@11.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+// 	at java.base@11.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+// 	at java.base@11.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: Process Messages Thread
+// 	at java.base@11.0.2/java.lang.Thread.sleep(Native Method)
+// 	at ui.frmwork.c.h.aOo(SourceFile:133)
+// 	at ui.frmwork.y.run(SourceFile:203)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: Finalizer
+// 	at java.base@11.0.2/java.lang.Object.wait(Native Method)
+// 	at java.base@11.0.2/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+// 	at java.base@11.0.2/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:176)
+// 	at java.base@11.0.2/java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:170)
+// Thread: pool-2-thread-1
+// 	at java.base@11.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+// 	at java.base@11.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+// 	at java.base@11.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: pool-54-thread-1
+// 	at java.base@11.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+// 	at java.base@11.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+// 	at java.base@11.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: AWT-Windows
+// 	at java.desktop@11.0.2/sun.awt.windows.WToolkit.eventLoop(Native Method)
+// 	at java.desktop@11.0.2/sun.awt.windows.WToolkit.run(WToolkit.java:303)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: pool-31-thread-1
+// 	at java.base@11.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+// 	at java.base@11.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+// 	at java.base@11.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: pool-50-thread-1
+// 	at java.base@11.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+// 	at java.base@11.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+// 	at java.base@11.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: SyntheticaAnimation 70
+// 	at java.base@11.0.2/java.lang.Thread.sleep(Native Method)
+// 	at de.javasoft.plaf.synthetica.painter.AnimationThreadFactory$AnimationThread.run(AnimationThreadFactory.java:119)
+// Thread: Thread-1
+// Thread: Timer-7
+// 	at java.base@11.0.2/java.lang.Object.wait(Native Method)
+// 	at java.base@11.0.2/java.util.TimerThread.mainLoop(Timer.java:553)
+// 	at java.base@11.0.2/java.util.TimerThread.run(Timer.java:506)
+// Thread: pool-30-thread-1
+// 	at java.base@11.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+// 	at java.base@11.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+// 	at java.base@11.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: pool-5-thread-1
+// 	at java.base@11.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.2/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+// 	at java.base@11.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
+// 	at java.base@11.0.2/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+// 	at java.base@11.0.2/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: AWT-Shutdown
+// 	at java.base@11.0.2/java.lang.Object.wait(Native Method)
+// 	at java.base@11.0.2/java.lang.Object.wait(Object.java:328)
+// 	at java.desktop@11.0.2/sun.awt.AWTAutoShutdown.run(AWTAutoShutdown.java:291)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: pool-23-thread-1
+// 	at java.base@11.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+// 	at java.base@11.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+// 	at java.base@11.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: ErrorGobbler
+// 	at java.base@11.0.2/java.io.FileInputStream.readBytes(Native Method)
+// 	at java.base@11.0.2/java.io.FileInputStream.read(FileInputStream.java:279)
+// 	at java.base@11.0.2/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+// 	at java.base@11.0.2/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+// 	at java.base@11.0.2/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+// 	at java.base@11.0.2/java.io.InputStreamReader.read(InputStreamReader.java:185)
+// 	at java.base@11.0.2/java.io.BufferedReader.fill(BufferedReader.java:161)
+// 	at java.base@11.0.2/java.io.BufferedReader.readLine(BufferedReader.java:326)
+// 	at java.base@11.0.2/java.io.BufferedReader.readLine(BufferedReader.java:392)
+// 	at java.base@11.0.2/java.io.BufferedReader$1.hasNext(BufferedReader.java:574)
+// 	at java.base@11.0.2/java.util.Iterator.forEachRemaining(Iterator.java:132)
+// 	at java.base@11.0.2/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
+// 	at java.base@11.0.2/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658)
+// 	at com.sigasi.lcm.C.run(SourceFile:43)
+// Thread: Timer-4
+// 	at java.base@11.0.2/java.lang.Object.wait(Native Method)
+// 	at java.base@11.0.2/java.util.TimerThread.mainLoop(Timer.java:553)
+// 	at java.base@11.0.2/java.util.TimerThread.run(Timer.java:506)
+// Thread: pool-29-thread-1
+// 	at java.base@11.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+// 	at java.base@11.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+// 	at java.base@11.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: pool-45-thread-1
+// 	at java.base@11.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+// 	at java.base@11.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+// 	at java.base@11.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: pool-34-thread-1
+// 	at java.base@11.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+// 	at java.base@11.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+// 	at java.base@11.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: Refresh Filesets Swing Worker Thread
+// 	at java.base@11.0.2/java.lang.Thread.sleep(Native Method)
+// 	at ui.data.design.z.aOo(SourceFile:2503)
+// 	at ui.frmwork.y.run(SourceFile:203)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: Monitor File Timestamp Swing Worker Thread
+// 	at java.base@11.0.2/java.lang.Thread.sleep(Native Method)
+// 	at ui.views.f.aOo(SourceFile:242)
+// 	at ui.frmwork.y.run(SourceFile:203)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: pool-24-thread-1
+// 	at java.base@11.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+// 	at java.base@11.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+// 	at java.base@11.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: pool-42-thread-1
+// 	at java.base@11.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+// 	at java.base@11.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+// 	at java.base@11.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: pool-38-thread-1
+// 	at java.base@11.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+// 	at java.base@11.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+// 	at java.base@11.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: pool-16-thread-1
+// 	at java.base@11.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+// 	at java.base@11.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+// 	at java.base@11.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: pool-33-thread-1
+// 	at java.base@11.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+// 	at java.base@11.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+// 	at java.base@11.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: Thread-42
+// 	at java.base@11.0.2/java.lang.Thread.sleep(Native Method)
+// 	at ui.j.c.z.ixH(SourceFile:128)
+// 	at ui.j.c.z$$Lambda$257/0x0000000800a34c40.run(Unknown Source)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: Monitor File Timestamp Swing Worker Thread
+// 	at java.base@11.0.2/java.lang.Thread.sleep(Native Method)
+// 	at ui.views.f.aOo(SourceFile:242)
+// 	at ui.frmwork.y.run(SourceFile:203)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: pool-49-thread-1
+// 	at java.base@11.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+// 	at java.base@11.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+// 	at java.base@11.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: EMF Reference Cleaner
+// 	at java.base@11.0.2/java.lang.Object.wait(Native Method)
+// 	at java.base@11.0.2/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+// 	at java.base@11.0.2/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:176)
+// 	at org.eclipse.emf.common.util.CommonUtil$1ReferenceClearingQueuePollingThread.run(CommonUtil.java:70)
+// Thread: SyntheticaAnimation 50
+// 	at java.base@11.0.2/java.lang.Thread.sleep(Native Method)
+// 	at ui.utils.lnf.b.run(SourceFile:100)
+// Thread: pool-1-thread-1
+// 	at java.base@11.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+// 	at java.base@11.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+// 	at java.base@11.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: Timer-9
+// 	at java.base@11.0.2/java.lang.Object.wait(Native Method)
+// 	at java.base@11.0.2/java.util.TimerThread.mainLoop(Timer.java:553)
+// 	at java.base@11.0.2/java.util.TimerThread.run(Timer.java:506)
+// Thread: Monitor File Timestamp Swing Worker Thread
+// 	at java.base@11.0.2/java.lang.Thread.sleep(Native Method)
+// 	at ui.views.f.aOo(SourceFile:242)
+// 	at ui.frmwork.y.run(SourceFile:203)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: pool-40-thread-1
+// 	at java.base@11.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+// 	at java.base@11.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+// 	at java.base@11.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: pool-14-thread-1
+// 	at java.base@11.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+// 	at java.base@11.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+// 	at java.base@11.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: SyntheticaAnimation 25
+// 	at java.base@11.0.2/java.lang.Thread.sleep(Native Method)
+// 	at de.javasoft.plaf.synthetica.painter.AnimationThreadFactory$AnimationThread.run(AnimationThreadFactory.java:119)
+// Thread: pool-25-thread-1
+// 	at java.base@11.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+// 	at java.base@11.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+// 	at java.base@11.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: pool-27-thread-1
+// 	at java.base@11.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+// 	at java.base@11.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+// 	at java.base@11.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+// 	at java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+// 	at java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+// Thread: SyntheticaAnimation 50
+// 	at java.base@11.0.2/java.lang.Thread.sleep(Native Method)
+// 	at de.javasoft.plaf.synthetica.painter.AnimationThreadFactory$AnimationThread.run(AnimationThreadFactory.java:119)
+// Thread: Timer-6
+// 	at java.base@11.0.2/java.lang.Object.wait(Native Method)
+// 	at java.base@11.0.2/java.util.TimerThread.mainLoop(Timer.java:553)
+// 	at java.base@11.0.2/java.util.TimerThread.run(Timer.java:506)
+// WARNING: HEventQueue.dispatchEvent() is taking  2709 ms.
+// Elapsed time: 79 seconds
+selectCodeEditor("viterbi_v7_0.v", 312, 150); // bP
+selectCodeEditor("viterbi_v7_0.v", 832, 130); // bP
+selectCodeEditor("viterbi_v7_0.v", 832, 130, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("viterbi_v7_0.v", 824, 341); // bP
+// Elapsed time: 93 seconds
+selectCodeEditor("viterbi_v7_0.v", 128, 242); // bP
+// Elapsed time: 36 seconds
+typeControlKey((HResource) null, "viterbi_v7_0.v", 'c'); // bP
+// Elapsed time: 79 seconds
+selectCodeEditor("viterbi_v7_0.v", 505, 198); // bP
+// Elapsed time: 14 seconds
+typeControlKey((HResource) null, "viterbi_v7_0.v", 'c'); // bP
+// Elapsed time: 145 seconds
+selectCodeEditor("viterbi_v7_0.v", 12, 306); // bP
+// Elapsed time: 219 seconds
+selectCodeEditor("viterbi_v7_0.v", 421, 263); // bP
+// Elapsed time: 164 seconds
+selectCodeEditor("viterbi_v7_0.v", 189, 274); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ofdm_decoder.v", 9); // m
+selectCodeEditor("ofdm_decoder.v", 208, 338); // bP
+// Elapsed time: 14 seconds
+selectCodeEditor("ofdm_decoder.v", 132, 214); // bP
+// Elapsed time: 65 seconds
+selectCodeEditor("ofdm_decoder.v", 98, 118); // bP
+typeControlKey((HResource) null, "ofdm_decoder.v", 'c'); // bP
+selectButton(RDIResource.HCodeView_FIND_TEXT_IN_FILE, (String) null); // x: TRUE
+// Elapsed time: 12 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "idle_wire"); // l
+selectCodeEditor("ofdm_decoder.v", 283, 175); // bP
+selectCodeEditor("ofdm_decoder.v", 258, 37); // bP
+selectCodeEditor("ofdm_decoder.v", 120, 237); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 14 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // o
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // an
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// e (cs):  Run Simulation : addNotify
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// Tcl Message: INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.sim/sim_1/behav/xsim' 
+selectButton(RDIResource.ProgressDialog_BACKGROUND, "Background"); // a
+// Tcl Message: "xvlog --incr --relax -prj dot11_tb_vlog.prj" 
+// 'd' command handler elapsed time: 3 seconds
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/verilog/dot11_tb.v" into library xil_defaultlib INFO: [VRFC 10-311] analyzing module dot11_tb "xvhdl --incr --relax -prj dot11_tb_vhdl.prj" 
+// Tcl Message: run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1146.031 ; gain = 0.000 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '8' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.sim/sim_1/behav/xsim' 
+// Tcl Message: "xelab -wto c368398a2f7640a9bd0564b667426500 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_4_4 -L xbip_utils_v3_0_10 -L axi_utils_v2_0_6 -L xbip_pipe_v3_0_6 -L xbip_dsp48_wrapper_v3_0_4 -L xbip_dsp48_addsub_v3_0_6 -L xbip_bram18k_v3_0_6 -L mult_gen_v12_0_17 -L floating_point_v7_0_19 -L xbip_dsp48_mult_v3_0_6 -L xbip_dsp48_multadd_v3_0_6 -L div_gen_v5_1_18 -L cmpy_v6_0_20 -L xlslice_v1_0_2 -L c_reg_fd_v12_0_6 -L xbip_addsub_v3_0_6 -L c_addsub_v12_0_14 -L c_mux_bit_v12_0_6 -L c_shift_ram_v12_0_14 -L xfft_v9_1_6 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot dot11_tb_behav xil_defaultlib.dot11_tb xil_defaultlib.glbl -log elaborate.log" 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 156 MB. Current time: 7/9/25, 5:23:05 PM IST
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 157 MB. Current time: 7/9/25, 5:23:35 PM IST
+// Tcl Message: Completed simulation data flow analysis 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 157 MB. Current time: 7/9/25, 5:25:05 PM IST
+// Tcl Message: Compiling architecture xilinx of entity xfft_v9_1_6.shift_ram [\shift_ram(c_xdevicefamily="zynq...] Compiling architecture xilinx of entity xfft_v9_1_6.shift_ram [\shift_ram(c_xdevicefamily="zynq...] Compiling architecture xilinx of entity xfft_v9_1_6.mux_bus2 [\mux_bus2(c_xdevicefamily="zynq"...] Compiling architecture xilinx of entity xfft_v9_1_6.r22_bf_sp [\r22_bf_sp(c_xdevicefamily="zynq...] Compiling architecture synth of entity xfft_v9_1_6.r22_twos_comp_mux [\r22_twos_comp_mux(c_xdevicefami...] Compiling architecture synth of entity xfft_v9_1_6.r22_twos_comp_mux [\r22_twos_comp_mux(c_xdevicefami...] 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 157 MB. Current time: 7/9/25, 5:25:35 PM IST
+// Tcl Message: Compiling module xil_defaultlib.dot11_tb Compiling module xil_defaultlib.glbl 
+// Tcl Message: Built simulation snapshot dot11_tb_behav 
+// Tcl Message:  ****** Webtalk v2021.1 (64-bit)   **** SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021   **** IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021     ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.  source C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.sim/sim_1/behav/xsim/xsim.dir/dot11_tb_behav/webtalk/xsim_webtalk.tcl -notrace 
+// TclEventType: LAUNCH_SIM
+// TclEventType: LOAD_FEATURE
+// Tcl Message: INFO: [Common 17-206] Exiting Webtalk at Wed Jul  9 17:25:44 2025... 
+// Tcl Message: run_program: Time (s): cpu = 00:00:17 ; elapsed = 00:04:00 . Memory (MB): peak = 1166.879 ; gain = 20.848 
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '240' seconds INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/openofdm_rx.sim/sim_1/behav/xsim' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "dot11_tb_behav -key {Behavioral:sim_1:Functional:dot11_tb} -tclbatch {dot11_tb.tcl} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// WARNING: HEventQueue.dispatchEvent() is taking  1637 ms.
+// Tcl Message: Time resolution is 1 ps 
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// Elapsed time: 249 seconds
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// Waveform: addNotify
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 163 MB. Current time: 7/9/25, 5:25:49 PM IST
+// TclEventType: WAVEFORM_MODEL_EVENT
+// Tcl Message: source dot11_tb.tcl 
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } 
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// Tcl Message: # run 1000ns 
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_OBJECT_TREE_RESTORED
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: xsim: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1236.824 ; gain = 69.945 
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'dot11_tb_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 1000ns 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:27 ; elapsed = 00:04:15 . Memory (MB): peak = 1236.824 ; gain = 90.793 
+dismissDialog("Run Simulation"); // e
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// Elapsed time: 13 seconds
+selectTreeTableHeader(PAResourceQtoS.SimulationScopesPanel_SIMULATE_SCOPE_TABLE, "Design Unit", 1); // c
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:26:10 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:26:10 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:26:10 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:26:11 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:26:11 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:26:12 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:26:12 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:26:13 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:26:17 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:26:17 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:26:17 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:26:18 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:26:18 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:26:19 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:26:19 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:26:20 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:26:21 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:26:22 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:26:22 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:26:22 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:26:23 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// Elapsed time: 20 seconds
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 150, 96); // b
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:26:25 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:26:34 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:26:34 PM IST
+// Elapsed time: 11 seconds
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 182, 238); // b
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 397, 146); // b
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:26:42 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 281, 192); // b
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:26:48 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:26:58 PM IST
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:26:59 PM IST
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:27:00 PM IST
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:27:00 PM IST
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:27:01 PM IST
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:27:02 PM IST
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:27:02 PM IST
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:27:03 PM IST
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:27:03 PM IST
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:27:04 PM IST
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:27:05 PM IST
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:27:06 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:27:06 PM IST
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:27:06 PM IST
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:27:06 PM IST
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:27:07 PM IST
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:27:07 PM IST
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:27:07 PM IST
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:27:07 PM IST
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:27:07 PM IST
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:27:07 PM IST
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:27:08 PM IST
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:27:08 PM IST
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:27:08 PM IST
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:27:08 PM IST
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:27:08 PM IST
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:27:09 PM IST
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:27:09 PM IST
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:27:09 PM IST
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:27:09 PM IST
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:27:09 PM IST
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:27:09 PM IST
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:27:10 PM IST
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:27:10 PM IST
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:27:10 PM IST
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:27:10 PM IST
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:27:10 PM IST
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:27:10 PM IST
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:27:10 PM IST
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:27:11 PM IST
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:27:11 PM IST
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:27:11 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:29:40 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:29:41 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:29:41 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:29:41 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:29:41 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:29:41 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:29:41 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:29:41 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:29:41 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:29:42 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:29:42 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:29:42 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:29:42 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:29:42 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:29:42 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:29:42 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:29:42 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 162 MB. Current time: 7/9/25, 5:29:44 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:29:44 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:29:44 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:29:45 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 163 MB. Current time: 7/9/25, 5:29:48 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:29:48 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:29:48 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:29:48 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:29:48 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// Elapsed time: 181 seconds
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 158, 223); // b
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:30:52 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:30:53 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:30:53 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:30:53 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:30:53 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:30:53 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:30:53 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:30:53 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:30:53 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:30:54 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:30:54 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:30:54 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:30:54 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:30:55 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:30:55 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 166 MB. Current time: 7/9/25, 5:30:55 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:30:55 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:30:55 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:30:55 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 166 MB. Current time: 7/9/25, 5:30:55 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:30:55 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:30:56 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:30:56 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:30:56 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:30:57 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 162 MB. Current time: 7/9/25, 5:30:57 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 162 MB. Current time: 7/9/25, 5:30:57 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:30:57 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:30:58 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:30:58 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:30:58 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:30:58 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:30:58 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:31:03 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 161 MB. Current time: 7/9/25, 5:31:03 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// Elapsed time: 76 seconds
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 676, 57); // dS
+// Elapsed time: 21 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "common_defs.v", 0); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "dot11_tb.v", 1); // m
+// Elapsed time: 19 seconds
+selectTab((HResource) null, (HResource) null, "Sources", 1); // aK
+// Elapsed time: 17 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Memory Initialization Files]", 22); // D
+// Elapsed time: 67 seconds
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 330, 87); // dS
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 912, 48); // dS
+// Elapsed time: 76 seconds
+typeControlKey(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, "RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR", 'c'); // dS

@@ -1,0 +1,6 @@
+verilog xil_defaultlib  \
+"../../../../../ip_repo/rot_lut/sim/rot_lut.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

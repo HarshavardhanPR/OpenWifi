@@ -1,0 +1,562 @@
+/*
+
+Xilinx Vivado v2021.1 (64-bit) [Major: 2021, Minor: 1]
+SW Build: 3247384 on Thu Jun 10 19:36:33 MDT 2021
+IP Build: 3246043 on Fri Jun 11 00:30:35 MDT 2021
+
+Process ID (PID): 9388
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Wed Jul 09 17:44:15 IST 2025
+Time zone: 	India Standard Time (Asia/Calcutta)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 12
+
+Screen size: 1920x1080
+Screen resolution (DPI): 125
+Available screens: 1
+Default font: family=Segoe UI,name=Segoe UI,style=plain,size=15
+Scale size: 19
+
+Java version: 	11.0.2 64-bit
+Java home: 	D:/Apps/v_log/Vivado/2021.1/tps/win64/jre11.0.2
+Java executable: 	D:/Apps/v_log/Vivado/2021.1/tps/win64/jre11.0.2/bin/java.exe
+Java initial memory (-Xms): 	256 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	ASUS
+User home directory: C:/Users/ASUS
+User working directory: C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi
+User country: 	IN
+User language: 	en
+User locale: 	en_IN
+
+RDI_BASEROOT: D:/Apps/v_log/Vivado
+HDI_APPROOT: D:/Apps/v_log/Vivado/2021.1
+RDI_DATADIR: D:/Apps/v_log/Vivado/2021.1/data
+RDI_BINDIR: D:/Apps/v_log/Vivado/2021.1/bin
+
+Vivado preferences file: C:/Users/ASUS/AppData/Roaming/Xilinx/Vivado/2021.1/vivado.xml
+Vivado preferences directory: C:/Users/ASUS/AppData/Roaming/Xilinx/Vivado/2021.1/
+Vivado layouts directory: C:/Users/ASUS/AppData/Roaming/Xilinx/Vivado/2021.1/data/layouts
+PlanAhead jar file: 	D:/Apps/v_log/Vivado/2021.1/lib/classes/planAhead.jar
+Vivado log file: 	C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/vivado.log
+Vivado journal file: 	C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/vivado.jou
+Engine tmp dir: 	C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/.Xil/Vivado-9388-MyASUS
+
+Xilinx Environment Variables
+----------------------------
+XILINX: D:/Apps/v_log/Vivado/2021.1/ids_lite/ISE
+XILINX_DIR: D:\Apps\v_log\Vivado\2021.1
+XILINX_DSP: D:/Apps/v_log/Vivado/2021.1/ids_lite/ISE
+XILINX_HLS: D:\Apps\v_log\Vitis_HLS\2021.1
+XILINX_PLANAHEAD: D:/Apps/v_log/Vivado/2021.1
+XILINX_VIVADO: D:/Apps/v_log/Vivado/2021.1
+XILINX_VIVADO_HLS: D:/Apps/v_log/Vivado/2021.1
+
+
+GUI allocated memory:	358 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,153 MB
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: START_PROGRESS_DIALOG
+// bz (cs):  Sourcing Tcl script 'openofdm_rx.tcl' : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// Tcl Message: source openofdm_rx.tcl 
+// Tcl Message:  BOARD_NAME zed_fmcs2  
+// Tcl Message: # puts "NUM_CLK_PER_US $NUM_CLK_PER_US\n" 
+// Tcl Message: NUM_CLK_PER_US 100  
+// Tcl Message: # puts "ultra_scale_flag $ultra_scale_flag\n" 
+// Tcl Message: ultra_scale_flag 0  
+// Tcl Message: # puts "part_string $part_string\n" 
+// Tcl Message: part_string xc7z020clg484-1  
+// Tcl Message: # puts "fpga_size_flag $fpga_size_flag\n" 
+// Tcl Message: fpga_size_flag 0  
+// Tcl Message: # puts "ARGUMENT3 $ARGUMENT3\n" 
+// Tcl Message: ARGUMENT3   
+// Tcl Message: # puts "ARGUMENT4 $MODULE_NAME\_$ARGUMENT4\n" 
+// Tcl Message: ARGUMENT4 OPENOFDM_RX_  
+// Tcl Message: # puts "ARGUMENT5 $MODULE_NAME\_$ARGUMENT5\n" 
+// Tcl Message: ARGUMENT5 OPENOFDM_RX_  
+// Tcl Message: # puts "ARGUMENT6 $MODULE_NAME\_$ARGUMENT6\n" 
+// Tcl Message: ARGUMENT6 OPENOFDM_RX_  
+// Tcl Message: # puts "ARGUMENT7 $MODULE_NAME\_$ARGUMENT7\n" 
+// Tcl Message: ARGUMENT7 OPENOFDM_RX_  
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 99 MB (+101510kb) [00:00:06]
+// [Engine Memory]: 1,153 MB (+1057921kb) [00:00:06]
+// [GUI Memory]: 124 MB (+20466kb) [00:00:07]
+// WARNING: HEventQueue.dispatchEvent() is taking  2235 ms.
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Apps/v_log/Vivado/2021.1/data/ip'. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,153 MB. GUI used memory: 66 MB. Current time: 7/9/25, 5:44:15 PM IST
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: LOAD_FEATURE
+// Tcl Message: create_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:06 . Memory (MB): peak = 1135.934 ; gain = 0.000 
+// Tcl Message: # set_property -name "dsa.rom.debug_type" -value "0" -objects $obj 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: # set_property -name "dsa.rom.prom_type" -value "0" -objects $obj 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/verilog/coregen/div_gen_new_ip_core_zynq'. 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_OPTIONS_MODIFIED
+// Tcl Message:  INFO: Project created:openofdm_rx  
+// Tcl Message: # update_compile_order -fileset sources_1 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_SUMMARY_RESULTS
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// Tcl Message: # report_ip_status -name ip_status  # set all_ips_to_upgrade {atan_lut complex_multiplier deinter_lut div_gen_div_gen_0_0 div_gen_xlslice_0_0 rot_lut xfft_v9 div_for_rotafft div_gen_csi_over_nova} # if {[llength [get_ips -quiet $all_ips_to_upgrade]] > 0} { #     upgrade_ip [get_ips $all_ips_to_upgrade] -log ip_upgrade.log # } 
+// Tcl Message: Upgrading 'atan_lut' 
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_UPDATE_IP
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-3422] Upgraded atan_lut (Block Memory Generator 8.4) from revision 2 to revision 4 INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'atan_lut'... 
+// Tcl Message: Upgrading 'complex_multiplier' 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_UPDATE_IP
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-3422] Upgraded complex_multiplier (Complex Multiplier 6.0) from revision 16 to revision 20 INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'complex_multiplier'... 
+// Tcl Message: Upgrading 'deinter_lut' 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_UPDATE_IP
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_UPDATE_IP
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_UPDATE_IP
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-3422] Upgraded deinter_lut (Block Memory Generator 8.4) from revision 2 to revision 4 INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'deinter_lut'... 
+// Tcl Message: Upgrading 'div_gen_div_gen_0_0' 
+// Tcl Message: INFO: [IP_Flow 19-3422] Upgraded div_gen_div_gen_0_0 (Divider Generator 5.1) from revision 14 to revision 18 INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'div_gen_div_gen_0_0'... 
+// Tcl Message: Upgrading 'div_gen_xlslice_0_0' 
+// Tcl Message: INFO: [IP_Flow 19-3422] Upgraded div_gen_xlslice_0_0 (Slice 1.0) from revision 1 to revision 2 INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'div_gen_xlslice_0_0'... 
+// Tcl Message: Upgrading 'rot_lut' 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_UPDATE_IP
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-3422] Upgraded rot_lut (Block Memory Generator 8.4) from revision 2 to revision 4 INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'rot_lut'... 
+// Tcl Message: Upgrading 'xfft_v9' 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_UPDATE_IP
+// TclEventType: IP_UPGRADE_COMPLETE
+// TclEventType: IP_SUMMARY_RESULTS
+// TclEventType: STOP_PROGRESS_DIALOG
+// Tcl Message: INFO: [IP_Flow 19-3422] Upgraded xfft_v9 (Fast Fourier Transform 9.1) from revision 1 to revision 6 INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'xfft_v9'... INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/openofdm_rx/ip_upgrade.log'. 
+// Tcl Message: upgrade_ip: Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1135.934 ; gain = 0.000 
+// Tcl Message: # export_ip_user_files -of_objects [get_ips $all_ips_to_upgrade] -no_script -sync -force -ip_user_files_dir "ip_user_files" -quiet # update_compile_order -fileset sources_1 # report_ip_status -name ip_status  
+dismissDialog("Sourcing Tcl script 'openofdm_rx.tcl'"); // bz
+// TclEventType: STOP_PROGRESS_DIALOG
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HEventQueue.dispatchEvent() is taking  4421 ms.
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 4020 ms. Increasing delay to 12060 ms.
+// Tcl Message: update_compile_order -fileset sources_1 
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// Elapsed time: 14 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // o
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // an
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// e (cs):  Run Simulation : addNotify
+// Tcl Message: generate_target all [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/deinter_lut/deinter_lut.xci] 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'deinter_lut'... 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'deinter_lut'... INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'deinter_lut'... INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'deinter_lut'... 
+// Tcl Message: export_ip_user_files -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/deinter_lut/deinter_lut.xci] -no_script -sync -force -quiet 
+// TclEventType: PROJECT_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// [GUI Memory]: 150 MB (+21143kb) [00:00:45]
+// Tcl Message: create_fileset -blockset deinter_lut 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: set_property top deinter_lut [get_fileset deinter_lut] 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,153 MB. GUI used memory: 94 MB. Current time: 7/9/25, 5:45:18 PM IST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: move_files -fileset [get_fileset deinter_lut] [get_files -of_objects [get_fileset sources_1] C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/deinter_lut/deinter_lut.xci] 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: generate_target all [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/div_gen_csi_over_nova/div_gen_csi_over_nova.xci] 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'div_gen_csi_over_nova'... INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'div_gen_csi_over_nova'... INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'div_gen_csi_over_nova'... INFO: [IP_Flow 19-1686] Generating 'C Simulation' target for IP 'div_gen_csi_over_nova'... INFO: [IP_Flow 19-1686] Generating 'Test Bench' target for IP 'div_gen_csi_over_nova'... INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'div_gen_csi_over_nova'... 
+// Tcl Message: export_ip_user_files -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/div_gen_csi_over_nova/div_gen_csi_over_nova.xci] -no_script -sync -force -quiet 
+// TclEventType: PROJECT_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// Tcl Message: create_fileset -blockset div_gen_csi_over_nova 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: set_property top div_gen_csi_over_nova [get_fileset div_gen_csi_over_nova] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: move_files -fileset [get_fileset div_gen_csi_over_nova] [get_files -of_objects [get_fileset sources_1] C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/div_gen_csi_over_nova/div_gen_csi_over_nova.xci] 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: generate_target Simulation [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/complex_multiplier/complex_multiplier.xci] 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'complex_multiplier'... 
+// Tcl Message: export_ip_user_files -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/complex_multiplier/complex_multiplier.xci] -no_script -sync -force -quiet 
+// TclEventType: PROJECT_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: generate_target Simulation [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/div_gen_new/src/div_gen_xlslice_0_0/div_gen_xlslice_0_0.xci] 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'div_gen_xlslice_0_0'... 
+// Tcl Message: export_ip_user_files -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/div_gen_new/src/div_gen_xlslice_0_0/div_gen_xlslice_0_0.xci] -no_script -sync -force -quiet 
+// TclEventType: PROJECT_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: generate_target all [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/div_gen_new/src/div_gen_div_gen_0_0/div_gen_div_gen_0_0.xci] 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'div_gen_div_gen_0_0'... INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'div_gen_div_gen_0_0'... INFO: [IP_Flow 19-1686] Generating 'C Simulation' target for IP 'div_gen_div_gen_0_0'... INFO: [IP_Flow 19-1686] Generating 'Test Bench' target for IP 'div_gen_div_gen_0_0'... INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'div_gen_div_gen_0_0'... 
+// Tcl Message: export_ip_user_files -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/div_gen_new/src/div_gen_div_gen_0_0/div_gen_div_gen_0_0.xci] -no_script -sync -force -quiet 
+// TclEventType: PROJECT_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// Tcl Message: create_fileset -blockset div_gen_div_gen_0_0 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: set_property top div_gen_div_gen_0_0 [get_fileset div_gen_div_gen_0_0] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: move_files -fileset [get_fileset div_gen_div_gen_0_0] [get_files -of_objects [get_fileset sources_1] C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/div_gen_new/src/div_gen_div_gen_0_0/div_gen_div_gen_0_0.xci] 
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,153 MB. GUI used memory: 92 MB. Current time: 7/9/25, 5:45:48 PM IST
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: generate_target all [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/div_for_rotafft/div_for_rotafft.xci] 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'div_for_rotafft'... INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'div_for_rotafft'... INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'div_for_rotafft'... INFO: [IP_Flow 19-1686] Generating 'C Simulation' target for IP 'div_for_rotafft'... INFO: [IP_Flow 19-1686] Generating 'Test Bench' target for IP 'div_for_rotafft'... INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'div_for_rotafft'... 
+// Tcl Message: export_ip_user_files -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/div_for_rotafft/div_for_rotafft.xci] -no_script -sync -force -quiet 
+// TclEventType: PROJECT_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// Tcl Message: create_fileset -blockset div_for_rotafft 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: set_property top div_for_rotafft [get_fileset div_for_rotafft] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: move_files -fileset [get_fileset div_for_rotafft] [get_files -of_objects [get_fileset sources_1] C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/div_for_rotafft/div_for_rotafft.xci] 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: generate_target all [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/xfft/xfft_v9.xci] 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'xfft_v9'... INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'xfft_v9'... INFO: [IP_Flow 19-1686] Generating 'C Simulation' target for IP 'xfft_v9'... INFO: [IP_Flow 19-1686] Generating 'Test Bench' target for IP 'xfft_v9'... INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'xfft_v9'... 
+// Tcl Message: export_ip_user_files -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/xfft/xfft_v9.xci] -no_script -sync -force -quiet 
+// TclEventType: PROJECT_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// Tcl Message: create_fileset -blockset xfft_v9 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: set_property top xfft_v9 [get_fileset xfft_v9] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: move_files -fileset [get_fileset xfft_v9] [get_files -of_objects [get_fileset sources_1] C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/xfft/xfft_v9.xci] 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: generate_target Simulation [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/atan_lut/atan_lut.xci] 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'atan_lut'... 
+// Tcl Message: export_ip_user_files -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/atan_lut/atan_lut.xci] -no_script -sync -force -quiet 
+// TclEventType: PROJECT_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: generate_target all [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/rot_lut/rot_lut.xci] 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'rot_lut'... INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'rot_lut'... INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'rot_lut'... INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'rot_lut'... 
+// Tcl Message: export_ip_user_files -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/rot_lut/rot_lut.xci] -no_script -sync -force -quiet 
+// TclEventType: PROJECT_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// Tcl Message: create_fileset -blockset rot_lut 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: set_property top rot_lut [get_fileset rot_lut] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: move_files -fileset [get_fileset rot_lut] [get_files -of_objects [get_fileset sources_1] C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/rot_lut/rot_lut.xci] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_run {deinter_lut_synth_1 div_gen_csi_over_nova_synth_1 div_gen_div_gen_0_0_synth_1 div_for_rotafft_synth_1 xfft_v9_synth_1 rot_lut_synth_1} 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: wait_on_run deinter_lut_synth_1  
+// Tcl Message: [Wed Jul  9 17:46:04 2025] Waiting for deinter_lut_synth_1 to finish... 
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: [Wed Jul  9 17:46:09 2025] Waiting for deinter_lut_synth_1 to finish... 
+// Tcl Message: [Wed Jul  9 17:46:14 2025] Waiting for deinter_lut_synth_1 to finish... 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,153 MB. GUI used memory: 94 MB. Current time: 7/9/25, 5:46:18 PM IST

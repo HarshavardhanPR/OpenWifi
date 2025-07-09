@@ -1,0 +1,165 @@
+/*
+
+Xilinx Vivado v2021.1 (64-bit) [Major: 2021, Minor: 1]
+SW Build: 3247384 on Thu Jun 10 19:36:33 MDT 2021
+IP Build: 3246043 on Fri Jun 11 00:30:35 MDT 2021
+
+Process ID (PID): 26308
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Wed Jul 09 17:42:09 IST 2025
+Time zone: 	India Standard Time (Asia/Calcutta)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 12
+
+Screen size: 1920x1080
+Screen resolution (DPI): 125
+Available screens: 1
+Default font: family=Segoe UI,name=Segoe UI,style=plain,size=15
+Scale size: 19
+
+Java version: 	11.0.2 64-bit
+Java home: 	D:/Apps/v_log/Vivado/2021.1/tps/win64/jre11.0.2
+Java executable: 	D:/Apps/v_log/Vivado/2021.1/tps/win64/jre11.0.2/bin/java.exe
+Java initial memory (-Xms): 	256 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	ASUS
+User home directory: C:/Users/ASUS
+User working directory: C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi
+User country: 	IN
+User language: 	en
+User locale: 	en_IN
+
+RDI_BASEROOT: D:/Apps/v_log/Vivado
+HDI_APPROOT: D:/Apps/v_log/Vivado/2021.1
+RDI_DATADIR: D:/Apps/v_log/Vivado/2021.1/data
+RDI_BINDIR: D:/Apps/v_log/Vivado/2021.1/bin
+
+Vivado preferences file: C:/Users/ASUS/AppData/Roaming/Xilinx/Vivado/2021.1/vivado.xml
+Vivado preferences directory: C:/Users/ASUS/AppData/Roaming/Xilinx/Vivado/2021.1/
+Vivado layouts directory: C:/Users/ASUS/AppData/Roaming/Xilinx/Vivado/2021.1/data/layouts
+PlanAhead jar file: 	D:/Apps/v_log/Vivado/2021.1/lib/classes/planAhead.jar
+Vivado log file: 	C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/vivado.log
+Vivado journal file: 	C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/vivado.jou
+Engine tmp dir: 	C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/.Xil/Vivado-26308-MyASUS
+
+Xilinx Environment Variables
+----------------------------
+XILINX: D:/Apps/v_log/Vivado/2021.1/ids_lite/ISE
+XILINX_DIR: D:\Apps\v_log\Vivado\2021.1
+XILINX_DSP: D:/Apps/v_log/Vivado/2021.1/ids_lite/ISE
+XILINX_HLS: D:\Apps\v_log\Vitis_HLS\2021.1
+XILINX_PLANAHEAD: D:/Apps/v_log/Vivado/2021.1
+XILINX_VIVADO: D:/Apps/v_log/Vivado/2021.1
+XILINX_VIVADO_HLS: D:/Apps/v_log/Vivado/2021.1
+
+
+GUI allocated memory:	256 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,154 MB
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// TclEventType: START_PROGRESS_DIALOG
+// Tcl Message: start_gui 
+// TclEventType: START_PROGRESS_DIALOG
+// bz (cs):  Sourcing Tcl script 'openofdm_rx.tcl' : addNotify
+// Tcl Message: source openofdm_rx.tcl 
+// Tcl Message:  BOARD_NAME zed_fmcs2  
+// Tcl Message: # puts "NUM_CLK_PER_US $NUM_CLK_PER_US\n" 
+// Tcl Message: NUM_CLK_PER_US 100  
+// Tcl Message: # puts "ultra_scale_flag $ultra_scale_flag\n" 
+// Tcl Message: ultra_scale_flag 0  
+// Tcl Message: # puts "part_string $part_string\n" 
+// Tcl Message: part_string xc7z020clg484-1  
+// Tcl Message: # puts "fpga_size_flag $fpga_size_flag\n" 
+// Tcl Message: fpga_size_flag 0  
+// Tcl Message: # puts "ARGUMENT3 $ARGUMENT3\n" 
+// Tcl Message: ARGUMENT3   
+// Tcl Message: # puts "ARGUMENT4 $MODULE_NAME\_$ARGUMENT4\n" 
+// Tcl Message: ARGUMENT4 OPENOFDM_RX_  
+// Tcl Message: # puts "ARGUMENT5 $MODULE_NAME\_$ARGUMENT5\n" 
+// Tcl Message: ARGUMENT5 OPENOFDM_RX_  
+// Tcl Message: # puts "ARGUMENT6 $MODULE_NAME\_$ARGUMENT6\n" 
+// Tcl Message: ARGUMENT6 OPENOFDM_RX_  
+// Tcl Message: # puts "ARGUMENT7 $MODULE_NAME\_$ARGUMENT7\n" 
+// Tcl Message: ARGUMENT7 OPENOFDM_RX_  
+// Tcl Message: # if {$ultra_scale_flag == 0} { #   set ip_fix_string zynq # } else { #   set ip_fix_string zynquplus # } # set  fd  [open  "./verilog/openofdm_rx_git_rev.v"  w] # set HASHCODE "00000000" # puts $fd "`define OPENOFDM_RX_GIT_REV (32'h$HASHCODE)" # close $fd # set origin_dir [file dirname [info script]] # file delete -force $origin_dir/ip_repo 
+// Tcl Message: # file mkdir $origin_dir/ip_repo # file copy -force $origin_dir/verilog/coregen/div_gen_new_ip_core_$ip_fix_string $origin_dir/ip_repo/div_gen_new # file copy -force $origin_dir/verilog/Xilinx/$ip_fix_string $origin_dir/ip_repo/$ip_fix_string # foreach item [glob -nocomplain $origin_dir/ip_repo/$ip_fix_string/*] { #     file rename -force $item $origin_dir/ip_repo/[file tail $item] # } # file delete -force $origin_dir/ip_repo/$ip_fix_string # if { [info exists ::origin_dir_loc] } { #   set origin_dir $::origin_dir_loc # } # set project_name "openofdm_rx" # if {[file exists $project_name]} { #     file delete -force $project_name # } 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 106 MB (+109169kb) [00:00:09]
+// [Engine Memory]: 1,154 MB (+1058363kb) [00:00:09]
+// WARNING: HEventQueue.dispatchEvent() is taking  2456 ms.
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Apps/v_log/Vivado/2021.1/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,154 MB. GUI used memory: 66 MB. Current time: 7/9/25, 5:42:12 PM IST
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: LOAD_FEATURE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: create_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 1135.871 ; gain = 0.000 
+// Tcl Message: # set_property -name "dsa.rom.debug_type" -value "0" -objects $obj 
+// Tcl Message: # set_property -name "dsa.rom.prom_type" -value "0" -objects $obj 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/verilog/coregen/div_gen_new_ip_core_zynq'. 
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: STOP_PROGRESS_DIALOG
+// Tcl Message: ERROR: [Vivado 12-385] Illegal file or directory name '#"C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/viterbi/viterbi_v7_0.xci"' 
+// HOptionPane Error: 'ERROR: [Vivado 12-385] Illegal file or directory name '#"C:/Users/ASUS/Downloads/ Openofdm/openofdm-dot11zynq/Wifi/ip_repo/viterbi/viterbi_v7_0.xci"'  (Sourcing Tcl script 'openofdm_rx.tcl')'
+// TclEventType: STOP_PROGRESS_DIALOG
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HEventQueue.dispatchEvent() is taking  4851 ms.
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 4539 ms. Increasing delay to 13617 ms.
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// [GUI Memory]: 114 MB (+1870kb) [00:00:22]
+selectButton("OptionPane.button", "OK"); // JButton
+// [GUI Memory]: 133 MB (+14282kb) [00:00:28]
+// TclEventType: FILE_SET_CHANGE
+// [GUI Memory]: 150 MB (+10816kb) [00:00:30]
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 17 ms. Decreasing delay to 2017 ms.
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aK
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, General Messages, [Vivado 12-385] Illegal file or directory name '#C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/viterbi/viterbi_v7_0.xci'. ]", 7, false); // ah
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, General Messages, [Vivado 12-385] Illegal file or directory name '#C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/viterbi/viterbi_v7_0.xci'. ]", 7, false, false, false, false, false, true); // ah - Double Click
+selectTab((HResource) null, (HResource) null, "Tcl Console", 0); // aK

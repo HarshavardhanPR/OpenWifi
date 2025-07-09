@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../../../ip_repo/complex_multiplier/sim/complex_multiplier.vhd" \
+
+nosort

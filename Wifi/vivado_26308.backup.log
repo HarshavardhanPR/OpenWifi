@@ -1,0 +1,361 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Wed Jul  9 17:41:57 2025
+# Process ID: 26308
+# Current directory: C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi
+# Command line: vivado.exe -source openofdm_rx.tcl -tclargs zed_fmcs2 100
+# Log file: C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/vivado.log
+# Journal file: C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi\vivado.jou
+#-----------------------------------------------------------
+start_gui
+source openofdm_rx.tcl
+# set ARGUMENT1 [lindex $argv 0]
+# set ARGUMENT2 [lindex $argv 1]
+# set ARGUMENT3 [lindex $argv 2]
+# set ARGUMENT4 [lindex $argv 3]
+# set ARGUMENT5 [lindex $argv 4]
+# set ARGUMENT6 [lindex $argv 5]
+# set ARGUMENT7 [lindex $argv 6]
+# if {$ARGUMENT1 eq ""} {
+#   set BOARD_NAME zed_fmcs2
+# } else {
+#   set BOARD_NAME $ARGUMENT1
+# }
+# if {$ARGUMENT2 eq ""} {
+#   set NUM_CLK_PER_US 100
+# } else {
+#   set NUM_CLK_PER_US $ARGUMENT2
+# }
+# source ./parse_board_name.tcl
+## if {$BOARD_NAME=="zed_fmcs2"} {
+##    set ultra_scale_flag 0
+##    set part_string "xc7z020clg484-1"
+##    set board_part_string []
+##    set board_id_string "zed"
+##    set fpga_size_flag 0
+## } elseif {$BOARD_NAME=="zcu102_fmcs2"} {
+##    set ultra_scale_flag 1
+##    set part_string "xczu9eg-ffvb1156-2-e"
+##    set board_part_string "xilinx.com:zcu102:part0:3.4"
+##    set board_id_string "zcu102"
+##    set fpga_size_flag 1
+## } elseif {$BOARD_NAME=="zc706_fmcs2"} {
+##    set ultra_scale_flag 0
+##    set part_string "xc7z045ffg900-2"
+##    set board_part_string []
+##    set board_id_string "zc706"
+##    set fpga_size_flag 1
+## } elseif {$BOARD_NAME=="zc702_fmcs2"} {
+##    set ultra_scale_flag 0
+##    set part_string "xc7z020clg484-1"
+##    set board_part_string []
+##    set board_id_string "zc702"
+##    set fpga_size_flag 0
+## } elseif {$BOARD_NAME=="antsdr"} {
+##    set ultra_scale_flag 0
+##    set part_string "xc7z020clg400-1"
+##    set board_part_string []
+##    set board_id_string []
+##    set fpga_size_flag 0
+## } elseif {$BOARD_NAME=="antsdr_e200"} {
+##    set ultra_scale_flag 0
+##    set part_string "xc7z020clg400-1"
+##    set board_part_string []
+##    set board_id_string []
+##    set fpga_size_flag 0
+## } elseif {$BOARD_NAME=="sdrpi"} {
+##    set ultra_scale_flag 0
+##    set part_string "xc7z020clg400-1"
+##    set board_part_string []
+##    set board_id_string []
+##    set fpga_size_flag 0
+## } elseif {$BOARD_NAME=="adrv9361z7035"} {
+##    set ultra_scale_flag 0
+##    set part_string "xc7z035ifbg676-2L"
+##    set board_part_string []
+##    set board_id_string []
+##    set fpga_size_flag 1
+## } elseif {$BOARD_NAME=="adrv9364z7020"} {
+##    set ultra_scale_flag 0
+##    set part_string "xc7z020clg400-1"
+##    set board_part_string []
+##    set board_id_string []
+##    set fpga_size_flag 0
+## } elseif {$BOARD_NAME=="neptunesdr"} {
+##    set ultra_scale_flag 0
+##    set part_string "xc7z020clg400-1"
+##    set board_part_string []
+##    set board_id_string []
+##    set fpga_size_flag 0
+## } elseif {$BOARD_NAME=="e310v2"} {
+##    set ultra_scale_flag 0
+##    set part_string "xc7z020clg400-1"
+##    set board_part_string []
+##    set board_id_string []
+##    set fpga_size_flag 0
+## } else {
+##    set ultra_scale_flag []
+##    set part_string []
+##    set fpga_size_flag []
+##    set board_part_string []
+##    set board_id_string []
+##    puts "$BOARD_NAME is not valid!"
+## }
+# set MODULE_NAME OPENOFDM_RX
+# set  fd  [open  "./verilog/openofdm_rx_pre_def.v"  w]
+# if {$NUM_CLK_PER_US == 100} {
+#   puts $fd "`define CLK_SPEED_100M"
+# } elseif {$NUM_CLK_PER_US == 200} {
+#   puts $fd "`define CLK_SPEED_200M"
+# } elseif {$NUM_CLK_PER_US == 240} {
+#   puts $fd "`define CLK_SPEED_240M"
+# } elseif {$NUM_CLK_PER_US == 400} {
+#   puts $fd "`define CLK_SPEED_400M"
+# } else {
+#   throw {NUM_CLK_PER_US MUST BE 100/200/240/400!}
+# }
+# puts $fd "`define BETTER_SENSITIVITY"
+# if {$fpga_size_flag == 1} {
+#   puts $fd "`define HAS_OLD_SOFT_BITS_METHOD 1"
+# }
+# if {$ARGUMENT3 eq ""} {
+#   puts $fd "`define SAMPLE_FILE \"../../../../../testing_inputs/simulated/ht_mcs7_gi1_aggr0_len14_pre100_post200_openwifi.txt\""
+# } else {
+#   puts $fd "`define SAMPLE_FILE \"$ARGUMENT3\""
+#   set fc_filename [string range $ARGUMENT3 0 end-4]
+#   append fc_filename "_Fc_input.txt"
+# }
+# if {$ARGUMENT4 eq ""} {
+#   puts $fd " "
+# } else {
+#   puts $fd "`define $MODULE_NAME\_$ARGUMENT4"
+# }
+# if {$ARGUMENT5 eq ""} {
+#   puts $fd " "
+# } else {
+#   puts $fd "`define $MODULE_NAME\_$ARGUMENT5"
+# }
+# if {$ARGUMENT6 eq ""} {
+#   puts $fd " "
+# } else {
+#   puts $fd "`define $MODULE_NAME\_$ARGUMENT6"
+# }
+# if {$ARGUMENT7 eq ""} {
+#   puts $fd " "
+# } else {
+#   puts $fd "`define $MODULE_NAME\_$ARGUMENT7"
+# }
+# puts $fd "`define $BOARD_NAME"
+# close $fd
+# puts "\nBOARD_NAME $BOARD_NAME\n"
+
+BOARD_NAME zed_fmcs2
+
+# puts "NUM_CLK_PER_US $NUM_CLK_PER_US\n"
+NUM_CLK_PER_US 100
+
+# puts "ultra_scale_flag $ultra_scale_flag\n"
+ultra_scale_flag 0
+
+# puts "part_string $part_string\n"
+part_string xc7z020clg484-1
+
+# puts "fpga_size_flag $fpga_size_flag\n"
+fpga_size_flag 0
+
+# puts "ARGUMENT3 $ARGUMENT3\n"
+ARGUMENT3 
+
+# puts "ARGUMENT4 $MODULE_NAME\_$ARGUMENT4\n"
+ARGUMENT4 OPENOFDM_RX_
+
+# puts "ARGUMENT5 $MODULE_NAME\_$ARGUMENT5\n"
+ARGUMENT5 OPENOFDM_RX_
+
+# puts "ARGUMENT6 $MODULE_NAME\_$ARGUMENT6\n"
+ARGUMENT6 OPENOFDM_RX_
+
+# puts "ARGUMENT7 $MODULE_NAME\_$ARGUMENT7\n"
+ARGUMENT7 OPENOFDM_RX_
+
+# if {$ultra_scale_flag == 0} {
+#   set ip_fix_string zynq
+# } else {
+#   set ip_fix_string zynquplus
+# }
+# set  fd  [open  "./verilog/openofdm_rx_git_rev.v"  w]
+# set HASHCODE "00000000"
+# puts $fd "`define OPENOFDM_RX_GIT_REV (32'h$HASHCODE)"
+# close $fd
+# set origin_dir [file dirname [info script]]
+# file delete -force $origin_dir/ip_repo
+# file mkdir $origin_dir/ip_repo
+# file copy -force $origin_dir/verilog/coregen/div_gen_new_ip_core_$ip_fix_string $origin_dir/ip_repo/div_gen_new
+# file copy -force $origin_dir/verilog/Xilinx/$ip_fix_string $origin_dir/ip_repo/$ip_fix_string
+# foreach item [glob -nocomplain $origin_dir/ip_repo/$ip_fix_string/*] {
+#     file rename -force $item $origin_dir/ip_repo/[file tail $item]
+# }
+# file delete -force $origin_dir/ip_repo/$ip_fix_string
+# if { [info exists ::origin_dir_loc] } {
+#   set origin_dir $::origin_dir_loc
+# }
+# set project_name "openofdm_rx"
+# if {[file exists $project_name]} {
+#     file delete -force $project_name
+# }
+# if { [info exists ::user_project_name] } {
+#   set project_name $::user_project_name
+# }
+# variable script_file
+# set script_file "openofdm_rx.tcl"
+# proc help {} {
+#   variable script_file
+#   puts "\nDescription:"
+#   puts "Recreate a Vivado project from this script. The created project will be"
+#   puts "functionally equivalent to the original project for which this script was"
+#   puts "generated. The script contains commands for creating a project, filesets,"
+#   puts "runs, adding/importing sources and setting properties on various objects.\n"
+#   puts "Syntax:"
+#   puts "$script_file"
+#   puts "$script_file -tclargs \[--origin_dir <path>\]"
+#   puts "$script_file -tclargs \[--project_name <name>\]"
+#   puts "$script_file -tclargs \[--help\]\n"
+#   puts "Usage:"
+#   puts "Name                   Description"
+#   puts "-------------------------------------------------------------------------"
+#   puts "\[--origin_dir <path>\]  Determine source file paths wrt this path. Default"
+#   puts "                       origin_dir path value is \".\", otherwise, the value"
+#   puts "                       that was set with the \"-paths_relative_to\" switch"
+#   puts "                       when this script was generated.\n"
+#   puts "\[--project_name <name>\] Create project with the specified name. Default"
+#   puts "                       name is the name of the project from where this"
+#   puts "                       script was generated.\n"
+#   puts "\[--help\]               Print help information for this script"
+#   puts "-------------------------------------------------------------------------\n"
+#   exit 0
+# }
+# if { $::argc > 0 } {
+#   for {set i 0} {$i < [llength $::argc]} {incr i} {
+#     set option [string trim [lindex $::argv $i]]
+#     switch -regexp -- $option {
+#       "--origin_dir"   { incr i; set origin_dir [lindex $::argv $i] }
+#       "--project_name" { incr i; set project_name [lindex $::argv $i] }
+#       "--help"         { help }
+#       default {
+#         if { [regexp {^-} $option] } {
+#           puts "ERROR: Unknown option '$option' specified, please type '$script_file -tclargs --help' for usage info.\n"
+#           return 1
+#         }
+#       }
+#     }
+#   }
+# }
+# set src_dir "[file normalize "$origin_dir/verilog"]"
+# create_project ${project_name} ./${project_name} -part $part_string
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Apps/v_log/Vivado/2021.1/data/ip'.
+create_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 1135.871 ; gain = 0.000
+# set proj_dir [get_property directory [current_project]]
+# set obj [current_project]
+# set_property -name "board_connections" -value "" -objects $obj
+# set_property -name "compxlib.activehdl_compiled_library_dir" -value "$proj_dir/${project_name}.cache/compile_simlib/activehdl" -objects $obj
+# set_property -name "compxlib.funcsim" -value "1" -objects $obj
+# set_property -name "compxlib.ies_compiled_library_dir" -value "$proj_dir/${project_name}.cache/compile_simlib/ies" -objects $obj
+# set_property -name "compxlib.modelsim_compiled_library_dir" -value "$proj_dir/${project_name}.cache/compile_simlib/modelsim" -objects $obj
+# set_property -name "compxlib.overwrite_libs" -value "0" -objects $obj
+# set_property -name "compxlib.questa_compiled_library_dir" -value "$proj_dir/${project_name}.cache/compile_simlib/questa" -objects $obj
+# set_property -name "compxlib.riviera_compiled_library_dir" -value "$proj_dir/${project_name}.cache/compile_simlib/riviera" -objects $obj
+# set_property -name "compxlib.timesim" -value "1" -objects $obj
+# set_property -name "compxlib.vcs_compiled_library_dir" -value "$proj_dir/${project_name}.cache/compile_simlib/vcs" -objects $obj
+# set_property -name "compxlib.xsim_compiled_library_dir" -value "" -objects $obj
+# set_property -name "corecontainer.enable" -value "0" -objects $obj
+# set_property -name "default_lib" -value "xil_defaultlib" -objects $obj
+# set_property -name "dsa.num_compute_units" -value "60" -objects $obj
+WARNING: [Common 17-599] Property 'dsa.num_compute_units' is deprecated for object type 'project'. dsa.* properties have been deprecated, please use the corresponding platform.* properties.
+# set_property -name "dsa.rom.debug_type" -value "0" -objects $obj
+WARNING: [Common 17-599] Property 'dsa.rom.debug_type' is deprecated for object type 'project'. dsa.* properties have been deprecated, please use the corresponding platform.* properties.
+# set_property -name "dsa.rom.prom_type" -value "0" -objects $obj
+WARNING: [Common 17-599] Property 'dsa.rom.prom_type' is deprecated for object type 'project'. dsa.* properties have been deprecated, please use the corresponding platform.* properties.
+# set_property -name "enable_optional_runs_sta" -value "0" -objects $obj
+# set_property -name "generate_ip_upgrade_log" -value "1" -objects $obj
+# set_property -name "ip_cache_permissions" -value "read write" -objects $obj
+# set_property -name "ip_interface_inference_priority" -value "" -objects $obj
+# set_property -name "ip_output_repo" -value "$proj_dir/${project_name}.cache/ip" -objects $obj
+# set_property -name "project_type" -value "Default" -objects $obj
+# set_property -name "pr_flow" -value "0" -objects $obj
+# set_property -name "sim.ip.auto_export_scripts" -value "1" -objects $obj
+# set_property -name "sim.use_ip_compiled_libs" -value "1" -objects $obj
+# set_property -name "simulator_language" -value "Mixed" -objects $obj
+# set_property -name "source_mgmt_mode" -value "All" -objects $obj
+# set_property -name "target_language" -value "Verilog" -objects $obj
+# set_property -name "target_simulator" -value "XSim" -objects $obj
+# set_property -name "xpm_libraries" -value "XPM_MEMORY" -objects $obj
+# set_property -name "xsim.array_display_limit" -value "1024" -objects $obj
+# set_property -name "xsim.radix" -value "hex" -objects $obj
+# set_property -name "xsim.time_unit" -value "ns" -objects $obj
+# set_property -name "xsim.trace_limit" -value "65536" -objects $obj
+# if {[get_filesets -quiet sources_1] eq ""} {
+#   create_fileset -srcset sources_1
+# }
+# set obj [get_filesets sources_1]
+# set_property ip_repo_paths [list $origin_dir/verilog/coregen/div_gen_new_ip_core_$ip_fix_string] $obj
+# update_ip_catalog -rebuild
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/verilog/coregen/div_gen_new_ip_core_zynq'.
+# set obj [get_filesets sources_1]
+# set files [list \
+#  "[file normalize "$origin_dir/verilog/calc_mean.v"]"\
+#  "[file normalize "$origin_dir/verilog/equalizer.v"]"\
+#  "[file normalize "$origin_dir/verilog/dot11_setting_agent.v"]"\
+#  "[file normalize "$origin_dir/verilog/bits_to_bytes.v"]"\
+#  "[file normalize "$origin_dir/verilog/complex_mult.v"]"\
+#  "[file normalize "$origin_dir/verilog/complex_to_mag.v"]"\
+#  "[file normalize "$origin_dir/verilog/complex_to_mag_sq.v"]"\
+#  "[file normalize "$origin_dir/verilog/crc32.v"]"\
+#  "[file normalize "$origin_dir/verilog/deinterleave.v"]"\
+#  "[file normalize "$origin_dir/verilog/delayT.v"]"\
+#  "[file normalize "$origin_dir/verilog/fifo_sample_delay.v"]"\
+#  "[file normalize "$origin_dir/verilog/common_defs.v"]"\
+#  "[file normalize "$origin_dir/verilog/demodulate.v"]"\
+#  "[file normalize "$origin_dir/verilog/descramble.v"]"\
+#  "[file normalize "$origin_dir/verilog/divider.v"]"\
+#  "[file normalize "$origin_dir/verilog/dot11.v"]"\
+#  "[file normalize "$origin_dir/verilog/ht_sig_crc.v"]"\
+#  "[file normalize "$origin_dir/verilog/mv_avg.v"]"\
+#  "[file normalize "$origin_dir/verilog/mv_avg_dual_ch.v"]"\
+#  "[file normalize "$origin_dir/verilog/ofdm_decoder.v"]"\
+#  "[file normalize "$origin_dir/verilog/openofdm_rx_s_axi.v"]"\
+#  "[file normalize "$origin_dir/verilog/phase.v"]"\
+#  "[file normalize "$origin_dir/verilog/dpram.v"]"\
+#  "[file normalize "$origin_dir/verilog/rotate.v"]"\
+#  "[file normalize "$origin_dir/verilog/stage_mult.v"]"\
+#  "[file normalize "$origin_dir/verilog/sync_long.v"]"\
+#  "[file normalize "$origin_dir/verilog/sync_short.v"]"\
+#  "[file normalize "$origin_dir/verilog/openofdm_rx.v"]"\
+#  "[file normalize "$origin_dir/verilog/running_sum_dual_ch.v"]"\
+#  "[file normalize "$origin_dir/verilog/signal_watchdog.v"]"\
+#  "[file normalize "$origin_dir/verilog/phy_len_calculation.v"]"\
+#  "[file normalize "$origin_dir/verilog/rot_after_fft.v"]"\
+#  "[file normalize "$origin_dir/verilog/viterbi_v7_0.v"]"\
+#  "[file normalize "$origin_dir/ip_repo/div_for_rotafft/div_for_rotafft.xci"]"\
+#  "[file normalize "$origin_dir/ip_repo/complex_multiplier/complex_multiplier.xci"]"\
+#  "[file normalize "$origin_dir/ip_repo/atan_lut/atan_lut.coe"]"\
+#  "[file normalize "$origin_dir/ip_repo/atan_lut/atan_lut.xci"]"\
+# #"[file normalize "$origin_dir/ip_repo/viterbi/viterbi_v7_0.xci"]"\
+#  "[file normalize "$origin_dir/ip_repo/deinter_lut/deinter_lut.coe"]"\
+#  "[file normalize "$origin_dir/ip_repo/deinter_lut/deinter_lut.xci"]"\
+#  "[file normalize "$origin_dir/ip_repo/xfft/xfft_v9.xci"]"\
+#  "[file normalize "$origin_dir/ip_repo/rot_lut/rot_lut.coe"]"\
+#  "[file normalize "$origin_dir/ip_repo/rot_lut/rot_lut.xci"]"\
+#  "[file normalize "$origin_dir/ip_repo/div_gen_new/src/div_gen.v"]"\
+#  "[file normalize "$origin_dir/ip_repo/div_gen_new/src/div_gen_div_gen_0_0/div_gen_div_gen_0_0.xci"]"\
+#  "[file normalize "$origin_dir/ip_repo/div_gen_new/src/div_gen_xlslice_0_0/div_gen_xlslice_0_0.xci"]"\
+#  "[file normalize "$origin_dir/ip_repo/div_gen_csi_over_nova/div_gen_csi_over_nova.xci"]"\
+# ]
+# add_files -norecurse -fileset $obj $files
+ERROR: [Vivado 12-385] Illegal file or directory name '#"C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/Wifi/ip_repo/viterbi/viterbi_v7_0.xci"'
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1

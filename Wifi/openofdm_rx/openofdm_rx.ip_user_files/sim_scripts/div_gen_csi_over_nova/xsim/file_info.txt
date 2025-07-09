@@ -1,0 +1,2 @@
+div_gen_csi_over_nova.vhd,vhdl,xil_defaultlib,../../../../../ip_repo/div_gen_csi_over_nova/sim/div_gen_csi_over_nova.vhd,
+glbl.v,Verilog,xil_defaultlib,glbl.v

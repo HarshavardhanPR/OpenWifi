@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../../../ip_repo/div_gen_csi_over_nova/sim/div_gen_csi_over_nova.vhd" \
+
+nosort

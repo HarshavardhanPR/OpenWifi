@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../../../ip_repo/xfft/sim/xfft_v9.vhd" \
+
+nosort

@@ -1,0 +1,2 @@
+complex_multiplier.vhd,vhdl,xil_defaultlib,../../../../../ip_repo/complex_multiplier/sim/complex_multiplier.vhd,
+glbl.v,Verilog,xil_defaultlib,glbl.v
