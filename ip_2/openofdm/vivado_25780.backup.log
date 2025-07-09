@@ -1,0 +1,2410 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Tue Jul  8 22:39:42 2025
+# Process ID: 25780
+# Current directory: C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq
+# Command line: vivado.exe -source openofdm_rx.tcl -tclargs zed_fmcs2 100
+# Log file: C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/vivado.log
+# Journal file: C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq\vivado.jou
+#-----------------------------------------------------------
+start_gui
+source openofdm_rx.tcl
+# set ARGUMENT1 [lindex $argv 0]
+# set ARGUMENT2 [lindex $argv 1]
+# set ARGUMENT3 [lindex $argv 2]
+# set ARGUMENT4 [lindex $argv 3]
+# set ARGUMENT5 [lindex $argv 4]
+# set ARGUMENT6 [lindex $argv 5]
+# set ARGUMENT7 [lindex $argv 6]
+# if {$ARGUMENT1 eq ""} {
+#   set BOARD_NAME zed_fmcs2
+# } else {
+#   set BOARD_NAME $ARGUMENT1
+# }
+# if {$ARGUMENT2 eq ""} {
+#   set NUM_CLK_PER_US 100
+# } else {
+#   set NUM_CLK_PER_US $ARGUMENT2
+# }
+# source ./parse_board_name.tcl
+## if {$BOARD_NAME=="zed_fmcs2"} {
+##    set ultra_scale_flag 0
+##    set part_string "xc7z020clg484-1"
+##    set board_part_string []
+##    set board_id_string "zed"
+##    set fpga_size_flag 0
+## } elseif {$BOARD_NAME=="zcu102_fmcs2"} {
+##    set ultra_scale_flag 1
+##    set part_string "xczu9eg-ffvb1156-2-e"
+##    set board_part_string "xilinx.com:zcu102:part0:3.4"
+##    set board_id_string "zcu102"
+##    set fpga_size_flag 1
+## } elseif {$BOARD_NAME=="zc706_fmcs2"} {
+##    set ultra_scale_flag 0
+##    set part_string "xc7z045ffg900-2"
+##    set board_part_string []
+##    set board_id_string "zc706"
+##    set fpga_size_flag 1
+## } elseif {$BOARD_NAME=="zc702_fmcs2"} {
+##    set ultra_scale_flag 0
+##    set part_string "xc7z020clg484-1"
+##    set board_part_string []
+##    set board_id_string "zc702"
+##    set fpga_size_flag 0
+## } elseif {$BOARD_NAME=="antsdr"} {
+##    set ultra_scale_flag 0
+##    set part_string "xc7z020clg400-1"
+##    set board_part_string []
+##    set board_id_string []
+##    set fpga_size_flag 0
+## } elseif {$BOARD_NAME=="antsdr_e200"} {
+##    set ultra_scale_flag 0
+##    set part_string "xc7z020clg400-1"
+##    set board_part_string []
+##    set board_id_string []
+##    set fpga_size_flag 0
+## } elseif {$BOARD_NAME=="sdrpi"} {
+##    set ultra_scale_flag 0
+##    set part_string "xc7z020clg400-1"
+##    set board_part_string []
+##    set board_id_string []
+##    set fpga_size_flag 0
+## } elseif {$BOARD_NAME=="adrv9361z7035"} {
+##    set ultra_scale_flag 0
+##    set part_string "xc7z035ifbg676-2L"
+##    set board_part_string []
+##    set board_id_string []
+##    set fpga_size_flag 1
+## } elseif {$BOARD_NAME=="adrv9364z7020"} {
+##    set ultra_scale_flag 0
+##    set part_string "xc7z020clg400-1"
+##    set board_part_string []
+##    set board_id_string []
+##    set fpga_size_flag 0
+## } elseif {$BOARD_NAME=="neptunesdr"} {
+##    set ultra_scale_flag 0
+##    set part_string "xc7z020clg400-1"
+##    set board_part_string []
+##    set board_id_string []
+##    set fpga_size_flag 0
+## } elseif {$BOARD_NAME=="e310v2"} {
+##    set ultra_scale_flag 0
+##    set part_string "xc7z020clg400-1"
+##    set board_part_string []
+##    set board_id_string []
+##    set fpga_size_flag 0
+## } else {
+##    set ultra_scale_flag []
+##    set part_string []
+##    set fpga_size_flag []
+##    set board_part_string []
+##    set board_id_string []
+##    puts "$BOARD_NAME is not valid!"
+## }
+# set MODULE_NAME OPENOFDM_RX
+# set  fd  [open  "./verilog/openofdm_rx_pre_def.v"  w]
+# if {$NUM_CLK_PER_US == 100} {
+#   puts $fd "`define CLK_SPEED_100M"
+# } elseif {$NUM_CLK_PER_US == 200} {
+#   puts $fd "`define CLK_SPEED_200M"
+# } elseif {$NUM_CLK_PER_US == 240} {
+#   puts $fd "`define CLK_SPEED_240M"
+# } elseif {$NUM_CLK_PER_US == 400} {
+#   puts $fd "`define CLK_SPEED_400M"
+# } else {
+#   throw {NUM_CLK_PER_US MUST BE 100/200/240/400!}
+# }
+# puts $fd "`define BETTER_SENSITIVITY"
+# if {$fpga_size_flag == 1} {
+#   puts $fd "`define HAS_OLD_SOFT_BITS_METHOD 1"
+# }
+# if {$ARGUMENT3 eq ""} {
+#   puts $fd "`define SAMPLE_FILE \"../../../../../testing_inputs/simulated/ht_mcs7_gi1_aggr0_len14_pre100_post200_openwifi.txt\""
+# } else {
+#   puts $fd "`define SAMPLE_FILE \"$ARGUMENT3\""
+#   set fc_filename [string range $ARGUMENT3 0 end-4]
+#   append fc_filename "_Fc_input.txt"
+# }
+# if {$ARGUMENT4 eq ""} {
+#   puts $fd " "
+# } else {
+#   puts $fd "`define $MODULE_NAME\_$ARGUMENT4"
+# }
+# if {$ARGUMENT5 eq ""} {
+#   puts $fd " "
+# } else {
+#   puts $fd "`define $MODULE_NAME\_$ARGUMENT5"
+# }
+# if {$ARGUMENT6 eq ""} {
+#   puts $fd " "
+# } else {
+#   puts $fd "`define $MODULE_NAME\_$ARGUMENT6"
+# }
+# if {$ARGUMENT7 eq ""} {
+#   puts $fd " "
+# } else {
+#   puts $fd "`define $MODULE_NAME\_$ARGUMENT7"
+# }
+# puts $fd "`define $BOARD_NAME"
+# close $fd
+# puts "\nBOARD_NAME $BOARD_NAME\n"
+
+BOARD_NAME zed_fmcs2
+
+# puts "NUM_CLK_PER_US $NUM_CLK_PER_US\n"
+NUM_CLK_PER_US 100
+
+# puts "ultra_scale_flag $ultra_scale_flag\n"
+ultra_scale_flag 0
+
+# puts "part_string $part_string\n"
+part_string xc7z020clg484-1
+
+# puts "fpga_size_flag $fpga_size_flag\n"
+fpga_size_flag 0
+
+# puts "ARGUMENT3 $ARGUMENT3\n"
+ARGUMENT3 
+
+# puts "ARGUMENT4 $MODULE_NAME\_$ARGUMENT4\n"
+ARGUMENT4 OPENOFDM_RX_
+
+# puts "ARGUMENT5 $MODULE_NAME\_$ARGUMENT5\n"
+ARGUMENT5 OPENOFDM_RX_
+
+# puts "ARGUMENT6 $MODULE_NAME\_$ARGUMENT6\n"
+ARGUMENT6 OPENOFDM_RX_
+
+# puts "ARGUMENT7 $MODULE_NAME\_$ARGUMENT7\n"
+ARGUMENT7 OPENOFDM_RX_
+
+# if {$ultra_scale_flag == 0} {
+#   set ip_fix_string zynq
+# } else {
+#   set ip_fix_string zynquplus
+# }
+# set  fd  [open  "./verilog/openofdm_rx_git_rev.v"  w]
+# set HASHCODE "00000000"
+# puts $fd "`define OPENOFDM_RX_GIT_REV (32'h$HASHCODE)"
+# close $fd
+# set origin_dir [file dirname [info script]]
+# file delete -force $origin_dir/ip_repo
+# file mkdir $origin_dir/ip_repo
+# file copy -force $origin_dir/verilog/coregen/div_gen_new_ip_core_$ip_fix_string $origin_dir/ip_repo/div_gen_new
+# file copy -force $origin_dir/verilog/Xilinx/$ip_fix_string $origin_dir/ip_repo/$ip_fix_string
+# foreach item [glob -nocomplain $origin_dir/ip_repo/$ip_fix_string/*] {
+#     file rename -force $item $origin_dir/ip_repo/[file tail $item]
+# }
+# file delete -force $origin_dir/ip_repo/$ip_fix_string
+# if { [info exists ::origin_dir_loc] } {
+#   set origin_dir $::origin_dir_loc
+# }
+# set project_name "openofdm_rx"
+# if {[file exists $project_name]} {
+#     file delete -force $project_name
+# }
+# if { [info exists ::user_project_name] } {
+#   set project_name $::user_project_name
+# }
+# variable script_file
+# set script_file "openofdm_rx.tcl"
+# proc help {} {
+#   variable script_file
+#   puts "\nDescription:"
+#   puts "Recreate a Vivado project from this script. The created project will be"
+#   puts "functionally equivalent to the original project for which this script was"
+#   puts "generated. The script contains commands for creating a project, filesets,"
+#   puts "runs, adding/importing sources and setting properties on various objects.\n"
+#   puts "Syntax:"
+#   puts "$script_file"
+#   puts "$script_file -tclargs \[--origin_dir <path>\]"
+#   puts "$script_file -tclargs \[--project_name <name>\]"
+#   puts "$script_file -tclargs \[--help\]\n"
+#   puts "Usage:"
+#   puts "Name                   Description"
+#   puts "-------------------------------------------------------------------------"
+#   puts "\[--origin_dir <path>\]  Determine source file paths wrt this path. Default"
+#   puts "                       origin_dir path value is \".\", otherwise, the value"
+#   puts "                       that was set with the \"-paths_relative_to\" switch"
+#   puts "                       when this script was generated.\n"
+#   puts "\[--project_name <name>\] Create project with the specified name. Default"
+#   puts "                       name is the name of the project from where this"
+#   puts "                       script was generated.\n"
+#   puts "\[--help\]               Print help information for this script"
+#   puts "-------------------------------------------------------------------------\n"
+#   exit 0
+# }
+# if { $::argc > 0 } {
+#   for {set i 0} {$i < [llength $::argc]} {incr i} {
+#     set option [string trim [lindex $::argv $i]]
+#     switch -regexp -- $option {
+#       "--origin_dir"   { incr i; set origin_dir [lindex $::argv $i] }
+#       "--project_name" { incr i; set project_name [lindex $::argv $i] }
+#       "--help"         { help }
+#       default {
+#         if { [regexp {^-} $option] } {
+#           puts "ERROR: Unknown option '$option' specified, please type '$script_file -tclargs --help' for usage info.\n"
+#           return 1
+#         }
+#       }
+#     }
+#   }
+# }
+# set src_dir "[file normalize "$origin_dir/verilog"]"
+# create_project ${project_name} ./${project_name} -part $part_string
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Apps/v_log/Vivado/2021.1/data/ip'.
+create_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:06 . Memory (MB): peak = 1136.574 ; gain = 0.000
+# set proj_dir [get_property directory [current_project]]
+# set obj [current_project]
+# set_property -name "board_connections" -value "" -objects $obj
+# set_property -name "compxlib.activehdl_compiled_library_dir" -value "$proj_dir/${project_name}.cache/compile_simlib/activehdl" -objects $obj
+# set_property -name "compxlib.funcsim" -value "1" -objects $obj
+# set_property -name "compxlib.ies_compiled_library_dir" -value "$proj_dir/${project_name}.cache/compile_simlib/ies" -objects $obj
+# set_property -name "compxlib.modelsim_compiled_library_dir" -value "$proj_dir/${project_name}.cache/compile_simlib/modelsim" -objects $obj
+# set_property -name "compxlib.overwrite_libs" -value "0" -objects $obj
+# set_property -name "compxlib.questa_compiled_library_dir" -value "$proj_dir/${project_name}.cache/compile_simlib/questa" -objects $obj
+# set_property -name "compxlib.riviera_compiled_library_dir" -value "$proj_dir/${project_name}.cache/compile_simlib/riviera" -objects $obj
+# set_property -name "compxlib.timesim" -value "1" -objects $obj
+# set_property -name "compxlib.vcs_compiled_library_dir" -value "$proj_dir/${project_name}.cache/compile_simlib/vcs" -objects $obj
+# set_property -name "compxlib.xsim_compiled_library_dir" -value "" -objects $obj
+# set_property -name "corecontainer.enable" -value "0" -objects $obj
+# set_property -name "default_lib" -value "xil_defaultlib" -objects $obj
+# set_property -name "dsa.num_compute_units" -value "60" -objects $obj
+WARNING: [Common 17-599] Property 'dsa.num_compute_units' is deprecated for object type 'project'. dsa.* properties have been deprecated, please use the corresponding platform.* properties.
+# set_property -name "dsa.rom.debug_type" -value "0" -objects $obj
+WARNING: [Common 17-599] Property 'dsa.rom.debug_type' is deprecated for object type 'project'. dsa.* properties have been deprecated, please use the corresponding platform.* properties.
+# set_property -name "dsa.rom.prom_type" -value "0" -objects $obj
+WARNING: [Common 17-599] Property 'dsa.rom.prom_type' is deprecated for object type 'project'. dsa.* properties have been deprecated, please use the corresponding platform.* properties.
+# set_property -name "enable_optional_runs_sta" -value "0" -objects $obj
+# set_property -name "generate_ip_upgrade_log" -value "1" -objects $obj
+# set_property -name "ip_cache_permissions" -value "read write" -objects $obj
+# set_property -name "ip_interface_inference_priority" -value "" -objects $obj
+# set_property -name "ip_output_repo" -value "$proj_dir/${project_name}.cache/ip" -objects $obj
+# set_property -name "project_type" -value "Default" -objects $obj
+# set_property -name "pr_flow" -value "0" -objects $obj
+# set_property -name "sim.ip.auto_export_scripts" -value "1" -objects $obj
+# set_property -name "sim.use_ip_compiled_libs" -value "1" -objects $obj
+# set_property -name "simulator_language" -value "Mixed" -objects $obj
+# set_property -name "source_mgmt_mode" -value "All" -objects $obj
+# set_property -name "target_language" -value "Verilog" -objects $obj
+# set_property -name "target_simulator" -value "XSim" -objects $obj
+# set_property -name "xpm_libraries" -value "XPM_MEMORY" -objects $obj
+# set_property -name "xsim.array_display_limit" -value "1024" -objects $obj
+# set_property -name "xsim.radix" -value "hex" -objects $obj
+# set_property -name "xsim.time_unit" -value "ns" -objects $obj
+# set_property -name "xsim.trace_limit" -value "65536" -objects $obj
+# if {[get_filesets -quiet sources_1] eq ""} {
+#   create_fileset -srcset sources_1
+# }
+# set obj [get_filesets sources_1]
+# set_property ip_repo_paths [list $origin_dir/verilog/coregen/div_gen_new_ip_core_$ip_fix_string] $obj
+# update_ip_catalog -rebuild
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/verilog/coregen/div_gen_new_ip_core_zynq'.
+# set obj [get_filesets sources_1]
+# set files [list \
+#  "[file normalize "$origin_dir/verilog/calc_mean.v"]"\
+#  "[file normalize "$origin_dir/verilog/equalizer.v"]"\
+#  "[file normalize "$origin_dir/verilog/dot11_setting_agent.v"]"\
+#  "[file normalize "$origin_dir/verilog/bits_to_bytes.v"]"\
+#  "[file normalize "$origin_dir/verilog/complex_mult.v"]"\
+#  "[file normalize "$origin_dir/verilog/complex_to_mag.v"]"\
+#  "[file normalize "$origin_dir/verilog/complex_to_mag_sq.v"]"\
+#  "[file normalize "$origin_dir/verilog/crc32.v"]"\
+#  "[file normalize "$origin_dir/verilog/deinterleave.v"]"\
+#  "[file normalize "$origin_dir/verilog/delayT.v"]"\
+#  "[file normalize "$origin_dir/verilog/fifo_sample_delay.v"]"\
+#  "[file normalize "$origin_dir/verilog/common_defs.v"]"\
+#  "[file normalize "$origin_dir/verilog/demodulate.v"]"\
+#  "[file normalize "$origin_dir/verilog/descramble.v"]"\
+#  "[file normalize "$origin_dir/verilog/divider.v"]"\
+#  "[file normalize "$origin_dir/verilog/dot11.v"]"\
+#  "[file normalize "$origin_dir/verilog/ht_sig_crc.v"]"\
+#  "[file normalize "$origin_dir/verilog/mv_avg.v"]"\
+#  "[file normalize "$origin_dir/verilog/mv_avg_dual_ch.v"]"\
+#  "[file normalize "$origin_dir/verilog/ofdm_decoder.v"]"\
+#  "[file normalize "$origin_dir/verilog/openofdm_rx_s_axi.v"]"\
+#  "[file normalize "$origin_dir/verilog/phase.v"]"\
+#  "[file normalize "$origin_dir/verilog/dpram.v"]"\
+#  "[file normalize "$origin_dir/verilog/rotate.v"]"\
+#  "[file normalize "$origin_dir/verilog/stage_mult.v"]"\
+#  "[file normalize "$origin_dir/verilog/sync_long.v"]"\
+#  "[file normalize "$origin_dir/verilog/sync_short.v"]"\
+#  "[file normalize "$origin_dir/verilog/openofdm_rx.v"]"\
+#  "[file normalize "$origin_dir/verilog/running_sum_dual_ch.v"]"\
+#  "[file normalize "$origin_dir/verilog/signal_watchdog.v"]"\
+#  "[file normalize "$origin_dir/verilog/phy_len_calculation.v"]"\
+#  "[file normalize "$origin_dir/verilog/rot_after_fft.v"]"\
+#  "[file normalize "$origin_dir/ip_repo/div_for_rotafft/div_for_rotafft.xci"]"\
+#  "[file normalize "$origin_dir/ip_repo/complex_multiplier/complex_multiplier.xci"]"\
+#  "[file normalize "$origin_dir/ip_repo/atan_lut/atan_lut.coe"]"\
+#  "[file normalize "$origin_dir/ip_repo/atan_lut/atan_lut.xci"]"\
+#  "[file normalize "$origin_dir/ip_repo/viterbi/viterbi_v7_0.xci"]"\
+#  "[file normalize "$origin_dir/ip_repo/deinter_lut/deinter_lut.coe"]"\
+#  "[file normalize "$origin_dir/ip_repo/deinter_lut/deinter_lut.xci"]"\
+#  "[file normalize "$origin_dir/ip_repo/xfft/xfft_v9.xci"]"\
+#  "[file normalize "$origin_dir/ip_repo/rot_lut/rot_lut.coe"]"\
+#  "[file normalize "$origin_dir/ip_repo/rot_lut/rot_lut.xci"]"\
+#  "[file normalize "$origin_dir/ip_repo/div_gen_new/src/div_gen.v"]"\
+#  "[file normalize "$origin_dir/ip_repo/div_gen_new/src/div_gen_div_gen_0_0/div_gen_div_gen_0_0.xci"]"\
+#  "[file normalize "$origin_dir/ip_repo/div_gen_new/src/div_gen_xlslice_0_0/div_gen_xlslice_0_0.xci"]"\
+#  "[file normalize "$origin_dir/ip_repo/div_gen_csi_over_nova/div_gen_csi_over_nova.xci"]"\
+# ]
+# add_files -norecurse -fileset $obj $files
+WARNING: [IP_Flow 19-2162] IP 'complex_multiplier' is locked:
+* IP definition 'Complex Multiplier (6.0)' for IP 'complex_multiplier' (customized with software release 2018.3) has a different revision in the IP Catalog. * Current project part 'xc7z020clg484-1' and the part 'xc7z045ffg900-2' used to customize the IP 'complex_multiplier' do not match.
+WARNING: [IP_Flow 19-2162] IP 'atan_lut' is locked:
+* IP definition 'Block Memory Generator (8.4)' for IP 'atan_lut' (customized with software release 2018.3) has a different revision in the IP Catalog. * Current project part 'xc7z020clg484-1' and the part 'xc7z045ffg900-2' used to customize the IP 'atan_lut' do not match.
+WARNING: [IP_Flow 19-2162] IP 'viterbi_v7_0' is locked:
+* IP 'viterbi_v7_0' requires one or more mandatory licenses but no valid licenses were found. However license checkpoints may prevent use of this IP in some tool flows. * IP definition 'Viterbi Decoder (9.1)' for IP 'viterbi_v7_0' (customized with software release 2018.3) has a different revision in the IP Catalog. * Current project part 'xc7z020clg484-1' and the part 'xc7z045ffg900-2' used to customize the IP 'viterbi_v7_0' do not match.
+WARNING: [IP_Flow 19-2162] IP 'deinter_lut' is locked:
+* IP definition 'Block Memory Generator (8.4)' for IP 'deinter_lut' (customized with software release 2018.3) has a different revision in the IP Catalog. * Current project part 'xc7z020clg484-1' and the part 'xc7z045ffg900-2' used to customize the IP 'deinter_lut' do not match.
+WARNING: [IP_Flow 19-2162] IP 'xfft_v9' is locked:
+* IP definition 'Fast Fourier Transform (9.1)' for IP 'xfft_v9' (customized with software release 2018.3) has a different revision in the IP Catalog. * Current project part 'xc7z020clg484-1' and the part 'xc7z045ffg900-2' used to customize the IP 'xfft_v9' do not match.
+WARNING: [IP_Flow 19-2162] IP 'rot_lut' is locked:
+* IP definition 'Block Memory Generator (8.4)' for IP 'rot_lut' (customized with software release 2018.3) has a different revision in the IP Catalog. * Current project part 'xc7z020clg484-1' and the part 'xc7z045ffg900-2' used to customize the IP 'rot_lut' do not match.
+WARNING: [IP_Flow 19-2162] IP 'div_gen_div_gen_0_0' is locked:
+* IP definition 'Divider Generator (5.1)' for IP 'div_gen_div_gen_0_0' (customized with software release 2018.3) has a different revision in the IP Catalog. * Current project part 'xc7z020clg484-1' and the part 'xc7z045ffg900-2' used to customize the IP 'div_gen_div_gen_0_0' do not match.
+WARNING: [IP_Flow 19-2162] IP 'div_gen_xlslice_0_0' is locked:
+* IP definition 'Slice (1.0)' for IP 'div_gen_xlslice_0_0' (customized with software release 2018.3) has a different revision in the IP Catalog. * Current project part 'xc7z020clg484-1' and the part 'xc7z045ffg900-2' used to customize the IP 'div_gen_xlslice_0_0' do not match.
+# set obj [get_filesets sources_1]
+# set_property -name "top" -value "openofdm_rx" -objects $obj
+# if {[get_filesets -quiet constrs_1] eq ""} {
+#   create_fileset -constrset constrs_1
+# }
+# set obj [get_filesets constrs_1]
+# set obj [get_filesets constrs_1]
+# if {[get_filesets -quiet sim_1] eq ""} {
+#   create_fileset -simset sim_1
+# }
+# set obj [get_filesets sim_1]
+# set files [list \
+#  "[file normalize "$origin_dir/verilog/dot11_tb.v"]"
+# ]
+# add_files -norecurse -fileset $obj $files
+# set obj [get_filesets sim_1]
+# set_property -name "32bit" -value "0" -objects $obj
+# set_property -name "generic" -value "" -objects $obj
+# set_property -name "include_dirs" -value "" -objects $obj
+# set_property -name "incremental" -value "1" -objects $obj
+# set_property -name "name" -value "sim_1" -objects $obj
+# set_property -name "nl.cell" -value "" -objects $obj
+# set_property -name "nl.incl_unisim_models" -value "0" -objects $obj
+# set_property -name "nl.process_corner" -value "slow" -objects $obj
+# set_property -name "nl.rename_top" -value "" -objects $obj
+# set_property -name "nl.sdf_anno" -value "1" -objects $obj
+# set_property -name "nl.write_all_overrides" -value "0" -objects $obj
+# set_property -name "source_set" -value "sources_1" -objects $obj
+# set_property -name "top" -value "dot11_tb" -objects $obj
+# set_property -name "transport_int_delay" -value "0" -objects $obj
+# set_property -name "transport_path_delay" -value "0" -objects $obj
+# set_property -name "verilog_define" -value "" -objects $obj
+# set_property -name "verilog_uppercase" -value "0" -objects $obj
+# set_property -name "xelab.dll" -value "0" -objects $obj
+# set_property -name "xsim.compile.tcl.pre" -value "" -objects $obj
+# set_property -name "xsim.compile.xvhdl.more_options" -value "" -objects $obj
+# set_property -name "xsim.compile.xvhdl.nosort" -value "1" -objects $obj
+# set_property -name "xsim.compile.xvhdl.relax" -value "1" -objects $obj
+# set_property -name "xsim.compile.xvlog.more_options" -value "" -objects $obj
+# set_property -name "xsim.compile.xvlog.nosort" -value "1" -objects $obj
+# set_property -name "xsim.compile.xvlog.relax" -value "1" -objects $obj
+# set_property -name "xsim.elaborate.debug_level" -value "typical" -objects $obj
+# set_property -name "xsim.elaborate.load_glbl" -value "1" -objects $obj
+# set_property -name "xsim.elaborate.mt_level" -value "auto" -objects $obj
+# set_property -name "xsim.elaborate.rangecheck" -value "0" -objects $obj
+# set_property -name "xsim.elaborate.relax" -value "1" -objects $obj
+# set_property -name "xsim.elaborate.sdf_delay" -value "sdfmax" -objects $obj
+# set_property -name "xsim.elaborate.snapshot" -value "" -objects $obj
+# set_property -name "xsim.elaborate.xelab.more_options" -value "" -objects $obj
+# set_property -name "xsim.simulate.custom_tcl" -value "" -objects $obj
+# set_property -name "xsim.simulate.log_all_signals" -value "0" -objects $obj
+# set_property -name "xsim.simulate.runtime" -value "1000ns" -objects $obj
+# set_property -name "xsim.simulate.saif" -value "" -objects $obj
+# set_property -name "xsim.simulate.saif_all_signals" -value "0" -objects $obj
+# set_property -name "xsim.simulate.saif_scope" -value "" -objects $obj
+# set_property -name "xsim.simulate.tcl.post" -value "" -objects $obj
+# set_property -name "xsim.simulate.wdb" -value "" -objects $obj
+# set_property -name "xsim.simulate.xsim.more_options" -value "" -objects $obj
+# if {[get_runs -quiet synth_1] eq ""} {
+#     create_run -name synth_1 -part $part_string -flow {Vivado Synthesis 2021} -strategy "Vivado Synthesis Defaults" -report_strategy {No Reports} -constrset constrs_1
+# } else {
+#   set_property strategy "Vivado Synthesis Defaults" [get_runs synth_1]
+#   set_property flow "Vivado Synthesis 2021" [get_runs synth_1]
+# }
+# set obj [get_runs synth_1]
+# set_property set_report_strategy_name 1 $obj
+# set_property report_strategy {Vivado Synthesis Default Reports} $obj
+# set_property set_report_strategy_name 0 $obj
+# if { [get_report_configs -of_objects [get_runs synth_1] synth_1_synth_report_utilization_0] eq "" } {
+#   create_report_config -report_name synth_1_synth_report_utilization_0 -report_type report_utilization:1.0 -steps synth_design -runs synth_1
+# }
+# set obj [get_report_configs -of_objects [get_runs synth_1] synth_1_synth_report_utilization_0]
+# if { $obj ne "" } {
+# set_property -name "is_enabled" -value "1" -objects $obj
+# set_property -name "options.pblocks" -value "" -objects $obj
+# set_property -name "options.cells" -value "" -objects $obj
+# set_property -name "options.slr" -value "0" -objects $obj
+# set_property -name "options.packthru" -value "0" -objects $obj
+# set_property -name "options.hierarchical" -value "0" -objects $obj
+# set_property -name "options.hierarchical_depth" -value "" -objects $obj
+# set_property -name "options.hierarchical_percentages" -value "0" -objects $obj
+# set_property -name "options.more_options" -value "" -objects $obj
+# 
+# }
+# set obj [get_runs synth_1]
+# set_property -name "constrset" -value "constrs_1" -objects $obj
+# set_property -name "description" -value "Vivado Synthesis Defaults" -objects $obj
+# set_property -name "flow" -value "Vivado Synthesis 2021" -objects $obj
+# set_property -name "name" -value "synth_1" -objects $obj
+# set_property -name "needs_refresh" -value "0" -objects $obj
+# set_property -name "srcset" -value "sources_1" -objects $obj
+# set_property -name "include_in_archive" -value "1" -objects $obj
+# set_property -name "strategy" -value "Vivado Synthesis Defaults" -objects $obj
+# set_property -name "steps.synth_design.tcl.pre" -value "" -objects $obj
+# set_property -name "steps.synth_design.tcl.post" -value "" -objects $obj
+# set_property -name "steps.synth_design.args.flatten_hierarchy" -value "rebuilt" -objects $obj
+# set_property -name "steps.synth_design.args.gated_clock_conversion" -value "off" -objects $obj
+# set_property -name "steps.synth_design.args.bufg" -value "12" -objects $obj
+# set_property -name "steps.synth_design.args.directive" -value "Default" -objects $obj
+# set_property -name "steps.synth_design.args.retiming" -value "0" -objects $obj
+# set_property -name "steps.synth_design.args.fsm_extraction" -value "auto" -objects $obj
+# set_property -name "steps.synth_design.args.keep_equivalent_registers" -value "0" -objects $obj
+# set_property -name "steps.synth_design.args.resource_sharing" -value "auto" -objects $obj
+# set_property -name "steps.synth_design.args.control_set_opt_threshold" -value "auto" -objects $obj
+# set_property -name "steps.synth_design.args.no_lc" -value "0" -objects $obj
+# set_property -name "steps.synth_design.args.no_srlextract" -value "0" -objects $obj
+# set_property -name "steps.synth_design.args.shreg_min_size" -value "3" -objects $obj
+# set_property -name "steps.synth_design.args.max_bram" -value "-1" -objects $obj
+# set_property -name "steps.synth_design.args.max_uram" -value "-1" -objects $obj
+# set_property -name "steps.synth_design.args.max_dsp" -value "-1" -objects $obj
+# set_property -name "steps.synth_design.args.max_bram_cascade_height" -value "-1" -objects $obj
+# set_property -name "steps.synth_design.args.max_uram_cascade_height" -value "-1" -objects $obj
+# set_property -name "steps.synth_design.args.cascade_dsp" -value "auto" -objects $obj
+# set_property -name "steps.synth_design.args.assert" -value "0" -objects $obj
+# set_property -name "steps.synth_design.args.more_options" -value "" -objects $obj
+ERROR: [Common 17-54] The object 'run' does not have a property 'steps.synth_design.args.more_options'.
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+report_property $obj
+Property                                           Type     Read-only  Value
+CURRENT_STEP                                       string   true       
+CLASS                                              string   true       run
+CONSTRSET                                          fileset  false      constrs_1
+DESCRIPTION                                        string   false      Vivado Synthesis Defaults
+DIRECTORY                                          string   true       C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.runs/synth_1
+STATS.ELAPSED                                      string   true       00:00:00
+STATS.TNS                                          string   true       
+STATS.THS                                          string   true       
+STATS.WNS                                          string   true       
+STATS.WHS                                          string   true       
+STATS.TPWS                                         string   true       
+STATS.TOTAL_POWER                                  string   true       
+STATS.FAILED_NETS                                  string   true       
+FLOW                                               string   false      Vivado Synthesis 2021
+IS_IMPLEMENTATION                                  bool     true       0
+IS_SYNTHESIS                                       bool     true       1
+NAME                                               string   false      synth_1
+NEEDS_REFRESH                                      bool     false      0
+PARENT                                             string   true       0
+PART                                               part     false      xc7z020clg484-1
+PROGRESS                                           string   true       0%
+SRCSET                                             fileset  false      sources_1
+STATUS                                             string   true       Not started
+INCREMENTAL_CHECKPOINT                             file     false      
+AUTO_INCREMENTAL_CHECKPOINT                        bool     false      0
+RQS_FILES                                          string*  false      
+INCREMENTAL_CHECKPOINT.MORE_OPTIONS                string   false      
+INCLUDE_IN_ARCHIVE                                 bool     false      1
+GEN_FULL_BITSTREAM                                 bool     false      1
+WRITE_INCREMENTAL_SYNTH_CHECKPOINT                 bool     false      0
+JOB_ID                                             string   true       
+AUTO_INCREMENTAL_CHECKPOINT.DIRECTORY              string   false      C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.srcs/utils_1/imports/synth_1
+REPORT_STRATEGY                                    string   false      Vivado Synthesis Default Reports
+STRATEGY                                           string   false      Vivado Synthesis Defaults
+STEPS.SYNTH_DESIGN.TCL.PRE                         file     false      
+STEPS.SYNTH_DESIGN.TCL.POST                        file     false      
+STEPS.SYNTH_DESIGN.REPORTS                         string*  true       synth_1_synth_report_utilization_0 synth_1_synth_synthesis_report_0
+STEPS.SYNTH_DESIGN.ARGS.FLATTEN_HIERARCHY          enum     false      rebuilt
+STEPS.SYNTH_DESIGN.ARGS.GATED_CLOCK_CONVERSION     enum     false      off
+STEPS.SYNTH_DESIGN.ARGS.BUFG                       int      false      12
+STEPS.SYNTH_DESIGN.ARGS.DIRECTIVE                  enum     false      Default
+STEPS.SYNTH_DESIGN.ARGS.RETIMING                   bool     false      0
+STEPS.SYNTH_DESIGN.ARGS.FSM_EXTRACTION             enum     false      auto
+STEPS.SYNTH_DESIGN.ARGS.KEEP_EQUIVALENT_REGISTERS  bool     false      0
+STEPS.SYNTH_DESIGN.ARGS.RESOURCE_SHARING           enum     false      auto
+STEPS.SYNTH_DESIGN.ARGS.CONTROL_SET_OPT_THRESHOLD  enum     false      auto
+STEPS.SYNTH_DESIGN.ARGS.NO_LC                      bool     false      0
+STEPS.SYNTH_DESIGN.ARGS.NO_SRLEXTRACT              bool     false      0
+STEPS.SYNTH_DESIGN.ARGS.SHREG_MIN_SIZE             int      false      3
+STEPS.SYNTH_DESIGN.ARGS.MAX_BRAM                   int      false      -1
+STEPS.SYNTH_DESIGN.ARGS.MAX_URAM                   int      false      -1
+STEPS.SYNTH_DESIGN.ARGS.MAX_DSP                    int      false      -1
+STEPS.SYNTH_DESIGN.ARGS.MAX_BRAM_CASCADE_HEIGHT    int      false      -1
+STEPS.SYNTH_DESIGN.ARGS.MAX_URAM_CASCADE_HEIGHT    int      false      -1
+STEPS.SYNTH_DESIGN.ARGS.CASCADE_DSP                enum     false      auto
+STEPS.SYNTH_DESIGN.ARGS.ASSERT                     bool     false      0
+STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS               string   false      
+source openofdm_rx.tcl
+# set ARGUMENT1 [lindex $argv 0]
+# set ARGUMENT2 [lindex $argv 1]
+# set ARGUMENT3 [lindex $argv 2]
+# set ARGUMENT4 [lindex $argv 3]
+# set ARGUMENT5 [lindex $argv 4]
+# set ARGUMENT6 [lindex $argv 5]
+# set ARGUMENT7 [lindex $argv 6]
+# if {$ARGUMENT1 eq ""} {
+#   set BOARD_NAME zed_fmcs2
+# } else {
+#   set BOARD_NAME $ARGUMENT1
+# }
+# if {$ARGUMENT2 eq ""} {
+#   set NUM_CLK_PER_US 100
+# } else {
+#   set NUM_CLK_PER_US $ARGUMENT2
+# }
+# source ./parse_board_name.tcl
+## if {$BOARD_NAME=="zed_fmcs2"} {
+##    set ultra_scale_flag 0
+##    set part_string "xc7z020clg484-1"
+##    set board_part_string []
+##    set board_id_string "zed"
+##    set fpga_size_flag 0
+## } elseif {$BOARD_NAME=="zcu102_fmcs2"} {
+##    set ultra_scale_flag 1
+##    set part_string "xczu9eg-ffvb1156-2-e"
+##    set board_part_string "xilinx.com:zcu102:part0:3.4"
+##    set board_id_string "zcu102"
+##    set fpga_size_flag 1
+## } elseif {$BOARD_NAME=="zc706_fmcs2"} {
+##    set ultra_scale_flag 0
+##    set part_string "xc7z045ffg900-2"
+##    set board_part_string []
+##    set board_id_string "zc706"
+##    set fpga_size_flag 1
+## } elseif {$BOARD_NAME=="zc702_fmcs2"} {
+##    set ultra_scale_flag 0
+##    set part_string "xc7z020clg484-1"
+##    set board_part_string []
+##    set board_id_string "zc702"
+##    set fpga_size_flag 0
+## } elseif {$BOARD_NAME=="antsdr"} {
+##    set ultra_scale_flag 0
+##    set part_string "xc7z020clg400-1"
+##    set board_part_string []
+##    set board_id_string []
+##    set fpga_size_flag 0
+## } elseif {$BOARD_NAME=="antsdr_e200"} {
+##    set ultra_scale_flag 0
+##    set part_string "xc7z020clg400-1"
+##    set board_part_string []
+##    set board_id_string []
+##    set fpga_size_flag 0
+## } elseif {$BOARD_NAME=="sdrpi"} {
+##    set ultra_scale_flag 0
+##    set part_string "xc7z020clg400-1"
+##    set board_part_string []
+##    set board_id_string []
+##    set fpga_size_flag 0
+## } elseif {$BOARD_NAME=="adrv9361z7035"} {
+##    set ultra_scale_flag 0
+##    set part_string "xc7z035ifbg676-2L"
+##    set board_part_string []
+##    set board_id_string []
+##    set fpga_size_flag 1
+## } elseif {$BOARD_NAME=="adrv9364z7020"} {
+##    set ultra_scale_flag 0
+##    set part_string "xc7z020clg400-1"
+##    set board_part_string []
+##    set board_id_string []
+##    set fpga_size_flag 0
+## } elseif {$BOARD_NAME=="neptunesdr"} {
+##    set ultra_scale_flag 0
+##    set part_string "xc7z020clg400-1"
+##    set board_part_string []
+##    set board_id_string []
+##    set fpga_size_flag 0
+## } elseif {$BOARD_NAME=="e310v2"} {
+##    set ultra_scale_flag 0
+##    set part_string "xc7z020clg400-1"
+##    set board_part_string []
+##    set board_id_string []
+##    set fpga_size_flag 0
+## } else {
+##    set ultra_scale_flag []
+##    set part_string []
+##    set fpga_size_flag []
+##    set board_part_string []
+##    set board_id_string []
+##    puts "$BOARD_NAME is not valid!"
+## }
+# set MODULE_NAME OPENOFDM_RX
+# set  fd  [open  "./verilog/openofdm_rx_pre_def.v"  w]
+# if {$NUM_CLK_PER_US == 100} {
+#   puts $fd "`define CLK_SPEED_100M"
+# } elseif {$NUM_CLK_PER_US == 200} {
+#   puts $fd "`define CLK_SPEED_200M"
+# } elseif {$NUM_CLK_PER_US == 240} {
+#   puts $fd "`define CLK_SPEED_240M"
+# } elseif {$NUM_CLK_PER_US == 400} {
+#   puts $fd "`define CLK_SPEED_400M"
+# } else {
+#   throw {NUM_CLK_PER_US MUST BE 100/200/240/400!}
+# }
+# puts $fd "`define BETTER_SENSITIVITY"
+# if {$fpga_size_flag == 1} {
+#   puts $fd "`define HAS_OLD_SOFT_BITS_METHOD 1"
+# }
+# if {$ARGUMENT3 eq ""} {
+#   puts $fd "`define SAMPLE_FILE \"../../../../../testing_inputs/simulated/ht_mcs7_gi1_aggr0_len14_pre100_post200_openwifi.txt\""
+# } else {
+#   puts $fd "`define SAMPLE_FILE \"$ARGUMENT3\""
+#   set fc_filename [string range $ARGUMENT3 0 end-4]
+#   append fc_filename "_Fc_input.txt"
+# }
+# if {$ARGUMENT4 eq ""} {
+#   puts $fd " "
+# } else {
+#   puts $fd "`define $MODULE_NAME\_$ARGUMENT4"
+# }
+# if {$ARGUMENT5 eq ""} {
+#   puts $fd " "
+# } else {
+#   puts $fd "`define $MODULE_NAME\_$ARGUMENT5"
+# }
+# if {$ARGUMENT6 eq ""} {
+#   puts $fd " "
+# } else {
+#   puts $fd "`define $MODULE_NAME\_$ARGUMENT6"
+# }
+# if {$ARGUMENT7 eq ""} {
+#   puts $fd " "
+# } else {
+#   puts $fd "`define $MODULE_NAME\_$ARGUMENT7"
+# }
+# puts $fd "`define $BOARD_NAME"
+# close $fd
+# puts "\nBOARD_NAME $BOARD_NAME\n"
+
+BOARD_NAME zed_fmcs2
+
+# puts "NUM_CLK_PER_US $NUM_CLK_PER_US\n"
+NUM_CLK_PER_US 100
+
+# puts "ultra_scale_flag $ultra_scale_flag\n"
+ultra_scale_flag 0
+
+# puts "part_string $part_string\n"
+part_string xc7z020clg484-1
+
+# puts "fpga_size_flag $fpga_size_flag\n"
+fpga_size_flag 0
+
+# puts "ARGUMENT3 $ARGUMENT3\n"
+ARGUMENT3 
+
+# puts "ARGUMENT4 $MODULE_NAME\_$ARGUMENT4\n"
+ARGUMENT4 OPENOFDM_RX_
+
+# puts "ARGUMENT5 $MODULE_NAME\_$ARGUMENT5\n"
+ARGUMENT5 OPENOFDM_RX_
+
+# puts "ARGUMENT6 $MODULE_NAME\_$ARGUMENT6\n"
+ARGUMENT6 OPENOFDM_RX_
+
+# puts "ARGUMENT7 $MODULE_NAME\_$ARGUMENT7\n"
+ARGUMENT7 OPENOFDM_RX_
+
+# if {$ultra_scale_flag == 0} {
+#   set ip_fix_string zynq
+# } else {
+#   set ip_fix_string zynquplus
+# }
+# set  fd  [open  "./verilog/openofdm_rx_git_rev.v"  w]
+# set HASHCODE "00000000"
+# puts $fd "`define OPENOFDM_RX_GIT_REV (32'h$HASHCODE)"
+# close $fd
+# set origin_dir [file dirname [info script]]
+# file delete -force $origin_dir/ip_repo
+# file mkdir $origin_dir/ip_repo
+# file copy -force $origin_dir/verilog/coregen/div_gen_new_ip_core_$ip_fix_string $origin_dir/ip_repo/div_gen_new
+# file copy -force $origin_dir/verilog/Xilinx/$ip_fix_string $origin_dir/ip_repo/$ip_fix_string
+# foreach item [glob -nocomplain $origin_dir/ip_repo/$ip_fix_string/*] {
+#     file rename -force $item $origin_dir/ip_repo/[file tail $item]
+# }
+# file delete -force $origin_dir/ip_repo/$ip_fix_string
+# if { [info exists ::origin_dir_loc] } {
+#   set origin_dir $::origin_dir_loc
+# }
+# set project_name "openofdm_rx"
+# if {[file exists $project_name]} {
+#     file delete -force $project_name
+# }
+# if { [info exists ::user_project_name] } {
+#   set project_name $::user_project_name
+# }
+# variable script_file
+# set script_file "openofdm_rx.tcl"
+# proc help {} {
+#   variable script_file
+#   puts "\nDescription:"
+#   puts "Recreate a Vivado project from this script. The created project will be"
+#   puts "functionally equivalent to the original project for which this script was"
+#   puts "generated. The script contains commands for creating a project, filesets,"
+#   puts "runs, adding/importing sources and setting properties on various objects.\n"
+#   puts "Syntax:"
+#   puts "$script_file"
+#   puts "$script_file -tclargs \[--origin_dir <path>\]"
+#   puts "$script_file -tclargs \[--project_name <name>\]"
+#   puts "$script_file -tclargs \[--help\]\n"
+#   puts "Usage:"
+#   puts "Name                   Description"
+#   puts "-------------------------------------------------------------------------"
+#   puts "\[--origin_dir <path>\]  Determine source file paths wrt this path. Default"
+#   puts "                       origin_dir path value is \".\", otherwise, the value"
+#   puts "                       that was set with the \"-paths_relative_to\" switch"
+#   puts "                       when this script was generated.\n"
+#   puts "\[--project_name <name>\] Create project with the specified name. Default"
+#   puts "                       name is the name of the project from where this"
+#   puts "                       script was generated.\n"
+#   puts "\[--help\]               Print help information for this script"
+#   puts "-------------------------------------------------------------------------\n"
+#   exit 0
+# }
+# if { $::argc > 0 } {
+#   for {set i 0} {$i < [llength $::argc]} {incr i} {
+#     set option [string trim [lindex $::argv $i]]
+#     switch -regexp -- $option {
+#       "--origin_dir"   { incr i; set origin_dir [lindex $::argv $i] }
+#       "--project_name" { incr i; set project_name [lindex $::argv $i] }
+#       "--help"         { help }
+#       default {
+#         if { [regexp {^-} $option] } {
+#           puts "ERROR: Unknown option '$option' specified, please type '$script_file -tclargs --help' for usage info.\n"
+#           return 1
+#         }
+#       }
+#     }
+#   }
+# }
+# set src_dir "[file normalize "$origin_dir/verilog"]"
+# create_project ${project_name} ./${project_name} -part $part_string
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Apps/v_log/Vivado/2021.1/data/ip'.
+# set proj_dir [get_property directory [current_project]]
+# set obj [current_project]
+# set_property -name "board_connections" -value "" -objects $obj
+# set_property -name "compxlib.activehdl_compiled_library_dir" -value "$proj_dir/${project_name}.cache/compile_simlib/activehdl" -objects $obj
+# set_property -name "compxlib.funcsim" -value "1" -objects $obj
+# set_property -name "compxlib.ies_compiled_library_dir" -value "$proj_dir/${project_name}.cache/compile_simlib/ies" -objects $obj
+# set_property -name "compxlib.modelsim_compiled_library_dir" -value "$proj_dir/${project_name}.cache/compile_simlib/modelsim" -objects $obj
+# set_property -name "compxlib.overwrite_libs" -value "0" -objects $obj
+# set_property -name "compxlib.questa_compiled_library_dir" -value "$proj_dir/${project_name}.cache/compile_simlib/questa" -objects $obj
+# set_property -name "compxlib.riviera_compiled_library_dir" -value "$proj_dir/${project_name}.cache/compile_simlib/riviera" -objects $obj
+# set_property -name "compxlib.timesim" -value "1" -objects $obj
+# set_property -name "compxlib.vcs_compiled_library_dir" -value "$proj_dir/${project_name}.cache/compile_simlib/vcs" -objects $obj
+# set_property -name "compxlib.xsim_compiled_library_dir" -value "" -objects $obj
+# set_property -name "corecontainer.enable" -value "0" -objects $obj
+# set_property -name "default_lib" -value "xil_defaultlib" -objects $obj
+# set_property -name "dsa.num_compute_units" -value "60" -objects $obj
+WARNING: [Common 17-599] Property 'dsa.num_compute_units' is deprecated for object type 'project'. dsa.* properties have been deprecated, please use the corresponding platform.* properties.
+# set_property -name "dsa.rom.debug_type" -value "0" -objects $obj
+WARNING: [Common 17-599] Property 'dsa.rom.debug_type' is deprecated for object type 'project'. dsa.* properties have been deprecated, please use the corresponding platform.* properties.
+# set_property -name "dsa.rom.prom_type" -value "0" -objects $obj
+WARNING: [Common 17-599] Property 'dsa.rom.prom_type' is deprecated for object type 'project'. dsa.* properties have been deprecated, please use the corresponding platform.* properties.
+# set_property -name "enable_optional_runs_sta" -value "0" -objects $obj
+# set_property -name "generate_ip_upgrade_log" -value "1" -objects $obj
+# set_property -name "ip_cache_permissions" -value "read write" -objects $obj
+# set_property -name "ip_interface_inference_priority" -value "" -objects $obj
+# set_property -name "ip_output_repo" -value "$proj_dir/${project_name}.cache/ip" -objects $obj
+# set_property -name "project_type" -value "Default" -objects $obj
+# set_property -name "pr_flow" -value "0" -objects $obj
+# set_property -name "sim.ip.auto_export_scripts" -value "1" -objects $obj
+# set_property -name "sim.use_ip_compiled_libs" -value "1" -objects $obj
+# set_property -name "simulator_language" -value "Mixed" -objects $obj
+# set_property -name "source_mgmt_mode" -value "All" -objects $obj
+# set_property -name "target_language" -value "Verilog" -objects $obj
+# set_property -name "target_simulator" -value "XSim" -objects $obj
+# set_property -name "xpm_libraries" -value "XPM_MEMORY" -objects $obj
+# set_property -name "xsim.array_display_limit" -value "1024" -objects $obj
+# set_property -name "xsim.radix" -value "hex" -objects $obj
+# set_property -name "xsim.time_unit" -value "ns" -objects $obj
+# set_property -name "xsim.trace_limit" -value "65536" -objects $obj
+# if {[get_filesets -quiet sources_1] eq ""} {
+#   create_fileset -srcset sources_1
+# }
+# set obj [get_filesets sources_1]
+# set_property ip_repo_paths [list $origin_dir/verilog/coregen/div_gen_new_ip_core_$ip_fix_string] $obj
+# update_ip_catalog -rebuild
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/verilog/coregen/div_gen_new_ip_core_zynq'.
+# set obj [get_filesets sources_1]
+# set files [list \
+#  "[file normalize "$origin_dir/verilog/calc_mean.v"]"\
+#  "[file normalize "$origin_dir/verilog/equalizer.v"]"\
+#  "[file normalize "$origin_dir/verilog/dot11_setting_agent.v"]"\
+#  "[file normalize "$origin_dir/verilog/bits_to_bytes.v"]"\
+#  "[file normalize "$origin_dir/verilog/complex_mult.v"]"\
+#  "[file normalize "$origin_dir/verilog/complex_to_mag.v"]"\
+#  "[file normalize "$origin_dir/verilog/complex_to_mag_sq.v"]"\
+#  "[file normalize "$origin_dir/verilog/crc32.v"]"\
+#  "[file normalize "$origin_dir/verilog/deinterleave.v"]"\
+#  "[file normalize "$origin_dir/verilog/delayT.v"]"\
+#  "[file normalize "$origin_dir/verilog/fifo_sample_delay.v"]"\
+#  "[file normalize "$origin_dir/verilog/common_defs.v"]"\
+#  "[file normalize "$origin_dir/verilog/demodulate.v"]"\
+#  "[file normalize "$origin_dir/verilog/descramble.v"]"\
+#  "[file normalize "$origin_dir/verilog/divider.v"]"\
+#  "[file normalize "$origin_dir/verilog/dot11.v"]"\
+#  "[file normalize "$origin_dir/verilog/ht_sig_crc.v"]"\
+#  "[file normalize "$origin_dir/verilog/mv_avg.v"]"\
+#  "[file normalize "$origin_dir/verilog/mv_avg_dual_ch.v"]"\
+#  "[file normalize "$origin_dir/verilog/ofdm_decoder.v"]"\
+#  "[file normalize "$origin_dir/verilog/openofdm_rx_s_axi.v"]"\
+#  "[file normalize "$origin_dir/verilog/phase.v"]"\
+#  "[file normalize "$origin_dir/verilog/dpram.v"]"\
+#  "[file normalize "$origin_dir/verilog/rotate.v"]"\
+#  "[file normalize "$origin_dir/verilog/stage_mult.v"]"\
+#  "[file normalize "$origin_dir/verilog/sync_long.v"]"\
+#  "[file normalize "$origin_dir/verilog/sync_short.v"]"\
+#  "[file normalize "$origin_dir/verilog/openofdm_rx.v"]"\
+#  "[file normalize "$origin_dir/verilog/running_sum_dual_ch.v"]"\
+#  "[file normalize "$origin_dir/verilog/signal_watchdog.v"]"\
+#  "[file normalize "$origin_dir/verilog/phy_len_calculation.v"]"\
+#  "[file normalize "$origin_dir/verilog/rot_after_fft.v"]"\
+#  "[file normalize "$origin_dir/ip_repo/div_for_rotafft/div_for_rotafft.xci"]"\
+#  "[file normalize "$origin_dir/ip_repo/complex_multiplier/complex_multiplier.xci"]"\
+#  "[file normalize "$origin_dir/ip_repo/atan_lut/atan_lut.coe"]"\
+#  "[file normalize "$origin_dir/ip_repo/atan_lut/atan_lut.xci"]"\
+#  "[file normalize "$origin_dir/ip_repo/viterbi/viterbi_v7_0.xci"]"\
+#  "[file normalize "$origin_dir/ip_repo/deinter_lut/deinter_lut.coe"]"\
+#  "[file normalize "$origin_dir/ip_repo/deinter_lut/deinter_lut.xci"]"\
+#  "[file normalize "$origin_dir/ip_repo/xfft/xfft_v9.xci"]"\
+#  "[file normalize "$origin_dir/ip_repo/rot_lut/rot_lut.coe"]"\
+#  "[file normalize "$origin_dir/ip_repo/rot_lut/rot_lut.xci"]"\
+#  "[file normalize "$origin_dir/ip_repo/div_gen_new/src/div_gen.v"]"\
+#  "[file normalize "$origin_dir/ip_repo/div_gen_new/src/div_gen_div_gen_0_0/div_gen_div_gen_0_0.xci"]"\
+#  "[file normalize "$origin_dir/ip_repo/div_gen_new/src/div_gen_xlslice_0_0/div_gen_xlslice_0_0.xci"]"\
+#  "[file normalize "$origin_dir/ip_repo/div_gen_csi_over_nova/div_gen_csi_over_nova.xci"]"\
+# ]
+# add_files -norecurse -fileset $obj $files
+WARNING: [IP_Flow 19-2162] IP 'complex_multiplier' is locked:
+* IP definition 'Complex Multiplier (6.0)' for IP 'complex_multiplier' (customized with software release 2018.3) has a different revision in the IP Catalog. * Current project part 'xc7z020clg484-1' and the part 'xc7z045ffg900-2' used to customize the IP 'complex_multiplier' do not match.
+WARNING: [IP_Flow 19-2162] IP 'atan_lut' is locked:
+* IP definition 'Block Memory Generator (8.4)' for IP 'atan_lut' (customized with software release 2018.3) has a different revision in the IP Catalog. * Current project part 'xc7z020clg484-1' and the part 'xc7z045ffg900-2' used to customize the IP 'atan_lut' do not match.
+WARNING: [IP_Flow 19-2162] IP 'viterbi_v7_0' is locked:
+* IP 'viterbi_v7_0' requires one or more mandatory licenses but no valid licenses were found. However license checkpoints may prevent use of this IP in some tool flows. * IP definition 'Viterbi Decoder (9.1)' for IP 'viterbi_v7_0' (customized with software release 2018.3) has a different revision in the IP Catalog. * Current project part 'xc7z020clg484-1' and the part 'xc7z045ffg900-2' used to customize the IP 'viterbi_v7_0' do not match.
+WARNING: [IP_Flow 19-2162] IP 'deinter_lut' is locked:
+* IP definition 'Block Memory Generator (8.4)' for IP 'deinter_lut' (customized with software release 2018.3) has a different revision in the IP Catalog. * Current project part 'xc7z020clg484-1' and the part 'xc7z045ffg900-2' used to customize the IP 'deinter_lut' do not match.
+WARNING: [IP_Flow 19-2162] IP 'xfft_v9' is locked:
+* IP definition 'Fast Fourier Transform (9.1)' for IP 'xfft_v9' (customized with software release 2018.3) has a different revision in the IP Catalog. * Current project part 'xc7z020clg484-1' and the part 'xc7z045ffg900-2' used to customize the IP 'xfft_v9' do not match.
+WARNING: [IP_Flow 19-2162] IP 'rot_lut' is locked:
+* IP definition 'Block Memory Generator (8.4)' for IP 'rot_lut' (customized with software release 2018.3) has a different revision in the IP Catalog. * Current project part 'xc7z020clg484-1' and the part 'xc7z045ffg900-2' used to customize the IP 'rot_lut' do not match.
+WARNING: [IP_Flow 19-2162] IP 'div_gen_div_gen_0_0' is locked:
+* IP definition 'Divider Generator (5.1)' for IP 'div_gen_div_gen_0_0' (customized with software release 2018.3) has a different revision in the IP Catalog. * Current project part 'xc7z020clg484-1' and the part 'xc7z045ffg900-2' used to customize the IP 'div_gen_div_gen_0_0' do not match.
+WARNING: [IP_Flow 19-2162] IP 'div_gen_xlslice_0_0' is locked:
+* IP definition 'Slice (1.0)' for IP 'div_gen_xlslice_0_0' (customized with software release 2018.3) has a different revision in the IP Catalog. * Current project part 'xc7z020clg484-1' and the part 'xc7z045ffg900-2' used to customize the IP 'div_gen_xlslice_0_0' do not match.
+# set obj [get_filesets sources_1]
+# set_property -name "top" -value "openofdm_rx" -objects $obj
+# if {[get_filesets -quiet constrs_1] eq ""} {
+#   create_fileset -constrset constrs_1
+# }
+# set obj [get_filesets constrs_1]
+# set obj [get_filesets constrs_1]
+# if {[get_filesets -quiet sim_1] eq ""} {
+#   create_fileset -simset sim_1
+# }
+# set obj [get_filesets sim_1]
+# set files [list \
+#  "[file normalize "$origin_dir/verilog/dot11_tb.v"]"
+# ]
+# add_files -norecurse -fileset $obj $files
+# set obj [get_filesets sim_1]
+# set_property -name "32bit" -value "0" -objects $obj
+# set_property -name "generic" -value "" -objects $obj
+# set_property -name "include_dirs" -value "" -objects $obj
+# set_property -name "incremental" -value "1" -objects $obj
+# set_property -name "name" -value "sim_1" -objects $obj
+# set_property -name "nl.cell" -value "" -objects $obj
+# set_property -name "nl.incl_unisim_models" -value "0" -objects $obj
+# set_property -name "nl.process_corner" -value "slow" -objects $obj
+# set_property -name "nl.rename_top" -value "" -objects $obj
+# set_property -name "nl.sdf_anno" -value "1" -objects $obj
+# set_property -name "nl.write_all_overrides" -value "0" -objects $obj
+# set_property -name "source_set" -value "sources_1" -objects $obj
+# set_property -name "top" -value "dot11_tb" -objects $obj
+# set_property -name "transport_int_delay" -value "0" -objects $obj
+# set_property -name "transport_path_delay" -value "0" -objects $obj
+# set_property -name "verilog_define" -value "" -objects $obj
+# set_property -name "verilog_uppercase" -value "0" -objects $obj
+# set_property -name "xelab.dll" -value "0" -objects $obj
+# set_property -name "xsim.compile.tcl.pre" -value "" -objects $obj
+# set_property -name "xsim.compile.xvhdl.more_options" -value "" -objects $obj
+# set_property -name "xsim.compile.xvhdl.nosort" -value "1" -objects $obj
+# set_property -name "xsim.compile.xvhdl.relax" -value "1" -objects $obj
+# set_property -name "xsim.compile.xvlog.more_options" -value "" -objects $obj
+# set_property -name "xsim.compile.xvlog.nosort" -value "1" -objects $obj
+# set_property -name "xsim.compile.xvlog.relax" -value "1" -objects $obj
+# set_property -name "xsim.elaborate.debug_level" -value "typical" -objects $obj
+# set_property -name "xsim.elaborate.load_glbl" -value "1" -objects $obj
+# set_property -name "xsim.elaborate.mt_level" -value "auto" -objects $obj
+# set_property -name "xsim.elaborate.rangecheck" -value "0" -objects $obj
+# set_property -name "xsim.elaborate.relax" -value "1" -objects $obj
+# set_property -name "xsim.elaborate.sdf_delay" -value "sdfmax" -objects $obj
+# set_property -name "xsim.elaborate.snapshot" -value "" -objects $obj
+# set_property -name "xsim.elaborate.xelab.more_options" -value "" -objects $obj
+# set_property -name "xsim.simulate.custom_tcl" -value "" -objects $obj
+# set_property -name "xsim.simulate.log_all_signals" -value "0" -objects $obj
+# set_property -name "xsim.simulate.runtime" -value "1000ns" -objects $obj
+# set_property -name "xsim.simulate.saif" -value "" -objects $obj
+# set_property -name "xsim.simulate.saif_all_signals" -value "0" -objects $obj
+# set_property -name "xsim.simulate.saif_scope" -value "" -objects $obj
+# set_property -name "xsim.simulate.tcl.post" -value "" -objects $obj
+# set_property -name "xsim.simulate.wdb" -value "" -objects $obj
+# set_property -name "xsim.simulate.xsim.more_options" -value "" -objects $obj
+# if {[get_runs -quiet synth_1] eq ""} {
+#     create_run -name synth_1 -part $part_string -flow {Vivado Synthesis 2021} -strategy "Vivado Synthesis Defaults" -report_strategy {No Reports} -constrset constrs_1
+# } else {
+#   set_property strategy "Vivado Synthesis Defaults" [get_runs synth_1]
+#   set_property flow "Vivado Synthesis 2021" [get_runs synth_1]
+# }
+# set obj [get_runs synth_1]
+# set_property set_report_strategy_name 1 $obj
+# set_property report_strategy {Vivado Synthesis Default Reports} $obj
+# set_property set_report_strategy_name 0 $obj
+# if { [get_report_configs -of_objects [get_runs synth_1] synth_1_synth_report_utilization_0] eq "" } {
+#   create_report_config -report_name synth_1_synth_report_utilization_0 -report_type report_utilization:1.0 -steps synth_design -runs synth_1
+# }
+# set obj [get_report_configs -of_objects [get_runs synth_1] synth_1_synth_report_utilization_0]
+# if { $obj ne "" } {
+# set_property -name "is_enabled" -value "1" -objects $obj
+# set_property -name "options.pblocks" -value "" -objects $obj
+# set_property -name "options.cells" -value "" -objects $obj
+# set_property -name "options.slr" -value "0" -objects $obj
+# set_property -name "options.packthru" -value "0" -objects $obj
+# set_property -name "options.hierarchical" -value "0" -objects $obj
+# set_property -name "options.hierarchical_depth" -value "" -objects $obj
+# set_property -name "options.hierarchical_percentages" -value "0" -objects $obj
+# set_property -name "options.more_options" -value "" -objects $obj
+# 
+# }
+# set obj [get_runs synth_1]
+# set_property -name "constrset" -value "constrs_1" -objects $obj
+# set_property -name "description" -value "Vivado Synthesis Defaults" -objects $obj
+# set_property -name "flow" -value "Vivado Synthesis 2021" -objects $obj
+# set_property -name "name" -value "synth_1" -objects $obj
+# set_property -name "needs_refresh" -value "0" -objects $obj
+# set_property -name "srcset" -value "sources_1" -objects $obj
+# set_property -name "include_in_archive" -value "1" -objects $obj
+# set_property -name "strategy" -value "Vivado Synthesis Defaults" -objects $obj
+# set_property -name "steps.synth_design.tcl.pre" -value "" -objects $obj
+# set_property -name "steps.synth_design.tcl.post" -value "" -objects $obj
+# set_property -name "steps.synth_design.args.flatten_hierarchy" -value "rebuilt" -objects $obj
+# set_property -name "steps.synth_design.args.gated_clock_conversion" -value "off" -objects $obj
+# set_property -name "steps.synth_design.args.bufg" -value "12" -objects $obj
+# set_property -name "steps.synth_design.args.directive" -value "Default" -objects $obj
+# set_property -name "steps.synth_design.args.retiming" -value "0" -objects $obj
+# set_property -name "steps.synth_design.args.fsm_extraction" -value "auto" -objects $obj
+# set_property -name "steps.synth_design.args.keep_equivalent_registers" -value "0" -objects $obj
+# set_property -name "steps.synth_design.args.resource_sharing" -value "auto" -objects $obj
+# set_property -name "steps.synth_design.args.control_set_opt_threshold" -value "auto" -objects $obj
+# set_property -name "steps.synth_design.args.no_lc" -value "0" -objects $obj
+# set_property -name "steps.synth_design.args.no_srlextract" -value "0" -objects $obj
+# set_property -name "steps.synth_design.args.shreg_min_size" -value "3" -objects $obj
+# set_property -name "steps.synth_design.args.max_bram" -value "-1" -objects $obj
+# set_property -name "steps.synth_design.args.max_uram" -value "-1" -objects $obj
+# set_property -name "steps.synth_design.args.max_dsp" -value "-1" -objects $obj
+# set_property -name "steps.synth_design.args.max_bram_cascade_height" -value "-1" -objects $obj
+# set_property -name "steps.synth_design.args.max_uram_cascade_height" -value "-1" -objects $obj
+# set_property -name "steps.synth_design.args.cascade_dsp" -value "auto" -objects $obj
+# set_property -name "steps.synth_design.args.assert" -value "0" -objects $obj
+# set_property -name "steps.synth_design.args.more options" -value "" -objects $obj
+# if {[get_runs synth_1] ne ""} {
+#     current_run -synthesis [get_runs synth_1]
+# }
+# if {[get_runs -quiet impl_1] eq ""} {
+#     create_run -name impl_1 -part $part_string -flow {Vivado Implementation 2021} -strategy "Vivado Implementation Defaults" -report_strategy {No Reports} -constrset constrs_1 -parent_run synth_1
+# } else {
+#   set_property strategy "Vivado Implementation Defaults" [get_runs impl_1]
+#   set_property flow "Vivado Implementation 2021" [get_runs impl_1]
+# }
+# set obj [get_runs impl_1]
+# set_property set_report_strategy_name 1 $obj
+# set_property report_strategy {Vivado Implementation Default Reports} $obj
+# set_property set_report_strategy_name 0 $obj
+# if { [get_report_configs -of_objects [get_runs impl_1] impl_1_init_report_timing_summary_0] eq "" } {
+#   create_report_config -report_name impl_1_init_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps init_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_init_report_timing_summary_0]
+# if { $obj ne "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# set_property -name "options.check_timing_verbose" -value "0" -objects $obj
+# set_property -name "options.delay_type" -value "" -objects $obj
+# set_property -name "options.setup" -value "0" -objects $obj
+# set_property -name "options.hold" -value "0" -objects $obj
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# set_property -name "options.nworst" -value "" -objects $obj
+# set_property -name "options.unique_pins" -value "0" -objects $obj
+# set_property -name "options.path_type" -value "" -objects $obj
+# set_property -name "options.slack_lesser_than" -value "" -objects $obj
+# set_property -name "options.report_unconstrained" -value "0" -objects $obj
+# set_property -name "options.warn_on_violation" -value "0" -objects $obj
+# set_property -name "options.significant_digits" -value "" -objects $obj
+# set_property -name "options.cell" -value "" -objects $obj
+# set_property -name "options.more_options" -value "" -objects $obj
+# 
+# }
+# if { [get_report_configs -of_objects [get_runs impl_1] impl_1_opt_report_drc_0] eq "" } {
+#   create_report_config -report_name impl_1_opt_report_drc_0 -report_type report_drc:1.0 -steps opt_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_opt_report_drc_0]
+# if { $obj ne "" } {
+# set_property -name "is_enabled" -value "1" -objects $obj
+# set_property -name "options.upgrade_cw" -value "0" -objects $obj
+# set_property -name "options.checks" -value "" -objects $obj
+# set_property -name "options.ruledecks" -value "" -objects $obj
+# set_property -name "options.more_options" -value "" -objects $obj
+# 
+# }
+# if { [get_report_configs -of_objects [get_runs impl_1] impl_1_opt_report_timing_summary_0] eq "" } {
+#   create_report_config -report_name impl_1_opt_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps opt_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_opt_report_timing_summary_0]
+# if { $obj ne "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# set_property -name "options.check_timing_verbose" -value "0" -objects $obj
+# set_property -name "options.delay_type" -value "" -objects $obj
+# set_property -name "options.setup" -value "0" -objects $obj
+# set_property -name "options.hold" -value "0" -objects $obj
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# set_property -name "options.nworst" -value "" -objects $obj
+# set_property -name "options.unique_pins" -value "0" -objects $obj
+# set_property -name "options.path_type" -value "" -objects $obj
+# set_property -name "options.slack_lesser_than" -value "" -objects $obj
+# set_property -name "options.report_unconstrained" -value "0" -objects $obj
+# set_property -name "options.warn_on_violation" -value "0" -objects $obj
+# set_property -name "options.significant_digits" -value "" -objects $obj
+# set_property -name "options.cell" -value "" -objects $obj
+# set_property -name "options.more_options" -value "" -objects $obj
+# 
+# }
+# if { [get_report_configs -of_objects [get_runs impl_1] impl_1_power_opt_report_timing_summary_0] eq "" } {
+#   create_report_config -report_name impl_1_power_opt_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps power_opt_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_power_opt_report_timing_summary_0]
+# if { $obj ne "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# set_property -name "options.check_timing_verbose" -value "0" -objects $obj
+# set_property -name "options.delay_type" -value "" -objects $obj
+# set_property -name "options.setup" -value "0" -objects $obj
+# set_property -name "options.hold" -value "0" -objects $obj
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# set_property -name "options.nworst" -value "" -objects $obj
+# set_property -name "options.unique_pins" -value "0" -objects $obj
+# set_property -name "options.path_type" -value "" -objects $obj
+# set_property -name "options.slack_lesser_than" -value "" -objects $obj
+# set_property -name "options.report_unconstrained" -value "0" -objects $obj
+# set_property -name "options.warn_on_violation" -value "0" -objects $obj
+# set_property -name "options.significant_digits" -value "" -objects $obj
+# set_property -name "options.cell" -value "" -objects $obj
+# set_property -name "options.more_options" -value "" -objects $obj
+# 
+# }
+# if { [get_report_configs -of_objects [get_runs impl_1] impl_1_place_report_io_0] eq "" } {
+#   create_report_config -report_name impl_1_place_report_io_0 -report_type report_io:1.0 -steps place_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_place_report_io_0]
+# if { $obj ne "" } {
+# set_property -name "is_enabled" -value "1" -objects $obj
+# set_property -name "options.more_options" -value "" -objects $obj
+# 
+# }
+# if { [get_report_configs -of_objects [get_runs impl_1] impl_1_place_report_utilization_0] eq "" } {
+#   create_report_config -report_name impl_1_place_report_utilization_0 -report_type report_utilization:1.0 -steps place_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_place_report_utilization_0]
+# if { $obj ne "" } {
+# set_property -name "is_enabled" -value "1" -objects $obj
+# set_property -name "options.pblocks" -value "" -objects $obj
+# set_property -name "options.cells" -value "" -objects $obj
+# set_property -name "options.slr" -value "0" -objects $obj
+# set_property -name "options.packthru" -value "0" -objects $obj
+# set_property -name "options.hierarchical" -value "0" -objects $obj
+# set_property -name "options.hierarchical_depth" -value "" -objects $obj
+# set_property -name "options.hierarchical_percentages" -value "0" -objects $obj
+# set_property -name "options.more_options" -value "" -objects $obj
+# 
+# }
+# if { [get_report_configs -of_objects [get_runs impl_1] impl_1_place_report_control_sets_0] eq "" } {
+#   create_report_config -report_name impl_1_place_report_control_sets_0 -report_type report_control_sets:1.0 -steps place_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_place_report_control_sets_0]
+# if { $obj ne "" } {
+# set_property -name "is_enabled" -value "1" -objects $obj
+# set_property -name "options.verbose" -value "1" -objects $obj
+# set_property -name "options.cells" -value "" -objects $obj
+# set_property -name "options.more_options" -value "" -objects $obj
+# 
+# }
+# if { [get_report_configs -of_objects [get_runs impl_1] impl_1_place_report_incremental_reuse_0] eq "" } {
+#   create_report_config -report_name impl_1_place_report_incremental_reuse_0 -report_type report_incremental_reuse:1.0 -steps place_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_place_report_incremental_reuse_0]
+# if { $obj ne "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# set_property -name "options.cells" -value "" -objects $obj
+# set_property -name "options.hierarchical" -value "0" -objects $obj
+# set_property -name "options.hierarchical_depth" -value "" -objects $obj
+# set_property -name "options.more_options" -value "" -objects $obj
+# 
+# }
+# if { [get_report_configs -of_objects [get_runs impl_1] impl_1_place_report_incremental_reuse_1] eq "" } {
+#   create_report_config -report_name impl_1_place_report_incremental_reuse_1 -report_type report_incremental_reuse:1.0 -steps place_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_place_report_incremental_reuse_1]
+# if { $obj ne "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# set_property -name "options.cells" -value "" -objects $obj
+# set_property -name "options.hierarchical" -value "0" -objects $obj
+# set_property -name "options.hierarchical_depth" -value "" -objects $obj
+# set_property -name "options.more_options" -value "" -objects $obj
+# 
+# }
+# if { [get_report_configs -of_objects [get_runs impl_1] impl_1_place_report_timing_summary_0] eq "" } {
+#   create_report_config -report_name impl_1_place_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps place_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_place_report_timing_summary_0]
+# if { $obj ne "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# set_property -name "options.check_timing_verbose" -value "0" -objects $obj
+# set_property -name "options.delay_type" -value "" -objects $obj
+# set_property -name "options.setup" -value "0" -objects $obj
+# set_property -name "options.hold" -value "0" -objects $obj
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# set_property -name "options.nworst" -value "" -objects $obj
+# set_property -name "options.unique_pins" -value "0" -objects $obj
+# set_property -name "options.path_type" -value "" -objects $obj
+# set_property -name "options.slack_lesser_than" -value "" -objects $obj
+# set_property -name "options.report_unconstrained" -value "0" -objects $obj
+# set_property -name "options.warn_on_violation" -value "0" -objects $obj
+# set_property -name "options.significant_digits" -value "" -objects $obj
+# set_property -name "options.cell" -value "" -objects $obj
+# set_property -name "options.more_options" -value "" -objects $obj
+# 
+# }
+# if { [get_report_configs -of_objects [get_runs impl_1] impl_1_post_place_power_opt_report_timing_summary_0] eq "" } {
+#   create_report_config -report_name impl_1_post_place_power_opt_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps post_place_power_opt_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_post_place_power_opt_report_timing_summary_0]
+# if { $obj ne "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# set_property -name "options.check_timing_verbose" -value "0" -objects $obj
+# set_property -name "options.delay_type" -value "" -objects $obj
+# set_property -name "options.setup" -value "0" -objects $obj
+# set_property -name "options.hold" -value "0" -objects $obj
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# set_property -name "options.nworst" -value "" -objects $obj
+# set_property -name "options.unique_pins" -value "0" -objects $obj
+# set_property -name "options.path_type" -value "" -objects $obj
+# set_property -name "options.slack_lesser_than" -value "" -objects $obj
+# set_property -name "options.report_unconstrained" -value "0" -objects $obj
+# set_property -name "options.warn_on_violation" -value "0" -objects $obj
+# set_property -name "options.significant_digits" -value "" -objects $obj
+# set_property -name "options.cell" -value "" -objects $obj
+# set_property -name "options.more_options" -value "" -objects $obj
+# 
+# }
+# if { [get_report_configs -of_objects [get_runs impl_1] impl_1_phys_opt_report_timing_summary_0] eq "" } {
+#   create_report_config -report_name impl_1_phys_opt_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps phys_opt_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_phys_opt_report_timing_summary_0]
+# if { $obj ne "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# set_property -name "options.check_timing_verbose" -value "0" -objects $obj
+# set_property -name "options.delay_type" -value "" -objects $obj
+# set_property -name "options.setup" -value "0" -objects $obj
+# set_property -name "options.hold" -value "0" -objects $obj
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# set_property -name "options.nworst" -value "" -objects $obj
+# set_property -name "options.unique_pins" -value "0" -objects $obj
+# set_property -name "options.path_type" -value "" -objects $obj
+# set_property -name "options.slack_lesser_than" -value "" -objects $obj
+# set_property -name "options.report_unconstrained" -value "0" -objects $obj
+# set_property -name "options.warn_on_violation" -value "0" -objects $obj
+# set_property -name "options.significant_digits" -value "" -objects $obj
+# set_property -name "options.cell" -value "" -objects $obj
+# set_property -name "options.more_options" -value "" -objects $obj
+# 
+# }
+# if { [get_report_configs -of_objects [get_runs impl_1] impl_1_route_report_drc_0] eq "" } {
+#   create_report_config -report_name impl_1_route_report_drc_0 -report_type report_drc:1.0 -steps route_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_route_report_drc_0]
+# if { $obj ne "" } {
+# set_property -name "is_enabled" -value "1" -objects $obj
+# set_property -name "options.upgrade_cw" -value "0" -objects $obj
+# set_property -name "options.checks" -value "" -objects $obj
+# set_property -name "options.ruledecks" -value "" -objects $obj
+# set_property -name "options.more_options" -value "" -objects $obj
+# 
+# }
+# if { [get_report_configs -of_objects [get_runs impl_1] impl_1_route_report_methodology_0] eq "" } {
+#   create_report_config -report_name impl_1_route_report_methodology_0 -report_type report_methodology:1.0 -steps route_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_route_report_methodology_0]
+# if { $obj ne "" } {
+# set_property -name "is_enabled" -value "1" -objects $obj
+# set_property -name "options.checks" -value "" -objects $obj
+# set_property -name "options.more_options" -value "" -objects $obj
+# 
+# }
+# if { [get_report_configs -of_objects [get_runs impl_1] impl_1_route_report_power_0] eq "" } {
+#   create_report_config -report_name impl_1_route_report_power_0 -report_type report_power:1.0 -steps route_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_route_report_power_0]
+# if { $obj ne "" } {
+# set_property -name "is_enabled" -value "1" -objects $obj
+# set_property -name "options.advisory" -value "0" -objects $obj
+# set_property -name "options.xpe" -value "" -objects $obj
+# set_property -name "options.more_options" -value "" -objects $obj
+# 
+# }
+# if { [get_report_configs -of_objects [get_runs impl_1] impl_1_route_report_route_status_0] eq "" } {
+#   create_report_config -report_name impl_1_route_report_route_status_0 -report_type report_route_status:1.0 -steps route_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_route_report_route_status_0]
+# if { $obj ne "" } {
+# set_property -name "is_enabled" -value "1" -objects $obj
+# set_property -name "options.of_objects" -value "" -objects $obj
+# set_property -name "options.route_type" -value "" -objects $obj
+# set_property -name "options.list_all_nets" -value "0" -objects $obj
+# set_property -name "options.show_all" -value "0" -objects $obj
+# set_property -name "options.has_routing" -value "0" -objects $obj
+# set_property -name "options.more_options" -value "" -objects $obj
+# 
+# }
+# if { [get_report_configs -of_objects [get_runs impl_1] impl_1_route_report_timing_summary_0] eq "" } {
+#   create_report_config -report_name impl_1_route_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps route_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_route_report_timing_summary_0]
+# if { $obj ne "" } {
+# set_property -name "is_enabled" -value "1" -objects $obj
+# set_property -name "options.check_timing_verbose" -value "0" -objects $obj
+# set_property -name "options.delay_type" -value "" -objects $obj
+# set_property -name "options.setup" -value "0" -objects $obj
+# set_property -name "options.hold" -value "0" -objects $obj
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# set_property -name "options.nworst" -value "" -objects $obj
+# set_property -name "options.unique_pins" -value "0" -objects $obj
+# set_property -name "options.path_type" -value "" -objects $obj
+# set_property -name "options.slack_lesser_than" -value "" -objects $obj
+# set_property -name "options.report_unconstrained" -value "0" -objects $obj
+# set_property -name "options.warn_on_violation" -value "0" -objects $obj
+# set_property -name "options.significant_digits" -value "" -objects $obj
+# set_property -name "options.cell" -value "" -objects $obj
+# set_property -name "options.more_options" -value "" -objects $obj
+# 
+# }
+# if { [get_report_configs -of_objects [get_runs impl_1] impl_1_route_report_incremental_reuse_0] eq "" } {
+#   create_report_config -report_name impl_1_route_report_incremental_reuse_0 -report_type report_incremental_reuse:1.0 -steps route_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_route_report_incremental_reuse_0]
+# if { $obj ne "" } {
+# set_property -name "is_enabled" -value "1" -objects $obj
+# set_property -name "options.cells" -value "" -objects $obj
+# set_property -name "options.hierarchical" -value "0" -objects $obj
+# set_property -name "options.hierarchical_depth" -value "" -objects $obj
+# set_property -name "options.more_options" -value "" -objects $obj
+# 
+# }
+# if { [get_report_configs -of_objects [get_runs impl_1] impl_1_route_report_clock_utilization_0] eq "" } {
+#   create_report_config -report_name impl_1_route_report_clock_utilization_0 -report_type report_clock_utilization:1.0 -steps route_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_route_report_clock_utilization_0]
+# if { $obj ne "" } {
+# set_property -name "is_enabled" -value "1" -objects $obj
+# set_property -name "options.write_xdc" -value "0" -objects $obj
+# set_property -name "options.clock_roots_only" -value "0" -objects $obj
+# set_property -name "options.more_options" -value "" -objects $obj
+# 
+# }
+# if { [get_report_configs -of_objects [get_runs impl_1] impl_1_post_route_phys_opt_report_timing_summary_0] eq "" } {
+#   create_report_config -report_name impl_1_post_route_phys_opt_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps post_route_phys_opt_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_post_route_phys_opt_report_timing_summary_0]
+# if { $obj ne "" } {
+# set_property -name "is_enabled" -value "1" -objects $obj
+# set_property -name "options.check_timing_verbose" -value "0" -objects $obj
+# set_property -name "options.delay_type" -value "" -objects $obj
+# set_property -name "options.setup" -value "0" -objects $obj
+# set_property -name "options.hold" -value "0" -objects $obj
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# set_property -name "options.nworst" -value "" -objects $obj
+# set_property -name "options.unique_pins" -value "0" -objects $obj
+# set_property -name "options.path_type" -value "" -objects $obj
+# set_property -name "options.slack_lesser_than" -value "" -objects $obj
+# set_property -name "options.report_unconstrained" -value "0" -objects $obj
+# set_property -name "options.warn_on_violation" -value "1" -objects $obj
+# set_property -name "options.significant_digits" -value "" -objects $obj
+# set_property -name "options.cell" -value "" -objects $obj
+# set_property -name "options.more_options" -value "" -objects $obj
+# 
+# }
+# set obj [get_runs impl_1]
+# set_property -name "constrset" -value "constrs_1" -objects $obj
+# set_property -name "description" -value "Default settings for Implementation." -objects $obj
+# set_property -name "flow" -value "Vivado Implementation 2021" -objects $obj
+# set_property -name "name" -value "impl_1" -objects $obj
+# set_property -name "needs_refresh" -value "0" -objects $obj
+# set_property -name "pr_configuration" -value "" -objects $obj
+# set_property -name "srcset" -value "sources_1" -objects $obj
+# set_property -name "include_in_archive" -value "1" -objects $obj
+# set_property -name "strategy" -value "Vivado Implementation Defaults" -objects $obj
+# set_property -name "steps.opt_design.is_enabled" -value "1" -objects $obj
+# set_property -name "steps.opt_design.tcl.pre" -value "" -objects $obj
+# set_property -name "steps.opt_design.tcl.post" -value "" -objects $obj
+# set_property -name "steps.opt_design.args.verbose" -value "0" -objects $obj
+# set_property -name "steps.opt_design.args.directive" -value "Default" -objects $obj
+# set_property -name "steps.opt_design.args.more_options" -value "" -objects $obj
+ERROR: [Common 17-54] The object 'run' does not have a property 'steps.opt_design.args.more_options'.
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+current_project openofdm_rx
+source openofdm_rx.tcl
+# set ARGUMENT1 [lindex $argv 0]
+# set ARGUMENT2 [lindex $argv 1]
+# set ARGUMENT3 [lindex $argv 2]
+# set ARGUMENT4 [lindex $argv 3]
+# set ARGUMENT5 [lindex $argv 4]
+# set ARGUMENT6 [lindex $argv 5]
+# set ARGUMENT7 [lindex $argv 6]
+# if {$ARGUMENT1 eq ""} {
+#   set BOARD_NAME zed_fmcs2
+# } else {
+#   set BOARD_NAME $ARGUMENT1
+# }
+# if {$ARGUMENT2 eq ""} {
+#   set NUM_CLK_PER_US 100
+# } else {
+#   set NUM_CLK_PER_US $ARGUMENT2
+# }
+# source ./parse_board_name.tcl
+## if {$BOARD_NAME=="zed_fmcs2"} {
+##    set ultra_scale_flag 0
+##    set part_string "xc7z020clg484-1"
+##    set board_part_string []
+##    set board_id_string "zed"
+##    set fpga_size_flag 0
+## } elseif {$BOARD_NAME=="zcu102_fmcs2"} {
+##    set ultra_scale_flag 1
+##    set part_string "xczu9eg-ffvb1156-2-e"
+##    set board_part_string "xilinx.com:zcu102:part0:3.4"
+##    set board_id_string "zcu102"
+##    set fpga_size_flag 1
+## } elseif {$BOARD_NAME=="zc706_fmcs2"} {
+##    set ultra_scale_flag 0
+##    set part_string "xc7z045ffg900-2"
+##    set board_part_string []
+##    set board_id_string "zc706"
+##    set fpga_size_flag 1
+## } elseif {$BOARD_NAME=="zc702_fmcs2"} {
+##    set ultra_scale_flag 0
+##    set part_string "xc7z020clg484-1"
+##    set board_part_string []
+##    set board_id_string "zc702"
+##    set fpga_size_flag 0
+## } elseif {$BOARD_NAME=="antsdr"} {
+##    set ultra_scale_flag 0
+##    set part_string "xc7z020clg400-1"
+##    set board_part_string []
+##    set board_id_string []
+##    set fpga_size_flag 0
+## } elseif {$BOARD_NAME=="antsdr_e200"} {
+##    set ultra_scale_flag 0
+##    set part_string "xc7z020clg400-1"
+##    set board_part_string []
+##    set board_id_string []
+##    set fpga_size_flag 0
+## } elseif {$BOARD_NAME=="sdrpi"} {
+##    set ultra_scale_flag 0
+##    set part_string "xc7z020clg400-1"
+##    set board_part_string []
+##    set board_id_string []
+##    set fpga_size_flag 0
+## } elseif {$BOARD_NAME=="adrv9361z7035"} {
+##    set ultra_scale_flag 0
+##    set part_string "xc7z035ifbg676-2L"
+##    set board_part_string []
+##    set board_id_string []
+##    set fpga_size_flag 1
+## } elseif {$BOARD_NAME=="adrv9364z7020"} {
+##    set ultra_scale_flag 0
+##    set part_string "xc7z020clg400-1"
+##    set board_part_string []
+##    set board_id_string []
+##    set fpga_size_flag 0
+## } elseif {$BOARD_NAME=="neptunesdr"} {
+##    set ultra_scale_flag 0
+##    set part_string "xc7z020clg400-1"
+##    set board_part_string []
+##    set board_id_string []
+##    set fpga_size_flag 0
+## } elseif {$BOARD_NAME=="e310v2"} {
+##    set ultra_scale_flag 0
+##    set part_string "xc7z020clg400-1"
+##    set board_part_string []
+##    set board_id_string []
+##    set fpga_size_flag 0
+## } else {
+##    set ultra_scale_flag []
+##    set part_string []
+##    set fpga_size_flag []
+##    set board_part_string []
+##    set board_id_string []
+##    puts "$BOARD_NAME is not valid!"
+## }
+# set MODULE_NAME OPENOFDM_RX
+# set  fd  [open  "./verilog/openofdm_rx_pre_def.v"  w]
+# if {$NUM_CLK_PER_US == 100} {
+#   puts $fd "`define CLK_SPEED_100M"
+# } elseif {$NUM_CLK_PER_US == 200} {
+#   puts $fd "`define CLK_SPEED_200M"
+# } elseif {$NUM_CLK_PER_US == 240} {
+#   puts $fd "`define CLK_SPEED_240M"
+# } elseif {$NUM_CLK_PER_US == 400} {
+#   puts $fd "`define CLK_SPEED_400M"
+# } else {
+#   throw {NUM_CLK_PER_US MUST BE 100/200/240/400!}
+# }
+# puts $fd "`define BETTER_SENSITIVITY"
+# if {$fpga_size_flag == 1} {
+#   puts $fd "`define HAS_OLD_SOFT_BITS_METHOD 1"
+# }
+# if {$ARGUMENT3 eq ""} {
+#   puts $fd "`define SAMPLE_FILE \"../../../../../testing_inputs/simulated/ht_mcs7_gi1_aggr0_len14_pre100_post200_openwifi.txt\""
+# } else {
+#   puts $fd "`define SAMPLE_FILE \"$ARGUMENT3\""
+#   set fc_filename [string range $ARGUMENT3 0 end-4]
+#   append fc_filename "_Fc_input.txt"
+# }
+# if {$ARGUMENT4 eq ""} {
+#   puts $fd " "
+# } else {
+#   puts $fd "`define $MODULE_NAME\_$ARGUMENT4"
+# }
+# if {$ARGUMENT5 eq ""} {
+#   puts $fd " "
+# } else {
+#   puts $fd "`define $MODULE_NAME\_$ARGUMENT5"
+# }
+# if {$ARGUMENT6 eq ""} {
+#   puts $fd " "
+# } else {
+#   puts $fd "`define $MODULE_NAME\_$ARGUMENT6"
+# }
+# if {$ARGUMENT7 eq ""} {
+#   puts $fd " "
+# } else {
+#   puts $fd "`define $MODULE_NAME\_$ARGUMENT7"
+# }
+# puts $fd "`define $BOARD_NAME"
+# close $fd
+# puts "\nBOARD_NAME $BOARD_NAME\n"
+
+BOARD_NAME zed_fmcs2
+
+# puts "NUM_CLK_PER_US $NUM_CLK_PER_US\n"
+NUM_CLK_PER_US 100
+
+# puts "ultra_scale_flag $ultra_scale_flag\n"
+ultra_scale_flag 0
+
+# puts "part_string $part_string\n"
+part_string xc7z020clg484-1
+
+# puts "fpga_size_flag $fpga_size_flag\n"
+fpga_size_flag 0
+
+# puts "ARGUMENT3 $ARGUMENT3\n"
+ARGUMENT3 
+
+# puts "ARGUMENT4 $MODULE_NAME\_$ARGUMENT4\n"
+ARGUMENT4 OPENOFDM_RX_
+
+# puts "ARGUMENT5 $MODULE_NAME\_$ARGUMENT5\n"
+ARGUMENT5 OPENOFDM_RX_
+
+# puts "ARGUMENT6 $MODULE_NAME\_$ARGUMENT6\n"
+ARGUMENT6 OPENOFDM_RX_
+
+# puts "ARGUMENT7 $MODULE_NAME\_$ARGUMENT7\n"
+ARGUMENT7 OPENOFDM_RX_
+
+# if {$ultra_scale_flag == 0} {
+#   set ip_fix_string zynq
+# } else {
+#   set ip_fix_string zynquplus
+# }
+# set  fd  [open  "./verilog/openofdm_rx_git_rev.v"  w]
+# set HASHCODE "00000000"
+# puts $fd "`define OPENOFDM_RX_GIT_REV (32'h$HASHCODE)"
+# close $fd
+# set origin_dir [file dirname [info script]]
+# file delete -force $origin_dir/ip_repo
+# file mkdir $origin_dir/ip_repo
+# file copy -force $origin_dir/verilog/coregen/div_gen_new_ip_core_$ip_fix_string $origin_dir/ip_repo/div_gen_new
+# file copy -force $origin_dir/verilog/Xilinx/$ip_fix_string $origin_dir/ip_repo/$ip_fix_string
+# foreach item [glob -nocomplain $origin_dir/ip_repo/$ip_fix_string/*] {
+#     file rename -force $item $origin_dir/ip_repo/[file tail $item]
+# }
+# file delete -force $origin_dir/ip_repo/$ip_fix_string
+# if { [info exists ::origin_dir_loc] } {
+#   set origin_dir $::origin_dir_loc
+# }
+# set project_name "openofdm_rx"
+# if {[file exists $project_name]} {
+#     file delete -force $project_name
+# }
+# if { [info exists ::user_project_name] } {
+#   set project_name $::user_project_name
+# }
+# variable script_file
+# set script_file "openofdm_rx.tcl"
+# proc help {} {
+#   variable script_file
+#   puts "\nDescription:"
+#   puts "Recreate a Vivado project from this script. The created project will be"
+#   puts "functionally equivalent to the original project for which this script was"
+#   puts "generated. The script contains commands for creating a project, filesets,"
+#   puts "runs, adding/importing sources and setting properties on various objects.\n"
+#   puts "Syntax:"
+#   puts "$script_file"
+#   puts "$script_file -tclargs \[--origin_dir <path>\]"
+#   puts "$script_file -tclargs \[--project_name <name>\]"
+#   puts "$script_file -tclargs \[--help\]\n"
+#   puts "Usage:"
+#   puts "Name                   Description"
+#   puts "-------------------------------------------------------------------------"
+#   puts "\[--origin_dir <path>\]  Determine source file paths wrt this path. Default"
+#   puts "                       origin_dir path value is \".\", otherwise, the value"
+#   puts "                       that was set with the \"-paths_relative_to\" switch"
+#   puts "                       when this script was generated.\n"
+#   puts "\[--project_name <name>\] Create project with the specified name. Default"
+#   puts "                       name is the name of the project from where this"
+#   puts "                       script was generated.\n"
+#   puts "\[--help\]               Print help information for this script"
+#   puts "-------------------------------------------------------------------------\n"
+#   exit 0
+# }
+# if { $::argc > 0 } {
+#   for {set i 0} {$i < [llength $::argc]} {incr i} {
+#     set option [string trim [lindex $::argv $i]]
+#     switch -regexp -- $option {
+#       "--origin_dir"   { incr i; set origin_dir [lindex $::argv $i] }
+#       "--project_name" { incr i; set project_name [lindex $::argv $i] }
+#       "--help"         { help }
+#       default {
+#         if { [regexp {^-} $option] } {
+#           puts "ERROR: Unknown option '$option' specified, please type '$script_file -tclargs --help' for usage info.\n"
+#           return 1
+#         }
+#       }
+#     }
+#   }
+# }
+# set src_dir "[file normalize "$origin_dir/verilog"]"
+# create_project ${project_name} ./${project_name} -part $part_string
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Apps/v_log/Vivado/2021.1/data/ip'.
+# set proj_dir [get_property directory [current_project]]
+# set obj [current_project]
+# set_property -name "board_connections" -value "" -objects $obj
+# set_property -name "compxlib.activehdl_compiled_library_dir" -value "$proj_dir/${project_name}.cache/compile_simlib/activehdl" -objects $obj
+# set_property -name "compxlib.funcsim" -value "1" -objects $obj
+# set_property -name "compxlib.ies_compiled_library_dir" -value "$proj_dir/${project_name}.cache/compile_simlib/ies" -objects $obj
+# set_property -name "compxlib.modelsim_compiled_library_dir" -value "$proj_dir/${project_name}.cache/compile_simlib/modelsim" -objects $obj
+# set_property -name "compxlib.overwrite_libs" -value "0" -objects $obj
+# set_property -name "compxlib.questa_compiled_library_dir" -value "$proj_dir/${project_name}.cache/compile_simlib/questa" -objects $obj
+# set_property -name "compxlib.riviera_compiled_library_dir" -value "$proj_dir/${project_name}.cache/compile_simlib/riviera" -objects $obj
+# set_property -name "compxlib.timesim" -value "1" -objects $obj
+# set_property -name "compxlib.vcs_compiled_library_dir" -value "$proj_dir/${project_name}.cache/compile_simlib/vcs" -objects $obj
+# set_property -name "compxlib.xsim_compiled_library_dir" -value "" -objects $obj
+# set_property -name "corecontainer.enable" -value "0" -objects $obj
+# set_property -name "default_lib" -value "xil_defaultlib" -objects $obj
+# set_property -name "dsa.num_compute_units" -value "60" -objects $obj
+WARNING: [Common 17-599] Property 'dsa.num_compute_units' is deprecated for object type 'project'. dsa.* properties have been deprecated, please use the corresponding platform.* properties.
+# set_property -name "dsa.rom.debug_type" -value "0" -objects $obj
+WARNING: [Common 17-599] Property 'dsa.rom.debug_type' is deprecated for object type 'project'. dsa.* properties have been deprecated, please use the corresponding platform.* properties.
+# set_property -name "dsa.rom.prom_type" -value "0" -objects $obj
+WARNING: [Common 17-599] Property 'dsa.rom.prom_type' is deprecated for object type 'project'. dsa.* properties have been deprecated, please use the corresponding platform.* properties.
+# set_property -name "enable_optional_runs_sta" -value "0" -objects $obj
+# set_property -name "generate_ip_upgrade_log" -value "1" -objects $obj
+# set_property -name "ip_cache_permissions" -value "read write" -objects $obj
+# set_property -name "ip_interface_inference_priority" -value "" -objects $obj
+# set_property -name "ip_output_repo" -value "$proj_dir/${project_name}.cache/ip" -objects $obj
+# set_property -name "project_type" -value "Default" -objects $obj
+# set_property -name "pr_flow" -value "0" -objects $obj
+# set_property -name "sim.ip.auto_export_scripts" -value "1" -objects $obj
+# set_property -name "sim.use_ip_compiled_libs" -value "1" -objects $obj
+# set_property -name "simulator_language" -value "Mixed" -objects $obj
+# set_property -name "source_mgmt_mode" -value "All" -objects $obj
+# set_property -name "target_language" -value "Verilog" -objects $obj
+# set_property -name "target_simulator" -value "XSim" -objects $obj
+# set_property -name "xpm_libraries" -value "XPM_MEMORY" -objects $obj
+# set_property -name "xsim.array_display_limit" -value "1024" -objects $obj
+# set_property -name "xsim.radix" -value "hex" -objects $obj
+# set_property -name "xsim.time_unit" -value "ns" -objects $obj
+# set_property -name "xsim.trace_limit" -value "65536" -objects $obj
+# if {[get_filesets -quiet sources_1] eq ""} {
+#   create_fileset -srcset sources_1
+# }
+# set obj [get_filesets sources_1]
+# set_property ip_repo_paths [list $origin_dir/verilog/coregen/div_gen_new_ip_core_$ip_fix_string] $obj
+# update_ip_catalog -rebuild
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/verilog/coregen/div_gen_new_ip_core_zynq'.
+# set obj [get_filesets sources_1]
+# set files [list \
+#  "[file normalize "$origin_dir/verilog/calc_mean.v"]"\
+#  "[file normalize "$origin_dir/verilog/equalizer.v"]"\
+#  "[file normalize "$origin_dir/verilog/dot11_setting_agent.v"]"\
+#  "[file normalize "$origin_dir/verilog/bits_to_bytes.v"]"\
+#  "[file normalize "$origin_dir/verilog/complex_mult.v"]"\
+#  "[file normalize "$origin_dir/verilog/complex_to_mag.v"]"\
+#  "[file normalize "$origin_dir/verilog/complex_to_mag_sq.v"]"\
+#  "[file normalize "$origin_dir/verilog/crc32.v"]"\
+#  "[file normalize "$origin_dir/verilog/deinterleave.v"]"\
+#  "[file normalize "$origin_dir/verilog/delayT.v"]"\
+#  "[file normalize "$origin_dir/verilog/fifo_sample_delay.v"]"\
+#  "[file normalize "$origin_dir/verilog/common_defs.v"]"\
+#  "[file normalize "$origin_dir/verilog/demodulate.v"]"\
+#  "[file normalize "$origin_dir/verilog/descramble.v"]"\
+#  "[file normalize "$origin_dir/verilog/divider.v"]"\
+#  "[file normalize "$origin_dir/verilog/dot11.v"]"\
+#  "[file normalize "$origin_dir/verilog/ht_sig_crc.v"]"\
+#  "[file normalize "$origin_dir/verilog/mv_avg.v"]"\
+#  "[file normalize "$origin_dir/verilog/mv_avg_dual_ch.v"]"\
+#  "[file normalize "$origin_dir/verilog/ofdm_decoder.v"]"\
+#  "[file normalize "$origin_dir/verilog/openofdm_rx_s_axi.v"]"\
+#  "[file normalize "$origin_dir/verilog/phase.v"]"\
+#  "[file normalize "$origin_dir/verilog/dpram.v"]"\
+#  "[file normalize "$origin_dir/verilog/rotate.v"]"\
+#  "[file normalize "$origin_dir/verilog/stage_mult.v"]"\
+#  "[file normalize "$origin_dir/verilog/sync_long.v"]"\
+#  "[file normalize "$origin_dir/verilog/sync_short.v"]"\
+#  "[file normalize "$origin_dir/verilog/openofdm_rx.v"]"\
+#  "[file normalize "$origin_dir/verilog/running_sum_dual_ch.v"]"\
+#  "[file normalize "$origin_dir/verilog/signal_watchdog.v"]"\
+#  "[file normalize "$origin_dir/verilog/phy_len_calculation.v"]"\
+#  "[file normalize "$origin_dir/verilog/rot_after_fft.v"]"\
+#  "[file normalize "$origin_dir/ip_repo/div_for_rotafft/div_for_rotafft.xci"]"\
+#  "[file normalize "$origin_dir/ip_repo/complex_multiplier/complex_multiplier.xci"]"\
+#  "[file normalize "$origin_dir/ip_repo/atan_lut/atan_lut.coe"]"\
+#  "[file normalize "$origin_dir/ip_repo/atan_lut/atan_lut.xci"]"\
+#  "[file normalize "$origin_dir/ip_repo/viterbi/viterbi_v7_0.xci"]"\
+#  "[file normalize "$origin_dir/ip_repo/deinter_lut/deinter_lut.coe"]"\
+#  "[file normalize "$origin_dir/ip_repo/deinter_lut/deinter_lut.xci"]"\
+#  "[file normalize "$origin_dir/ip_repo/xfft/xfft_v9.xci"]"\
+#  "[file normalize "$origin_dir/ip_repo/rot_lut/rot_lut.coe"]"\
+#  "[file normalize "$origin_dir/ip_repo/rot_lut/rot_lut.xci"]"\
+#  "[file normalize "$origin_dir/ip_repo/div_gen_new/src/div_gen.v"]"\
+#  "[file normalize "$origin_dir/ip_repo/div_gen_new/src/div_gen_div_gen_0_0/div_gen_div_gen_0_0.xci"]"\
+#  "[file normalize "$origin_dir/ip_repo/div_gen_new/src/div_gen_xlslice_0_0/div_gen_xlslice_0_0.xci"]"\
+#  "[file normalize "$origin_dir/ip_repo/div_gen_csi_over_nova/div_gen_csi_over_nova.xci"]"\
+# ]
+# add_files -norecurse -fileset $obj $files
+WARNING: [IP_Flow 19-2162] IP 'complex_multiplier' is locked:
+* IP definition 'Complex Multiplier (6.0)' for IP 'complex_multiplier' (customized with software release 2018.3) has a different revision in the IP Catalog. * Current project part 'xc7z020clg484-1' and the part 'xc7z045ffg900-2' used to customize the IP 'complex_multiplier' do not match.
+WARNING: [IP_Flow 19-2162] IP 'atan_lut' is locked:
+* IP definition 'Block Memory Generator (8.4)' for IP 'atan_lut' (customized with software release 2018.3) has a different revision in the IP Catalog. * Current project part 'xc7z020clg484-1' and the part 'xc7z045ffg900-2' used to customize the IP 'atan_lut' do not match.
+WARNING: [IP_Flow 19-2162] IP 'viterbi_v7_0' is locked:
+* IP 'viterbi_v7_0' requires one or more mandatory licenses but no valid licenses were found. However license checkpoints may prevent use of this IP in some tool flows. * IP definition 'Viterbi Decoder (9.1)' for IP 'viterbi_v7_0' (customized with software release 2018.3) has a different revision in the IP Catalog. * Current project part 'xc7z020clg484-1' and the part 'xc7z045ffg900-2' used to customize the IP 'viterbi_v7_0' do not match.
+WARNING: [IP_Flow 19-2162] IP 'deinter_lut' is locked:
+* IP definition 'Block Memory Generator (8.4)' for IP 'deinter_lut' (customized with software release 2018.3) has a different revision in the IP Catalog. * Current project part 'xc7z020clg484-1' and the part 'xc7z045ffg900-2' used to customize the IP 'deinter_lut' do not match.
+WARNING: [IP_Flow 19-2162] IP 'xfft_v9' is locked:
+* IP definition 'Fast Fourier Transform (9.1)' for IP 'xfft_v9' (customized with software release 2018.3) has a different revision in the IP Catalog. * Current project part 'xc7z020clg484-1' and the part 'xc7z045ffg900-2' used to customize the IP 'xfft_v9' do not match.
+WARNING: [IP_Flow 19-2162] IP 'rot_lut' is locked:
+* IP definition 'Block Memory Generator (8.4)' for IP 'rot_lut' (customized with software release 2018.3) has a different revision in the IP Catalog. * Current project part 'xc7z020clg484-1' and the part 'xc7z045ffg900-2' used to customize the IP 'rot_lut' do not match.
+WARNING: [IP_Flow 19-2162] IP 'div_gen_div_gen_0_0' is locked:
+* IP definition 'Divider Generator (5.1)' for IP 'div_gen_div_gen_0_0' (customized with software release 2018.3) has a different revision in the IP Catalog. * Current project part 'xc7z020clg484-1' and the part 'xc7z045ffg900-2' used to customize the IP 'div_gen_div_gen_0_0' do not match.
+WARNING: [IP_Flow 19-2162] IP 'div_gen_xlslice_0_0' is locked:
+* IP definition 'Slice (1.0)' for IP 'div_gen_xlslice_0_0' (customized with software release 2018.3) has a different revision in the IP Catalog. * Current project part 'xc7z020clg484-1' and the part 'xc7z045ffg900-2' used to customize the IP 'div_gen_xlslice_0_0' do not match.
+# set obj [get_filesets sources_1]
+# set_property -name "top" -value "openofdm_rx" -objects $obj
+# if {[get_filesets -quiet constrs_1] eq ""} {
+#   create_fileset -constrset constrs_1
+# }
+# set obj [get_filesets constrs_1]
+# set obj [get_filesets constrs_1]
+# if {[get_filesets -quiet sim_1] eq ""} {
+#   create_fileset -simset sim_1
+# }
+# set obj [get_filesets sim_1]
+# set files [list \
+#  "[file normalize "$origin_dir/verilog/dot11_tb.v"]"
+# ]
+# add_files -norecurse -fileset $obj $files
+# set obj [get_filesets sim_1]
+# set_property -name "32bit" -value "0" -objects $obj
+# set_property -name "generic" -value "" -objects $obj
+# set_property -name "include_dirs" -value "" -objects $obj
+# set_property -name "incremental" -value "1" -objects $obj
+# set_property -name "name" -value "sim_1" -objects $obj
+# set_property -name "nl.cell" -value "" -objects $obj
+# set_property -name "nl.incl_unisim_models" -value "0" -objects $obj
+# set_property -name "nl.process_corner" -value "slow" -objects $obj
+# set_property -name "nl.rename_top" -value "" -objects $obj
+# set_property -name "nl.sdf_anno" -value "1" -objects $obj
+# set_property -name "nl.write_all_overrides" -value "0" -objects $obj
+# set_property -name "source_set" -value "sources_1" -objects $obj
+# set_property -name "top" -value "dot11_tb" -objects $obj
+# set_property -name "transport_int_delay" -value "0" -objects $obj
+# set_property -name "transport_path_delay" -value "0" -objects $obj
+# set_property -name "verilog_define" -value "" -objects $obj
+# set_property -name "verilog_uppercase" -value "0" -objects $obj
+# set_property -name "xelab.dll" -value "0" -objects $obj
+# set_property -name "xsim.compile.tcl.pre" -value "" -objects $obj
+# set_property -name "xsim.compile.xvhdl.more_options" -value "" -objects $obj
+# set_property -name "xsim.compile.xvhdl.nosort" -value "1" -objects $obj
+# set_property -name "xsim.compile.xvhdl.relax" -value "1" -objects $obj
+# set_property -name "xsim.compile.xvlog.more_options" -value "" -objects $obj
+# set_property -name "xsim.compile.xvlog.nosort" -value "1" -objects $obj
+# set_property -name "xsim.compile.xvlog.relax" -value "1" -objects $obj
+# set_property -name "xsim.elaborate.debug_level" -value "typical" -objects $obj
+# set_property -name "xsim.elaborate.load_glbl" -value "1" -objects $obj
+# set_property -name "xsim.elaborate.mt_level" -value "auto" -objects $obj
+# set_property -name "xsim.elaborate.rangecheck" -value "0" -objects $obj
+# set_property -name "xsim.elaborate.relax" -value "1" -objects $obj
+# set_property -name "xsim.elaborate.sdf_delay" -value "sdfmax" -objects $obj
+# set_property -name "xsim.elaborate.snapshot" -value "" -objects $obj
+# set_property -name "xsim.elaborate.xelab.more_options" -value "" -objects $obj
+# set_property -name "xsim.simulate.custom_tcl" -value "" -objects $obj
+# set_property -name "xsim.simulate.log_all_signals" -value "0" -objects $obj
+# set_property -name "xsim.simulate.runtime" -value "1000ns" -objects $obj
+# set_property -name "xsim.simulate.saif" -value "" -objects $obj
+# set_property -name "xsim.simulate.saif_all_signals" -value "0" -objects $obj
+# set_property -name "xsim.simulate.saif_scope" -value "" -objects $obj
+# set_property -name "xsim.simulate.tcl.post" -value "" -objects $obj
+# set_property -name "xsim.simulate.wdb" -value "" -objects $obj
+# set_property -name "xsim.simulate.xsim.more_options" -value "" -objects $obj
+# if {[get_runs -quiet synth_1] eq ""} {
+#     create_run -name synth_1 -part $part_string -flow {Vivado Synthesis 2021} -strategy "Vivado Synthesis Defaults" -report_strategy {No Reports} -constrset constrs_1
+# } else {
+#   set_property strategy "Vivado Synthesis Defaults" [get_runs synth_1]
+#   set_property flow "Vivado Synthesis 2021" [get_runs synth_1]
+# }
+# set obj [get_runs synth_1]
+# set_property set_report_strategy_name 1 $obj
+# set_property report_strategy {Vivado Synthesis Default Reports} $obj
+# set_property set_report_strategy_name 0 $obj
+# if { [get_report_configs -of_objects [get_runs synth_1] synth_1_synth_report_utilization_0] eq "" } {
+#   create_report_config -report_name synth_1_synth_report_utilization_0 -report_type report_utilization:1.0 -steps synth_design -runs synth_1
+# }
+# set obj [get_report_configs -of_objects [get_runs synth_1] synth_1_synth_report_utilization_0]
+# if { $obj ne "" } {
+# set_property -name "is_enabled" -value "1" -objects $obj
+# set_property -name "options.pblocks" -value "" -objects $obj
+# set_property -name "options.cells" -value "" -objects $obj
+# set_property -name "options.slr" -value "0" -objects $obj
+# set_property -name "options.packthru" -value "0" -objects $obj
+# set_property -name "options.hierarchical" -value "0" -objects $obj
+# set_property -name "options.hierarchical_depth" -value "" -objects $obj
+# set_property -name "options.hierarchical_percentages" -value "0" -objects $obj
+# set_property -name "options.more_options" -value "" -objects $obj
+# 
+# }
+# set obj [get_runs synth_1]
+# set_property -name "constrset" -value "constrs_1" -objects $obj
+# set_property -name "description" -value "Vivado Synthesis Defaults" -objects $obj
+# set_property -name "flow" -value "Vivado Synthesis 2021" -objects $obj
+# set_property -name "name" -value "synth_1" -objects $obj
+# set_property -name "needs_refresh" -value "0" -objects $obj
+# set_property -name "srcset" -value "sources_1" -objects $obj
+# set_property -name "include_in_archive" -value "1" -objects $obj
+# set_property -name "strategy" -value "Vivado Synthesis Defaults" -objects $obj
+# set_property -name "steps.synth_design.tcl.pre" -value "" -objects $obj
+# set_property -name "steps.synth_design.tcl.post" -value "" -objects $obj
+# set_property -name "steps.synth_design.args.flatten_hierarchy" -value "rebuilt" -objects $obj
+# set_property -name "steps.synth_design.args.gated_clock_conversion" -value "off" -objects $obj
+# set_property -name "steps.synth_design.args.bufg" -value "12" -objects $obj
+# set_property -name "steps.synth_design.args.directive" -value "Default" -objects $obj
+# set_property -name "steps.synth_design.args.retiming" -value "0" -objects $obj
+# set_property -name "steps.synth_design.args.fsm_extraction" -value "auto" -objects $obj
+# set_property -name "steps.synth_design.args.keep_equivalent_registers" -value "0" -objects $obj
+# set_property -name "steps.synth_design.args.resource_sharing" -value "auto" -objects $obj
+# set_property -name "steps.synth_design.args.control_set_opt_threshold" -value "auto" -objects $obj
+# set_property -name "steps.synth_design.args.no_lc" -value "0" -objects $obj
+# set_property -name "steps.synth_design.args.no_srlextract" -value "0" -objects $obj
+# set_property -name "steps.synth_design.args.shreg_min_size" -value "3" -objects $obj
+# set_property -name "steps.synth_design.args.max_bram" -value "-1" -objects $obj
+# set_property -name "steps.synth_design.args.max_uram" -value "-1" -objects $obj
+# set_property -name "steps.synth_design.args.max_dsp" -value "-1" -objects $obj
+# set_property -name "steps.synth_design.args.max_bram_cascade_height" -value "-1" -objects $obj
+# set_property -name "steps.synth_design.args.max_uram_cascade_height" -value "-1" -objects $obj
+# set_property -name "steps.synth_design.args.cascade_dsp" -value "auto" -objects $obj
+# set_property -name "steps.synth_design.args.assert" -value "0" -objects $obj
+# set_property -name "steps.synth_design.args.more options" -value "" -objects $obj
+# if {[get_runs synth_1] ne ""} {
+#     current_run -synthesis [get_runs synth_1]
+# }
+# if {[get_runs -quiet impl_1] eq ""} {
+#     create_run -name impl_1 -part $part_string -flow {Vivado Implementation 2021} -strategy "Vivado Implementation Defaults" -report_strategy {No Reports} -constrset constrs_1 -parent_run synth_1
+# } else {
+#   set_property strategy "Vivado Implementation Defaults" [get_runs impl_1]
+#   set_property flow "Vivado Implementation 2021" [get_runs impl_1]
+# }
+# set obj [get_runs impl_1]
+# set_property set_report_strategy_name 1 $obj
+# set_property report_strategy {Vivado Implementation Default Reports} $obj
+# set_property set_report_strategy_name 0 $obj
+# if { [get_report_configs -of_objects [get_runs impl_1] impl_1_init_report_timing_summary_0] eq "" } {
+#   create_report_config -report_name impl_1_init_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps init_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_init_report_timing_summary_0]
+# if { $obj ne "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# set_property -name "options.check_timing_verbose" -value "0" -objects $obj
+# set_property -name "options.delay_type" -value "" -objects $obj
+# set_property -name "options.setup" -value "0" -objects $obj
+# set_property -name "options.hold" -value "0" -objects $obj
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# set_property -name "options.nworst" -value "" -objects $obj
+# set_property -name "options.unique_pins" -value "0" -objects $obj
+# set_property -name "options.path_type" -value "" -objects $obj
+# set_property -name "options.slack_lesser_than" -value "" -objects $obj
+# set_property -name "options.report_unconstrained" -value "0" -objects $obj
+# set_property -name "options.warn_on_violation" -value "0" -objects $obj
+# set_property -name "options.significant_digits" -value "" -objects $obj
+# set_property -name "options.cell" -value "" -objects $obj
+# set_property -name "options.more_options" -value "" -objects $obj
+# 
+# }
+# if { [get_report_configs -of_objects [get_runs impl_1] impl_1_opt_report_drc_0] eq "" } {
+#   create_report_config -report_name impl_1_opt_report_drc_0 -report_type report_drc:1.0 -steps opt_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_opt_report_drc_0]
+# if { $obj ne "" } {
+# set_property -name "is_enabled" -value "1" -objects $obj
+# set_property -name "options.upgrade_cw" -value "0" -objects $obj
+# set_property -name "options.checks" -value "" -objects $obj
+# set_property -name "options.ruledecks" -value "" -objects $obj
+# set_property -name "options.more_options" -value "" -objects $obj
+# 
+# }
+# if { [get_report_configs -of_objects [get_runs impl_1] impl_1_opt_report_timing_summary_0] eq "" } {
+#   create_report_config -report_name impl_1_opt_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps opt_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_opt_report_timing_summary_0]
+# if { $obj ne "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# set_property -name "options.check_timing_verbose" -value "0" -objects $obj
+# set_property -name "options.delay_type" -value "" -objects $obj
+# set_property -name "options.setup" -value "0" -objects $obj
+# set_property -name "options.hold" -value "0" -objects $obj
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# set_property -name "options.nworst" -value "" -objects $obj
+# set_property -name "options.unique_pins" -value "0" -objects $obj
+# set_property -name "options.path_type" -value "" -objects $obj
+# set_property -name "options.slack_lesser_than" -value "" -objects $obj
+# set_property -name "options.report_unconstrained" -value "0" -objects $obj
+# set_property -name "options.warn_on_violation" -value "0" -objects $obj
+# set_property -name "options.significant_digits" -value "" -objects $obj
+# set_property -name "options.cell" -value "" -objects $obj
+# set_property -name "options.more_options" -value "" -objects $obj
+# 
+# }
+# if { [get_report_configs -of_objects [get_runs impl_1] impl_1_power_opt_report_timing_summary_0] eq "" } {
+#   create_report_config -report_name impl_1_power_opt_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps power_opt_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_power_opt_report_timing_summary_0]
+# if { $obj ne "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# set_property -name "options.check_timing_verbose" -value "0" -objects $obj
+# set_property -name "options.delay_type" -value "" -objects $obj
+# set_property -name "options.setup" -value "0" -objects $obj
+# set_property -name "options.hold" -value "0" -objects $obj
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# set_property -name "options.nworst" -value "" -objects $obj
+# set_property -name "options.unique_pins" -value "0" -objects $obj
+# set_property -name "options.path_type" -value "" -objects $obj
+# set_property -name "options.slack_lesser_than" -value "" -objects $obj
+# set_property -name "options.report_unconstrained" -value "0" -objects $obj
+# set_property -name "options.warn_on_violation" -value "0" -objects $obj
+# set_property -name "options.significant_digits" -value "" -objects $obj
+# set_property -name "options.cell" -value "" -objects $obj
+# set_property -name "options.more_options" -value "" -objects $obj
+# 
+# }
+# if { [get_report_configs -of_objects [get_runs impl_1] impl_1_place_report_io_0] eq "" } {
+#   create_report_config -report_name impl_1_place_report_io_0 -report_type report_io:1.0 -steps place_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_place_report_io_0]
+# if { $obj ne "" } {
+# set_property -name "is_enabled" -value "1" -objects $obj
+# set_property -name "options.more_options" -value "" -objects $obj
+# 
+# }
+# if { [get_report_configs -of_objects [get_runs impl_1] impl_1_place_report_utilization_0] eq "" } {
+#   create_report_config -report_name impl_1_place_report_utilization_0 -report_type report_utilization:1.0 -steps place_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_place_report_utilization_0]
+# if { $obj ne "" } {
+# set_property -name "is_enabled" -value "1" -objects $obj
+# set_property -name "options.pblocks" -value "" -objects $obj
+# set_property -name "options.cells" -value "" -objects $obj
+# set_property -name "options.slr" -value "0" -objects $obj
+# set_property -name "options.packthru" -value "0" -objects $obj
+# set_property -name "options.hierarchical" -value "0" -objects $obj
+# set_property -name "options.hierarchical_depth" -value "" -objects $obj
+# set_property -name "options.hierarchical_percentages" -value "0" -objects $obj
+# set_property -name "options.more_options" -value "" -objects $obj
+# 
+# }
+# if { [get_report_configs -of_objects [get_runs impl_1] impl_1_place_report_control_sets_0] eq "" } {
+#   create_report_config -report_name impl_1_place_report_control_sets_0 -report_type report_control_sets:1.0 -steps place_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_place_report_control_sets_0]
+# if { $obj ne "" } {
+# set_property -name "is_enabled" -value "1" -objects $obj
+# set_property -name "options.verbose" -value "1" -objects $obj
+# set_property -name "options.cells" -value "" -objects $obj
+# set_property -name "options.more_options" -value "" -objects $obj
+# 
+# }
+# if { [get_report_configs -of_objects [get_runs impl_1] impl_1_place_report_incremental_reuse_0] eq "" } {
+#   create_report_config -report_name impl_1_place_report_incremental_reuse_0 -report_type report_incremental_reuse:1.0 -steps place_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_place_report_incremental_reuse_0]
+# if { $obj ne "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# set_property -name "options.cells" -value "" -objects $obj
+# set_property -name "options.hierarchical" -value "0" -objects $obj
+# set_property -name "options.hierarchical_depth" -value "" -objects $obj
+# set_property -name "options.more_options" -value "" -objects $obj
+# 
+# }
+# if { [get_report_configs -of_objects [get_runs impl_1] impl_1_place_report_incremental_reuse_1] eq "" } {
+#   create_report_config -report_name impl_1_place_report_incremental_reuse_1 -report_type report_incremental_reuse:1.0 -steps place_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_place_report_incremental_reuse_1]
+# if { $obj ne "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# set_property -name "options.cells" -value "" -objects $obj
+# set_property -name "options.hierarchical" -value "0" -objects $obj
+# set_property -name "options.hierarchical_depth" -value "" -objects $obj
+# set_property -name "options.more_options" -value "" -objects $obj
+# 
+# }
+# if { [get_report_configs -of_objects [get_runs impl_1] impl_1_place_report_timing_summary_0] eq "" } {
+#   create_report_config -report_name impl_1_place_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps place_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_place_report_timing_summary_0]
+# if { $obj ne "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# set_property -name "options.check_timing_verbose" -value "0" -objects $obj
+# set_property -name "options.delay_type" -value "" -objects $obj
+# set_property -name "options.setup" -value "0" -objects $obj
+# set_property -name "options.hold" -value "0" -objects $obj
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# set_property -name "options.nworst" -value "" -objects $obj
+# set_property -name "options.unique_pins" -value "0" -objects $obj
+# set_property -name "options.path_type" -value "" -objects $obj
+# set_property -name "options.slack_lesser_than" -value "" -objects $obj
+# set_property -name "options.report_unconstrained" -value "0" -objects $obj
+# set_property -name "options.warn_on_violation" -value "0" -objects $obj
+# set_property -name "options.significant_digits" -value "" -objects $obj
+# set_property -name "options.cell" -value "" -objects $obj
+# set_property -name "options.more_options" -value "" -objects $obj
+# 
+# }
+# if { [get_report_configs -of_objects [get_runs impl_1] impl_1_post_place_power_opt_report_timing_summary_0] eq "" } {
+#   create_report_config -report_name impl_1_post_place_power_opt_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps post_place_power_opt_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_post_place_power_opt_report_timing_summary_0]
+# if { $obj ne "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# set_property -name "options.check_timing_verbose" -value "0" -objects $obj
+# set_property -name "options.delay_type" -value "" -objects $obj
+# set_property -name "options.setup" -value "0" -objects $obj
+# set_property -name "options.hold" -value "0" -objects $obj
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# set_property -name "options.nworst" -value "" -objects $obj
+# set_property -name "options.unique_pins" -value "0" -objects $obj
+# set_property -name "options.path_type" -value "" -objects $obj
+# set_property -name "options.slack_lesser_than" -value "" -objects $obj
+# set_property -name "options.report_unconstrained" -value "0" -objects $obj
+# set_property -name "options.warn_on_violation" -value "0" -objects $obj
+# set_property -name "options.significant_digits" -value "" -objects $obj
+# set_property -name "options.cell" -value "" -objects $obj
+# set_property -name "options.more_options" -value "" -objects $obj
+# 
+# }
+# if { [get_report_configs -of_objects [get_runs impl_1] impl_1_phys_opt_report_timing_summary_0] eq "" } {
+#   create_report_config -report_name impl_1_phys_opt_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps phys_opt_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_phys_opt_report_timing_summary_0]
+# if { $obj ne "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# set_property -name "options.check_timing_verbose" -value "0" -objects $obj
+# set_property -name "options.delay_type" -value "" -objects $obj
+# set_property -name "options.setup" -value "0" -objects $obj
+# set_property -name "options.hold" -value "0" -objects $obj
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# set_property -name "options.nworst" -value "" -objects $obj
+# set_property -name "options.unique_pins" -value "0" -objects $obj
+# set_property -name "options.path_type" -value "" -objects $obj
+# set_property -name "options.slack_lesser_than" -value "" -objects $obj
+# set_property -name "options.report_unconstrained" -value "0" -objects $obj
+# set_property -name "options.warn_on_violation" -value "0" -objects $obj
+# set_property -name "options.significant_digits" -value "" -objects $obj
+# set_property -name "options.cell" -value "" -objects $obj
+# set_property -name "options.more_options" -value "" -objects $obj
+# 
+# }
+# if { [get_report_configs -of_objects [get_runs impl_1] impl_1_route_report_drc_0] eq "" } {
+#   create_report_config -report_name impl_1_route_report_drc_0 -report_type report_drc:1.0 -steps route_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_route_report_drc_0]
+# if { $obj ne "" } {
+# set_property -name "is_enabled" -value "1" -objects $obj
+# set_property -name "options.upgrade_cw" -value "0" -objects $obj
+# set_property -name "options.checks" -value "" -objects $obj
+# set_property -name "options.ruledecks" -value "" -objects $obj
+# set_property -name "options.more_options" -value "" -objects $obj
+# 
+# }
+# if { [get_report_configs -of_objects [get_runs impl_1] impl_1_route_report_methodology_0] eq "" } {
+#   create_report_config -report_name impl_1_route_report_methodology_0 -report_type report_methodology:1.0 -steps route_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_route_report_methodology_0]
+# if { $obj ne "" } {
+# set_property -name "is_enabled" -value "1" -objects $obj
+# set_property -name "options.checks" -value "" -objects $obj
+# set_property -name "options.more_options" -value "" -objects $obj
+# 
+# }
+# if { [get_report_configs -of_objects [get_runs impl_1] impl_1_route_report_power_0] eq "" } {
+#   create_report_config -report_name impl_1_route_report_power_0 -report_type report_power:1.0 -steps route_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_route_report_power_0]
+# if { $obj ne "" } {
+# set_property -name "is_enabled" -value "1" -objects $obj
+# set_property -name "options.advisory" -value "0" -objects $obj
+# set_property -name "options.xpe" -value "" -objects $obj
+# set_property -name "options.more_options" -value "" -objects $obj
+# 
+# }
+# if { [get_report_configs -of_objects [get_runs impl_1] impl_1_route_report_route_status_0] eq "" } {
+#   create_report_config -report_name impl_1_route_report_route_status_0 -report_type report_route_status:1.0 -steps route_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_route_report_route_status_0]
+# if { $obj ne "" } {
+# set_property -name "is_enabled" -value "1" -objects $obj
+# set_property -name "options.of_objects" -value "" -objects $obj
+# set_property -name "options.route_type" -value "" -objects $obj
+# set_property -name "options.list_all_nets" -value "0" -objects $obj
+# set_property -name "options.show_all" -value "0" -objects $obj
+# set_property -name "options.has_routing" -value "0" -objects $obj
+# set_property -name "options.more_options" -value "" -objects $obj
+# 
+# }
+# if { [get_report_configs -of_objects [get_runs impl_1] impl_1_route_report_timing_summary_0] eq "" } {
+#   create_report_config -report_name impl_1_route_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps route_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_route_report_timing_summary_0]
+# if { $obj ne "" } {
+# set_property -name "is_enabled" -value "1" -objects $obj
+# set_property -name "options.check_timing_verbose" -value "0" -objects $obj
+# set_property -name "options.delay_type" -value "" -objects $obj
+# set_property -name "options.setup" -value "0" -objects $obj
+# set_property -name "options.hold" -value "0" -objects $obj
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# set_property -name "options.nworst" -value "" -objects $obj
+# set_property -name "options.unique_pins" -value "0" -objects $obj
+# set_property -name "options.path_type" -value "" -objects $obj
+# set_property -name "options.slack_lesser_than" -value "" -objects $obj
+# set_property -name "options.report_unconstrained" -value "0" -objects $obj
+# set_property -name "options.warn_on_violation" -value "0" -objects $obj
+# set_property -name "options.significant_digits" -value "" -objects $obj
+# set_property -name "options.cell" -value "" -objects $obj
+# set_property -name "options.more_options" -value "" -objects $obj
+# 
+# }
+# if { [get_report_configs -of_objects [get_runs impl_1] impl_1_route_report_incremental_reuse_0] eq "" } {
+#   create_report_config -report_name impl_1_route_report_incremental_reuse_0 -report_type report_incremental_reuse:1.0 -steps route_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_route_report_incremental_reuse_0]
+# if { $obj ne "" } {
+# set_property -name "is_enabled" -value "1" -objects $obj
+# set_property -name "options.cells" -value "" -objects $obj
+# set_property -name "options.hierarchical" -value "0" -objects $obj
+# set_property -name "options.hierarchical_depth" -value "" -objects $obj
+# set_property -name "options.more_options" -value "" -objects $obj
+# 
+# }
+# if { [get_report_configs -of_objects [get_runs impl_1] impl_1_route_report_clock_utilization_0] eq "" } {
+#   create_report_config -report_name impl_1_route_report_clock_utilization_0 -report_type report_clock_utilization:1.0 -steps route_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_route_report_clock_utilization_0]
+# if { $obj ne "" } {
+# set_property -name "is_enabled" -value "1" -objects $obj
+# set_property -name "options.write_xdc" -value "0" -objects $obj
+# set_property -name "options.clock_roots_only" -value "0" -objects $obj
+# set_property -name "options.more_options" -value "" -objects $obj
+# 
+# }
+# if { [get_report_configs -of_objects [get_runs impl_1] impl_1_post_route_phys_opt_report_timing_summary_0] eq "" } {
+#   create_report_config -report_name impl_1_post_route_phys_opt_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps post_route_phys_opt_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_post_route_phys_opt_report_timing_summary_0]
+# if { $obj ne "" } {
+# set_property -name "is_enabled" -value "1" -objects $obj
+# set_property -name "options.check_timing_verbose" -value "0" -objects $obj
+# set_property -name "options.delay_type" -value "" -objects $obj
+# set_property -name "options.setup" -value "0" -objects $obj
+# set_property -name "options.hold" -value "0" -objects $obj
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# set_property -name "options.nworst" -value "" -objects $obj
+# set_property -name "options.unique_pins" -value "0" -objects $obj
+# set_property -name "options.path_type" -value "" -objects $obj
+# set_property -name "options.slack_lesser_than" -value "" -objects $obj
+# set_property -name "options.report_unconstrained" -value "0" -objects $obj
+# set_property -name "options.warn_on_violation" -value "1" -objects $obj
+# set_property -name "options.significant_digits" -value "" -objects $obj
+# set_property -name "options.cell" -value "" -objects $obj
+# set_property -name "options.more_options" -value "" -objects $obj
+# 
+# }
+# set obj [get_runs impl_1]
+# set_property -name "constrset" -value "constrs_1" -objects $obj
+# set_property -name "description" -value "Default settings for Implementation." -objects $obj
+# set_property -name "flow" -value "Vivado Implementation 2021" -objects $obj
+# set_property -name "name" -value "impl_1" -objects $obj
+# set_property -name "needs_refresh" -value "0" -objects $obj
+# set_property -name "pr_configuration" -value "" -objects $obj
+# set_property -name "srcset" -value "sources_1" -objects $obj
+# set_property -name "include_in_archive" -value "1" -objects $obj
+# set_property -name "strategy" -value "Vivado Implementation Defaults" -objects $obj
+# set_property -name "steps.opt_design.is_enabled" -value "1" -objects $obj
+# set_property -name "steps.opt_design.tcl.pre" -value "" -objects $obj
+# set_property -name "steps.opt_design.tcl.post" -value "" -objects $obj
+# set_property -name "steps.opt_design.args.verbose" -value "0" -objects $obj
+# set_property -name "steps.opt_design.args.directive" -value "Default" -objects $obj
+# set_property -name "steps.opt_design.args.more_options" -value "" -objects $obj
+ERROR: [Common 17-54] The object 'run' does not have a property 'steps.opt_design.args.more_options'.
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+close_project
+upgrade_ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 [get_ips  rot_lut] -log ip_upgrade.log
+Upgrading 'rot_lut'
+INFO: [IP_Flow 19-3422] Upgraded rot_lut (Block Memory Generator 8.4) from revision 2 to revision 4
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'rot_lut'...
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips rot_lut] -no_script -sync -force -quiet
+set_property generate_synth_checkpoint false [get_files  C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/ip_repo/rot_lut/rot_lut.xci]
+generate_target all [get_files  C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/ip_repo/rot_lut/rot_lut.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'rot_lut'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'rot_lut'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'rot_lut'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'rot_lut'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'rot_lut'...
+export_ip_user_files -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/ip_repo/rot_lut/rot_lut.xci] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/ip_repo/rot_lut/rot_lut.xci] -directory C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.ip_user_files -ipstatic_source_dir C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.cache/compile_simlib/modelsim} {questa=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.cache/compile_simlib/questa} {riviera=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.cache/compile_simlib/riviera} {activehdl=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+upgrade_ip -vlnv xilinx.com:ip:xfft:9.1 [get_ips  xfft_v9] -log ip_upgrade.log
+Upgrading 'xfft_v9'
+INFO: [IP_Flow 19-3422] Upgraded xfft_v9 (Fast Fourier Transform 9.1) from revision 1 to revision 6
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'xfft_v9'...
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/ip_upgrade.log'.
+upgrade_ip: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1136.574 ; gain = 0.000
+export_ip_user_files -of_objects [get_ips xfft_v9] -no_script -sync -force -quiet
+set_property generate_synth_checkpoint false [get_files  C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/ip_repo/xfft/xfft_v9.xci]
+generate_target all [get_files  C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/ip_repo/xfft/xfft_v9.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'xfft_v9'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'xfft_v9'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'xfft_v9'...
+INFO: [IP_Flow 19-1686] Generating 'C Simulation' target for IP 'xfft_v9'...
+INFO: [IP_Flow 19-1686] Generating 'Test Bench' target for IP 'xfft_v9'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'xfft_v9'...
+export_ip_user_files -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/ip_repo/xfft/xfft_v9.xci] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/ip_repo/xfft/xfft_v9.xci] -directory C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.ip_user_files -ipstatic_source_dir C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.cache/compile_simlib/modelsim} {questa=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.cache/compile_simlib/questa} {riviera=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.cache/compile_simlib/riviera} {activehdl=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+upgrade_ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 [get_ips  atan_lut] -log ip_upgrade.log
+Upgrading 'atan_lut'
+INFO: [IP_Flow 19-3422] Upgraded atan_lut (Block Memory Generator 8.4) from revision 2 to revision 4
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'atan_lut'...
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips atan_lut] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/ip_repo/atan_lut/atan_lut.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'atan_lut'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'atan_lut'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'atan_lut'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'atan_lut'...
+export_ip_user_files -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/ip_repo/atan_lut/atan_lut.xci] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/ip_repo/atan_lut/atan_lut.xci] -directory C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.ip_user_files -ipstatic_source_dir C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.cache/compile_simlib/modelsim} {questa=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.cache/compile_simlib/questa} {riviera=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.cache/compile_simlib/riviera} {activehdl=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+upgrade_ip -vlnv xilinx.com:ip:cmpy:6.0 [get_ips  complex_multiplier] -log ip_upgrade.log
+Upgrading 'complex_multiplier'
+INFO: [IP_Flow 19-3422] Upgraded complex_multiplier (Complex Multiplier 6.0) from revision 16 to revision 20
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'complex_multiplier'...
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips complex_multiplier] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/ip_repo/complex_multiplier/complex_multiplier.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'complex_multiplier'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'complex_multiplier'...
+INFO: [IP_Flow 19-1686] Generating 'C Simulation' target for IP 'complex_multiplier'...
+INFO: [IP_Flow 19-1686] Generating 'Test Bench' target for IP 'complex_multiplier'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'complex_multiplier'...
+export_ip_user_files -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/ip_repo/complex_multiplier/complex_multiplier.xci] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/ip_repo/complex_multiplier/complex_multiplier.xci] -directory C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.ip_user_files -ipstatic_source_dir C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.cache/compile_simlib/modelsim} {questa=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.cache/compile_simlib/questa} {riviera=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.cache/compile_simlib/riviera} {activehdl=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+upgrade_ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 [get_ips  deinter_lut] -log ip_upgrade.log
+Upgrading 'deinter_lut'
+INFO: [IP_Flow 19-3422] Upgraded deinter_lut (Block Memory Generator 8.4) from revision 2 to revision 4
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'deinter_lut'...
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips deinter_lut] -no_script -sync -force -quiet
+set_property generate_synth_checkpoint false [get_files  C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/ip_repo/deinter_lut/deinter_lut.xci]
+generate_target all [get_files  C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/ip_repo/deinter_lut/deinter_lut.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'deinter_lut'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'deinter_lut'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'deinter_lut'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'deinter_lut'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'deinter_lut'...
+export_ip_user_files -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/ip_repo/deinter_lut/deinter_lut.xci] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/ip_repo/deinter_lut/deinter_lut.xci] -directory C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.ip_user_files -ipstatic_source_dir C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.cache/compile_simlib/modelsim} {questa=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.cache/compile_simlib/questa} {riviera=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.cache/compile_simlib/riviera} {activehdl=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+upgrade_ip -vlnv xilinx.com:ip:div_gen:5.1 [get_ips  div_gen_div_gen_0_0] -log ip_upgrade.log
+Upgrading 'div_gen_div_gen_0_0'
+INFO: [IP_Flow 19-3422] Upgraded div_gen_div_gen_0_0 (Divider Generator 5.1) from revision 14 to revision 18
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'div_gen_div_gen_0_0'...
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips div_gen_div_gen_0_0] -no_script -sync -force -quiet
+set_property generate_synth_checkpoint false [get_files  C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/ip_repo/div_gen_new/src/div_gen_div_gen_0_0/div_gen_div_gen_0_0.xci]
+generate_target all [get_files  C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/ip_repo/div_gen_new/src/div_gen_div_gen_0_0/div_gen_div_gen_0_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'div_gen_div_gen_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'div_gen_div_gen_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'div_gen_div_gen_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'C Simulation' target for IP 'div_gen_div_gen_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Test Bench' target for IP 'div_gen_div_gen_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'div_gen_div_gen_0_0'...
+export_ip_user_files -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/ip_repo/div_gen_new/src/div_gen_div_gen_0_0/div_gen_div_gen_0_0.xci] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/ip_repo/div_gen_new/src/div_gen_div_gen_0_0/div_gen_div_gen_0_0.xci] -directory C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.ip_user_files -ipstatic_source_dir C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.cache/compile_simlib/modelsim} {questa=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.cache/compile_simlib/questa} {riviera=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.cache/compile_simlib/riviera} {activehdl=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+upgrade_ip -vlnv xilinx.com:ip:xlslice:1.0 [get_ips  div_gen_xlslice_0_0] -log ip_upgrade.log
+Upgrading 'div_gen_xlslice_0_0'
+INFO: [IP_Flow 19-3422] Upgraded div_gen_xlslice_0_0 (Slice 1.0) from revision 1 to revision 2
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'div_gen_xlslice_0_0'...
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips div_gen_xlslice_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/ip_repo/div_gen_new/src/div_gen_xlslice_0_0/div_gen_xlslice_0_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'div_gen_xlslice_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'div_gen_xlslice_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'div_gen_xlslice_0_0'...
+export_ip_user_files -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/ip_repo/div_gen_new/src/div_gen_xlslice_0_0/div_gen_xlslice_0_0.xci] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/ip_repo/div_gen_new/src/div_gen_xlslice_0_0/div_gen_xlslice_0_0.xci] -directory C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.ip_user_files -ipstatic_source_dir C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.cache/compile_simlib/modelsim} {questa=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.cache/compile_simlib/questa} {riviera=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.cache/compile_simlib/riviera} {activehdl=C:/Users/ASUS/Downloads/Openofdm/openofdm-dot11zynq/openofdm_rx/openofdm_rx.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kc705/1.6/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu1500/1.2/board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc707/1.4/board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc709/1.8/board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.1 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_es:part0:1.1 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/es/1.1/board.xml as part xcvc1902-vsva2197-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_es:part0:1.2 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/es/1.2/board.xml as part xcvc1902-vsva2197-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_es:part0:1.3 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/es/1.3/board.xml as part xcvc1902-vsva2197-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.6/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.7/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu110/1.4/board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.0/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.3 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.3/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.4/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu128/production/1.0/board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu1525/1.3/board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_mpsoc:part0:1.0 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_mpsoc/1.0/board.xml as part xczu19eg-ffvd1760-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_rfsoc/1.0/board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.1 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_es:part0:1.1 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/es/1.1/board.xml as part xcvm1802-vsva2197-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_es:part0:1.2 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/es/1.2/board.xml as part xcvm1802-vsva2197-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_es:part0:1.3 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/es/1.3/board.xml as part xcvm1802-vsva2197-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.4 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zc706/1.4/board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.3 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.3/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.4 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.4/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.2/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.3 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.3/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.4 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.4/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1275:part0:1.0 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1275/1.0/board.xml as part xczu29dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1285/1.0/board.xml as part xczu39dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/production/2.0/board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208_es:part0:1.0 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/es/1.0/board.xml as part xczu48dr-fsvg1517-2-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208_es:part0:1.1 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/es/1.1/board.xml as part xczu48dr-fsvg1517-2-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208_es:part0:1.2 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/es/1.2/board.xml as part xczu48dr-fsvg1517-2-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld_es:part0:1.0 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/es/1.0/board.xml as part xczu58dr-fsvg1517-2-i-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/production/2.0/board.xml as part xczu49dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216_es:part0:1.0 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/es/1.0/board.xml as part xczu49dr-ffvf1760-2-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216_es:part0:1.1 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/es/1.1/board.xml as part xczu49dr-ffvf1760-2-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216_es:part0:1.2 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/es/1.2/board.xml as part xczu49dr-ffvf1760-2-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld_es:part0:1.0 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/es/1.0/board.xml as part xczu59dr-ffvf1760-2-i-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kc705/1.6/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu1500/1.2/board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc707/1.4/board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc709/1.8/board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.1 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_es:part0:1.1 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/es/1.1/board.xml as part xcvc1902-vsva2197-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_es:part0:1.2 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/es/1.2/board.xml as part xcvc1902-vsva2197-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_es:part0:1.3 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/es/1.3/board.xml as part xcvc1902-vsva2197-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.6/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.7/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu110/1.4/board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.0/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.3 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.3/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.4/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu128/production/1.0/board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu1525/1.3/board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_mpsoc:part0:1.0 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_mpsoc/1.0/board.xml as part xczu19eg-ffvd1760-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_rfsoc/1.0/board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.1 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_es:part0:1.1 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/es/1.1/board.xml as part xcvm1802-vsva2197-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_es:part0:1.2 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/es/1.2/board.xml as part xcvm1802-vsva2197-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_es:part0:1.3 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/es/1.3/board.xml as part xcvm1802-vsva2197-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.4 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zc706/1.4/board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.3 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.3/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.4 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.4/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.2/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.3 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.3/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.4 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.4/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1275:part0:1.0 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1275/1.0/board.xml as part xczu29dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1285/1.0/board.xml as part xczu39dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/production/2.0/board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208_es:part0:1.0 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/es/1.0/board.xml as part xczu48dr-fsvg1517-2-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208_es:part0:1.1 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/es/1.1/board.xml as part xczu48dr-fsvg1517-2-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208_es:part0:1.2 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/es/1.2/board.xml as part xczu48dr-fsvg1517-2-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld_es:part0:1.0 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/es/1.0/board.xml as part xczu58dr-fsvg1517-2-i-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/production/2.0/board.xml as part xczu49dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216_es:part0:1.0 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/es/1.0/board.xml as part xczu49dr-ffvf1760-2-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216_es:part0:1.1 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/es/1.1/board.xml as part xczu49dr-ffvf1760-2-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216_es:part0:1.2 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/es/1.2/board.xml as part xczu49dr-ffvf1760-2-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld_es:part0:1.0 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/es/1.0/board.xml as part xczu59dr-ffvf1760-2-i-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kc705/1.6/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu1500/1.2/board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc707/1.4/board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at D:/Apps/v_log/Vivado/2021.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc709/1.8/board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
+INFO: [Common 17-14] Message 'Board 49-26' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+source ./system_project.tcl
+couldn't read file "./system_project.tcl": no such file or directory
+close_project
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Jul  8 23:43:46 2025...
